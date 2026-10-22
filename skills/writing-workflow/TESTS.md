@@ -342,11 +342,11 @@ Each test has:
 
 **RED (wrong handling):**
 
-> Step 1A writes a new SCQA opening from the topic and audience, discarding the Background section, and Step 2 outputs only a pyramid outline.
+> Step 1A writes a new SCQA opening from the topic and audience alone, ignoring the memo's Background and content, and Step 2 outputs only a pyramid outline.
 
 **GREEN (correct handling):**
 
-> Step 1A builds the Situation, Complication, Question, and Answer from the memo's own Background and content, and replaces only the opening. Step 2 returns the full memo in pyramid order, keeping the author's content.
+> Step 1A builds the Situation, Complication, Question, and Answer from the memo's own Background and content, and replaces only the opening. Background facts the opening does not use stay in the memo for Step 2 to place. Step 2 returns the full memo in pyramid order, keeping the author's content.
 
 **Expected finding:** `[Input] With a supplied draft, every step works on that draft and keeps the author's content unless a sub-skill rule requires the change. Step 1A builds the opening from the draft's own opening and content. Only a brief-only input has Step 2 write the body prose.`
 
@@ -430,17 +430,17 @@ Each test has:
 
 **GREEN (correct handling):**
 
-> Step 1 writes "Write-offs from miscounts have grown by [needs: figure for write-off growth]." Step 3 writes "Owner: [needs: owner]". Every other step that needs a detail the brief lacks, such as a missing link between annual counting and the write-offs, also writes a [needs: …] marker instead of a value. Steps 4 through 4.6 pass every marker through unchanged. Step 5 runs document-qa's Fix job, adds [needs: source for "Write-offs from miscounts have grown"], and lists every open marker under **Gaps**, which is the author's punch list.
+> Step 1 writes "Write-offs from miscounts have grown by [needs: figure for write-off growth]." Step 3 writes "Owner: [needs: owner]" and "Due: [needs: date]". Every other step that needs a detail the brief lacks, such as a missing link between annual counting and the write-offs, also writes a [needs: …] marker instead of a value. Steps 4 through 4.6 pass every marker through unchanged. Step 5 runs document-qa's Fix job, adds [needs: source for "Write-offs from miscounts have grown"], and lists every open marker under **Gaps**, which is the author's punch list.
 
-**Expected finding:** `[Use only the facts you were given] The brief supplies no owner, no write-off figure, and no link between annual counting and the write-offs. No step may fill these in: each writes a [needs: …] marker instead, including [needs: figure for write-off growth] and [needs: owner], and every later step carries each marker forward untouched. Step 5 adds [needs: source for "Write-offs from miscounts have grown"] and lists every open marker under Gaps, as document-qa's Fix job directs, for the author to supply rather than resolving it. The RED fails because it invents a figure, an owner, and a deadline and reports no gaps.`
+**Expected finding:** `[Use only the facts you were given] The brief supplies no owner, no deadline, no write-off figure, and no link between annual counting and the write-offs. No step may fill these in: each writes a [needs: …] marker instead, including [needs: figure for write-off growth], [needs: owner] and [needs: date], and every later step carries each marker forward untouched. Step 5 adds [needs: source for "Write-offs from miscounts have grown"] and lists every open marker under Gaps, as document-qa's Fix job directs, for the author to supply rather than resolving it. The RED fails because it invents a figure, an owner, and a deadline and reports no gaps.`
 
 ---
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **25/25 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` files the tests depend on (`document-qa`, `recommendations-and-actions`, `scqa-framework`, `pyramid-editor`, `scr-narrative`, `plain-language`, `no-ai-slop`, and the job, output-mode, and pattern-list sections of `humanizer` and the jobs, procedure, and scope sections of `ste100-writer`), with no edit to either file afterwards. Every sub-skill job, output, and rule the workflow names was checked against the sub-skill as edited on 2026-10-22 and found as named; `routing-guide.md` was checked against `SKILL.md` and the sub-skills it routes to; no disagreement found.
+**Verified 2026-10-22.** Result: **25/25 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` files the tests depend on (`document-qa`, `recommendations-and-actions`, `scqa-framework`, `pyramid-editor`, `scr-narrative`, `plain-language`, `no-ai-slop`, the job, output-mode, and pattern-list sections of `humanizer`, and the jobs and procedure sections of `ste100-writer`), with no edit to either file afterwards. Checked after the 2026-10-22 edits to Step 4.6's Deliver line, W5, and G1: the Step 4.6 What changed lists match `no-ai-slop`'s Edit output, G1's `[needs: date]` matches `recommendations-and-actions` step 5, and W4's figures (500 + 410 + 280 = 1,190; 1,200 − 1,190 = 10, under 24) were computed by script.
 
-Produced against `TESTS.md` body sha256 `7afc124d873bc35f` and `SKILL.md` sha256 `56c823a15c945017`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `bc0a9ab324c42164` and `SKILL.md` sha256 `55f1785d6cb59941`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                                                    | RED flags | GREEN clean | Pass |
 |-----------------------------------------------------------------------------------------|-----------|-------------|------|

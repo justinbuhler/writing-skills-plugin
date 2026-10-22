@@ -25,8 +25,8 @@ STE has two parts:
 
 This skill applies ASD-STE100 Issue 9 from its own summaries:
 
-- `references/rules.md`: each writing rule, with its number, title, page,
-  and a summary.
+- `references/rules.md`: each writing rule, with its number, a paraphrased
+  title, its page, and a summary.
 - `references/word-choices.md`: the dictionary entries that the skill uses.
 - `references/checklist.md`: the final check.
 - `references/house-style.md`: house-style rules that are not STE.
@@ -68,6 +68,16 @@ Before you tell the user that a word is or is not approved, find it in
 `references/word-choices.md`. If it is not there, give your best judgment
 and say that the word needs a check in the Issue 9 dictionary. Do not state
 its approval as a fact.
+
+Put these words in one list, "Words to check in the Issue 9 dictionary", at
+the end of your response. Stop the list at these limits:
+
+- List a word only if it is not in `references/word-choices.md` and it is
+  not a technical noun or a technical verb of the text. A technical noun or
+  verb goes in the glossary check, not in this list.
+- Do not list a function word (the, and, of, if).
+- Give each word one line: the word, its part of speech, and your best
+  alternative.
 
 The standard is ASD copyright. Do not quote long parts of it to the user.
 Cite the rule number and page.
@@ -143,32 +153,49 @@ one for a unit or a full term.
 
 ## Part 1: Writing rules
 
-This is an index of the Issue 9 rules: number, title, and page. Before you
-apply a rule, read its summary and examples in `references/rules.md`. The
-paragraphs under a section heading below are instructions of this skill.
+This is an index of the Issue 9 rules: number, title (paraphrased), and
+page. Before you apply a rule, read its summary and examples in
+`references/rules.md`. The paragraphs under a section heading below are instructions of this skill.
 Obey them as well.
 
 ### Section 1: Words (p.45)
 
-- **Rule 1.1** Use words that are: approved in the dictionary, technical nouns, technical verbs. (p.46)
-- **Rule 1.2** Use approved words from the dictionary only as the specified part of speech. (p.46)
-- **Rule 1.3** Use approved words only with their approved meanings. (p.48)
-- **Rule 1.4** Use only the approved forms of verbs and adjectives. (p.48)
-- **Rule 1.5** You can use words that you can include in a technical noun category. (p.49)
-- **Rule 1.6** Use a word that is not approved in the dictionary, only when it is a technical noun or part of a technical noun. (p.53)
-- **Rule 1.7** Do not use words that are technical nouns as verbs. (p.55)
-- **Rule 1.8** Use technical nouns that are approved in your company, industry, or subject field. (p.55)
-- **Rule 1.9** When you must select a technical noun, use one which is short and easy to understand. (p.56)
-- **Rule 1.10** Do not use regional, slang, or jargon words as technical nouns. (p.56)
-- **Rule 1.11** Do not use different technical nouns for the same item. (p.57)
-- **Rule 1.12** You can use verbs that you can include in a technical verb category. (p.57)
-- **Rule 1.13** Do not use technical verbs as nouns. (p.60)
-- **Rule 1.14** Use American English spelling unless other official directives tell you differently. (p.61)
+- **Rule 1.1** Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs. (p.46)
+- **Rule 1.2** Give each approved word only the part of speech that the dictionary lists for it. (p.46)
+- **Rule 1.3** Give each approved word only the meaning that the dictionary assigns to it. (p.48)
+- **Rule 1.4** Inflect verbs and adjectives only in the forms that the dictionary permits. (p.48)
+- **Rule 1.5** A word that fits a technical-noun category is permitted. (p.49)
+- **Rule 1.6** An unapproved word is permitted only as a technical noun or inside one. (p.53)
+- **Rule 1.7** Never turn a technical noun into a verb. (p.55)
+- **Rule 1.8** Prefer the technical nouns that your organization or field has already sanctioned. (p.55)
+- **Rule 1.9** Choose the shortest, clearest technical noun available. (p.56)
+- **Rule 1.10** Keep regional terms, slang, and jargon out of technical nouns. (p.56)
+- **Rule 1.11** Call each item by a single technical noun throughout. (p.57)
+- **Rule 1.12** A word that fits a technical-verb category is permitted. (p.57)
+- **Rule 1.13** Never turn a technical verb into a noun. (p.60)
+- **Rule 1.14** Spell in American English unless an official directive says otherwise. (p.61)
+
+The Rule 1.12 test: if an approved verb is accurate in the sentence, the word
+is not a technical verb there, so use the approved verb ("reset" becomes SET,
+"trip" becomes OPEN, "prime" becomes FILL). Use a technical verb only when no
+approved verb gives the same information. When an approved verb fits the
+action exactly (BYPASS, ENGAGE, RELEASE), use it, not a longer paraphrase
+with other approved words.
+
+Approved does not mean safe in all uses. Some approved words have a narrow
+meaning (GET, COME, LOOK, CHARGE, AIRBORNE) or one part of speech only
+(RELEASE, CHECK, TEST, LEAK, HEAT, SINCE). `references/word-choices.md` lists
+them. Look at each one when it is in the text.
 
 ### Section 2: Multi-word nouns (p.63)
 
-- **Rule 2.1** Write multi-word nouns of no more than three words. (p.63)
-- **Rule 2.2** When a technical noun has more than three words, write it in full. Then, you can use one of these methods to make the technical noun clear: … (p.64)
+- **Rule 2.1** Limit a noun cluster to three words. (p.63)
+- **Rule 2.2** A technical noun of four or more words may be made clearer with a shorter form or with hyphens. (p.64)
+
+The three-word limit applies to the groups that you make. Keep an approved
+technical noun of four or more words whole, and apply Rule 2.2 to it: write
+it in full the first time. After that, prefer a shorter form or an
+abbreviation that is approved; repeating the full noun is allowed.
 
 To break up a multi-word noun, you must know how its words connect. If the
 source does not show this, and a split can give different meanings (Rule 4.1),
@@ -176,13 +203,23 @@ keep the noun and write `[needs: meaning of "<noun>"]` after it.
 
 ### Section 3: Verbs (p.67)
 
-- **Rule 3.1** Use only the verb forms that are given in the dictionary. (p.67)
-- **Rule 3.2** Use only these verb forms and tenses of verbs: … (p.68)
-- **Rule 3.3** Use the past participle form as an adjective. (p.68)
-- **Rule 3.4** Do not use auxiliary verbs to make complex verb constructions. (p.69)
-- **Rule 3.5** Use the "-ing" form of a verb only as a technical noun or as a modifier in a technical noun. (p.70)
-- **Rule 3.6** Use the active voice. In descriptive writing, you can use the passive voice only if the agent is unknown. (p.71)
-- **Rule 3.7** Use an approved verb to describe an action, not a noun or other parts of speech. (p.75)
+- **Rule 3.1** Restrict verbs to the forms that the dictionary lists. (p.67)
+- **Rule 3.2** Limit verbs to six permitted forms and tenses. (p.68)
+- **Rule 3.3** A past participle may serve as an adjective. (p.68)
+- **Rule 3.4** Avoid chains of auxiliary verbs that build complex verb phrases. (p.69)
+- **Rule 3.5** Limit "-ing" words to technical nouns and their modifiers. (p.70)
+- **Rule 3.6** Prefer the active voice. Descriptive text may use the passive only when the actor is unknown. (p.71)
+- **Rule 3.7** Express an action with an approved verb, not with a noun or another word class. (p.75)
+
+An "-ing" process name such as "cleaning" or "handling" is a technical noun
+only if it names a defined process, in the glossary or in a heading
+(Rule 3.5). In a sentence about the work, use the verb.
+
+Complex verbs: "has/have/had" with a past participle, "is to be", and a modal
+with "be" and a past participle ("must be removed") are not permitted
+(Rules 3.2, 3.4). A modal with an infinitive ("can remove") is permitted. A
+plain "is" or "was" with a past participle is an adjective that gives a
+condition (Rule 3.3) or a simple passive that Rule 3.6 decides.
 
 Do not invent an agent to make a sentence active. In procedural text, use the
 imperative (Rule 5.3). In descriptive text, keep the passive when the agent is
@@ -206,34 +243,34 @@ instruction is very important for safety or gives an important condition
 
 ### Section 4: Sentences (p.77)
 
-- **Rule 4.1** Write short and clear sentences. (p.77)
-- **Rule 4.2** Do not omit words or use contractions to make your sentences shorter. (p.79)
-- **Rule 4.3** Use a vertical list for complex text. (p.80)
-- **Rule 4.4** Use connecting words and connecting phrases to connect sentences that contain related topics. (p.83)
-- **Rule 4.5** When applicable, use an article (the, a, an) or a demonstrative adjective (this, these) before a noun or a multi-word noun. (p.84)
+- **Rule 4.1** Keep sentences brief and unambiguous. (p.77)
+- **Rule 4.2** Never drop words or contract them to save length. (p.79)
+- **Rule 4.3** Break complex text into a vertical list. (p.80)
+- **Rule 4.4** Link sentences on related topics with connectors. (p.83)
+- **Rule 4.5** Where it fits, put an article (the, a, an) or "this"/"these" before a noun or noun cluster. (p.84)
 
 ### Section 5: Procedural writing (p.87)
 
-- **Rule 5.1** Write short sentences. Use a maximum of 20 words in each sentence. (p.87)
-- **Rule 5.2** Write only one instruction in each sentence unless two or more actions occur at the same time. (p.88)
-- **Rule 5.3** Write instructions in the imperative (command) form. (p.89)
-- **Rule 5.4** When there is a condition that the reader must know about first, start the instruction with a descriptive statement. Then, divide that descriptive statement from the command with a comma. (p.90)
-- **Rule 5.5** Write notes only to give information, not instructions. (p.91)
+- **Rule 5.1** Procedural sentences: 20 words at most. (p.87)
+- **Rule 5.2** One instruction per sentence, except for simultaneous actions. (p.88)
+- **Rule 5.3** Phrase each instruction as an imperative. (p.89)
+- **Rule 5.4** Put a condition the reader needs first at the start, as a descriptive clause set off from the command by a comma. (p.90)
+- **Rule 5.5** Notes carry information only, never instructions. (p.91)
 
 ### Section 6: Descriptive writing (p.95)
 
-- **Rule 6.1** Give information gradually. (p.95)
-- **Rule 6.2** Use key words and key phrases to give your text a logical structure. (p.96)
-- **Rule 6.3** Write short sentences. Use a maximum of 25 words in each sentence. (p.98)
-- **Rule 6.4** Use paragraphs to show related information. (p.99)
-- **Rule 6.5** Make sure that each paragraph has only one topic. (p.100)
-- **Rule 6.6** Make sure that no paragraph has more than six sentences. (p.101)
+- **Rule 6.1** Release information in stages. (p.95)
+- **Rule 6.2** Structure the text with key words and phrases. (p.96)
+- **Rule 6.3** Descriptive sentences: 25 words at most. (p.98)
+- **Rule 6.4** Group related information into paragraphs. (p.99)
+- **Rule 6.5** Limit each paragraph to a single topic. (p.100)
+- **Rule 6.6** Six sentences at most per paragraph. (p.101)
 
 ### Section 7: Safety instructions (p.103)
 
-- **Rule 7.1** Use an applicable word (for example, "warning" or "caution") to identify the level of risk. (p.104)
-- **Rule 7.2** Start a safety instruction with a clear and accurate command or condition. (p.105)
-- **Rule 7.3** Give an explanation to show the risk or possible result. (p.106)
+- **Rule 7.1** Mark the risk level with a signal word such as "warning" or "caution". (p.104)
+- **Rule 7.2** Open a safety instruction with a precise command or condition. (p.105)
+- **Rule 7.3** Explain the risk or the likely consequence. (p.106)
 
 STE does not give rules for formatting (p.104). The standard's examples are in
 uppercase, but uppercase is not an STE rule. ANSI Z535 is a reference
@@ -254,24 +291,33 @@ Take each part of a safety instruction from the source only:
   (Rule 7.1). A source WARNING already shows a risk to persons, and a source
   CAUTION a risk to objects, so neither needs the marker.
 
+When a safety instruction in the source has no signal word, select WARNING or
+CAUTION from the risk that the source gives (Rule 7.1, p.104) and tell the
+user. If the source does not show the type of risk, write
+`[needs: level of risk]` in place of the signal word.
+
+A safety command that is valid STE but not precise ("BE CAREFUL WHEN YOU
+DISCONNECT THE LEADS") stays. Do not delete it to obey Rule 7.2. Keep it and
+add the marker that applies, for example `[needs: risk or result]`.
+
 Make sure that each command agrees with the work steps that it applies to.
 
 ### Section 8: Punctuation and word count (p.107)
 
-- **Rule 8.1** You can use all standard English punctuation marks but not the semicolon (;). (p.108)
-- **Rule 8.2** Use hyphens (-) to connect words that are directly related. (p.108)
-- **Rule 8.3** You can use parentheses: … (p.109)
-- **Rule 8.4** In a vertical list, a colon (:) has the same effect on word count as a period and shows the end of a sentence. (p.110)
-- **Rule 8.5** When you put text in parentheses, it counts as one word in that sentence. (p.111)
-- **Rule 8.6** Count each of these elements as one word: … (p.111)
-- **Rule 8.7** Hyphenated words count as one word. (p.114)
+- **Rule 8.1** Any standard English punctuation mark is permitted except the semicolon (;). (p.108)
+- **Rule 8.2** Hyphenate (-) words that belong closely together. (p.108)
+- **Rule 8.3** Parentheses have seven permitted uses. (p.109)
+- **Rule 8.4** For the word count, a colon (:) that introduces list items ends a sentence, as a period does. (p.110)
+- **Rule 8.5** Parenthesized text counts as a single word of its sentence. (p.111)
+- **Rule 8.6** Certain elements count as one word each. (p.111)
+- **Rule 8.7** A hyphenated compound counts once. (p.114)
 
 ### Section 9: Writing practices (p.115)
 
-- **Rule 9.1** Use a different sentence construction to write a sentence when a word-for-word replacement is not sufficient. (p.115)
-- **Rule 9.2** Use each approved word correctly. (p.119)
-- **Rule 9.3** When you use two words together, do not make phrasal verbs. (p.121)
-- **Rule 9.4** When you select terminology or wording, always use a consistent style. (p.122)
+- **Rule 9.1** Restructure the sentence when a one-for-one word swap does not work. (p.115)
+- **Rule 9.2** Use every approved word as the dictionary intends. (p.119)
+- **Rule 9.3** Do not form phrasal verbs from word pairs. (p.121)
+- **Rule 9.4** Keep terminology and wording consistent. (p.122)
 
 ### General recommendations (p.123)
 
@@ -285,8 +331,10 @@ GR-7 Inclusive language (p.127), GR-8 Possessive form (p.127).
 `references/word-choices.md` gives the common words that Issue 9 does not
 approve, the approved words to use in their place, and the dictionary page of
 each. It includes each word in the standard's list of recurring errors
-(dictionary p.145-146). For a word that is not in that file, see Source of
-truth.
+(dictionary p.145-146), the common verbs and modifiers of maintenance and
+safety text, the approved words with a narrow meaning, and the approved words
+that have one part of speech only. For a word that is not in that file, see
+Source of truth.
 
 APPROXIMATELY, SUFFICIENT, ADJACENT, INITIAL, PREVIOUS, SUBSEQUENT (adj),
 INSPECTION, MALFUNCTION, and PERSONNEL are approved. Do not replace them.
@@ -316,8 +364,11 @@ to the user, then do the checks below as well. Where the two differ, follow
 - Count the words in each sentence with the counting rules of Section 8.
   Procedural: maximum 20 (Rule 5.1). Descriptive and notes: maximum 25
   (Rule 6.3, Rule 5.5).
-- Find each passive verb. Change it to the active voice (Rule 3.6), without
-  an invented agent.
+- Find each passive verb (Rule 3.6). In procedural text, make it active,
+  usually with the imperative. In descriptive text, keep it if the agent is
+  unknown. If the source gives the agent, make that agent the subject, use
+  "you" or "we", or use a verb that needs no agent ("The valve opens").
+  Never invent an agent.
 - Find each complex verb construction (Rules 3.2, 3.4).
 - Find each "-ing" word. Keep it only if it is a technical noun, a modifier in
   a technical noun, or an approved "-ing" word (Rule 3.5).

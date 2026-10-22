@@ -6,8 +6,9 @@ Each test has:
 - **GREEN:** text that complies with the rule (should pass)
 - **Expected finding:** what the skill should flag in the RED case
 
-Rule numbers and titles are ASD-STE100 Issue 9's own, the same numbers that `SKILL.md`,
-`references/rules.md`, and `references/checklist.md` use.
+Rule numbers are ASD-STE100 Issue 9's own, the same numbers that `SKILL.md`,
+`references/rules.md`, and `references/checklist.md` use. Rule titles are this skill's
+paraphrases, the same ones that `references/rules.md` uses.
 A page ("p.N") is a page of the published standard.
 Where a finding says a word is or is not approved, the page is that word's dictionary entry.
 Each such entry, and each rule detail that a finding depends on, is in `references/rules.md` or
@@ -28,7 +29,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ## Section 1 — Words
 
-### Rule 1.1 — Use words that are approved in the dictionary, technical nouns, or technical verbs
+### Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs
 
 **RED:**
 
@@ -42,7 +43,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.1 — Use words that are approved in the dictionary ("shall")
+### Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("shall")
 
 **RED:**
 
@@ -56,7 +57,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.1 — Use words that are approved in the dictionary ("should")
+### Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("should")
 
 **RED (descriptive text):**
 
@@ -70,7 +71,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.2 — Use approved words from the dictionary only as the specified part of speech
+### Rule 1.2 — Give each approved word only the part of speech that the dictionary lists for it
 
 **RED:**
 
@@ -85,7 +86,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.2 — Use approved words from the dictionary only as the specified part of speech ("light")
+### Rule 1.2 — Give each approved word only the part of speech that the dictionary lists for it ("light")
 
 **RED:**
 
@@ -99,7 +100,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.3 — Use approved words only with their approved meanings
+### Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it
 
 **RED:**
 
@@ -114,7 +115,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.5 — You can use words that you can include in a technical noun category (quoted text)
+### Rule 1.5 — A word that fits a technical-noun category is permitted (quoted text)
 
 **RED (rewrite that changes placard text):**
 
@@ -129,7 +130,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.11 — Do not use different technical nouns for the same item
+### Rule 1.11 — Call each item by a single technical noun throughout
 
 **RED:**
 
@@ -144,7 +145,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.12 — You can use verbs that you can include in a technical verb category
+### Rule 1.12 — A word that fits a technical-verb category is permitted
 
 **RED:**
 
@@ -158,7 +159,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 1.14 — Use American English spelling unless other official directives tell you differently
+### Rule 1.14 — Spell in American English unless an official directive says otherwise
 
 **RED:**
 
@@ -174,7 +175,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ## Section 2 — Multi-word nouns
 
-### Rule 2.1 — Write multi-word nouns of no more than three words
+### Rule 2.1 — Limit a noun cluster to three words
 
 **RED:**
 
@@ -185,13 +186,13 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 > Refer to the installation procedure for the fuel system pressure relief valve assembly.
 
-**Expected finding:** `[2.1] The multi-word noun "fuel system pressure relief valve assembly installation procedure" has 8 words. The maximum is 3. Use a preposition to break it up: "the installation procedure for …". [2.2] "fuel system pressure relief valve assembly" is a technical noun of more than three words: write it in full, as the source writes it. After that, you can use a shorter form or hyphens (p.64-66).`
+**Expected finding:** `[2.1] The multi-word noun "fuel system pressure relief valve assembly installation procedure" has 8 words. The maximum is 3. Use a preposition to break it up: "the installation procedure for …". [2.2] "fuel system pressure relief valve assembly" is an approved technical noun of more than three words: keep it whole and write it in full, as the source writes it. If it occurs again, a shorter form, an abbreviation that is approved, or hyphens make it clearer; these are options, not duties (p.64-66).`
 
 ---
 
 ## Section 3 — Verbs
 
-### Rule 3.5 — Use the "-ing" form of a verb only as a technical noun or as a modifier in a technical noun
+### Rule 3.5 — Limit "-ing" words to technical nouns and their modifiers
 
 **RED:**
 
@@ -205,7 +206,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 3.6 — Use the active voice
+### Rule 3.6 — Prefer the active voice. Descriptive text may use the passive only when the actor is unknown
 
 **RED (procedural):**
 
@@ -219,7 +220,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 3.7 — Use an approved verb to describe an action, not a noun or other parts of speech
+### Rule 3.7 — Express an action with an approved verb, not with a noun or another word class
 
 **RED:**
 
@@ -235,7 +236,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ## Section 4 — Sentences
 
-### Rule 4.1 — Write short and clear sentences (be accurate)
+### Rule 4.1 — Keep sentences brief and unambiguous (be accurate)
 
 **RED (rewrite that changes a value):**
 
@@ -250,7 +251,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
-### Rule 4.2 — Do not omit words or use contractions to make your sentences shorter
+### Rule 4.2 — Never drop words or contract them to save length
 
 Context: the parts data names this kit, so "kit" is a technical noun here.
 
@@ -266,7 +267,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 4.5 — When applicable, use an article or a demonstrative adjective before a noun
+### Rule 4.5 — Where it fits, put an article (the, a, an) or "this"/"these" before a noun or noun cluster
 
 **RED:**
 
@@ -282,7 +283,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ## Section 5 — Procedural writing
 
-### Rule 5.1 — Write short sentences. Use a maximum of 20 words in each sentence
+### Rule 5.1 — Procedural sentences: 20 words at most
 
 **RED:**
 
@@ -299,7 +300,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.1 — Write short sentences. Use a maximum of 20 words in each sentence (description in a procedure)
+### Rule 5.1 — Procedural sentences: 20 words at most (description in a procedure)
 
 **RED:**
 
@@ -317,7 +318,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.2 — Write only one instruction in each sentence (sentence)
+### Rule 5.2 — One instruction per sentence, except for simultaneous actions (sentence)
 
 **RED:**
 
@@ -332,7 +333,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.2 — Write only one instruction in each sentence (work step)
+### Rule 5.2 — One instruction per sentence, except for simultaneous actions (work step)
 
 **RED:**
 
@@ -347,7 +348,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.3 — Write instructions in the imperative (command) form
+### Rule 5.3 — Phrase each instruction as an imperative
 
 **RED (procedural; the reader is the operator):**
 
@@ -361,7 +362,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.3 — Write instructions in the imperative (command) form ("you should")
+### Rule 5.3 — Phrase each instruction as an imperative ("you should")
 
 **RED:**
 
@@ -375,7 +376,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 5.4 — When there is a condition that the reader must know about first, start with it
+### Rule 5.4 — Put a condition the reader needs first at the start, as a descriptive clause set off from the command by a comma
 
 **RED:**
 
@@ -391,11 +392,11 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ## Section 6 — Descriptive writing
 
-### Rule 6.3 — Write short sentences. Use a maximum of 25 words in each sentence
+### Rule 6.3 — Descriptive sentences: 25 words at most
 
 **RED:**
 
-> The fuel system consists of a series of interconnected components including the fuel tank, the low-pressure pump, the high-pressure pump, the fuel filters, the fuel metering unit, and the associated pipework and valves that connect these components together.
+> The fuel system consists of a series of interconnected components including the fuel tank, the low-pressure pump, the high-pressure pump, the fuel filters, the fuel metering unit, and the associated pipes and valves that connect these components together.
 
 **GREEN:**
 
@@ -406,27 +407,27 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 > - The high-pressure pump
 > - The fuel filters
 > - The fuel metering unit
-> - The pipework and the valves that connect these components.
+> - The pipes and the valves that connect these components.
 
 **Expected finding:** `[6.3] This descriptive sentence has 38 words. The maximum is 25. Use a vertical list (Rule 4.3). Also [1.1]: "consists of" is not approved (→ HAVE, p.200: "The fuel system has these components:"); "including" is not approved (→ THRU or WITH, p.280); "associated" is not approved (→ CORRECT, RELATED, ITS, or THEIR, p.169); "interconnected" is not approved (interconnect (v) → CONNECT, p.287); "series" is not in the dictionary and is not a technical noun here.`
 
 ---
 
-### Rule 6.4 — Use paragraphs to show related information (topic sentence first)
+### Rule 6.4 — Group related information into paragraphs (topic sentence first)
 
 **RED:**
 
-> High temperatures, heavy loads, and long periods of operation can all contribute to problems in the lubrication system. The lubrication system requires regular maintenance.
+> The pump supplies oil to the bearings. The filter removes particles from the oil. The cooler keeps the oil temperature low. The lubrication system has three primary parts.
 
 **GREEN:**
 
-> Regular maintenance of the lubrication system is necessary. High temperatures, heavy loads, and long periods of operation can help to cause problems in the lubrication system.
+> The lubrication system has three primary parts. The pump supplies oil to the bearings. The filter removes particles from the oil. The cooler keeps the oil temperature low.
 
-**Expected finding:** `[6.4] The paragraph does not start with a topic sentence. Its topic is the maintenance of the lubrication system: put that sentence first. Also [1.1]: "requires" is not approved (require (v) → NECESSARY, p.360), and "contribute" is not in the dictionary: "can help to cause" keeps the partial cause (HELP (v), p.270; CAUSE (v), p.186). The floating "all" is not the approved adjective use of ALL (adj), p.160, so it goes.`
+**Expected finding:** `[6.4] The paragraph does not start with a topic sentence. The last sentence states the topic (the three primary parts of the lubrication system), and the other sentences describe each part: put the topic sentence first.`
 
 ---
 
-### Rule 6.6 — Make sure that no paragraph has more than six sentences
+### Rule 6.6 — Six sentences at most per paragraph
 
 **RED:**
 
@@ -444,7 +445,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ## Section 7 — Safety instructions
 
-### Rule 7.1 — Use an applicable word to identify the level of risk (warning, not note)
+### Rule 7.1 — Mark the risk level with a signal word such as "warning" or "caution" (warning, not note)
 
 **RED:**
 
@@ -458,7 +459,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 7.1 — Use an applicable word to identify the level of risk (caution, not warning)
+### Rule 7.1 — Mark the risk level with a signal word such as "warning" or "caution" (caution, not warning)
 
 **RED:**
 
@@ -473,7 +474,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 7.2 — Start a safety instruction with a clear and accurate command or condition
+### Rule 7.2 — Open a safety instruction with a precise command or condition
 
 **RED:**
 
@@ -491,7 +492,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 7.3 — Give an explanation to show the risk or possible result
+### Rule 7.3 — Explain the risk or the likely consequence
 
 **RED:**
 
@@ -512,7 +513,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ## Section 8 — Punctuation and word count
 
-### Rule 8.1 — You can use all standard English punctuation marks but not the semicolon
+### Rule 8.1 — Any standard English punctuation mark is permitted except the semicolon (;)
 
 **RED:**
 
@@ -526,7 +527,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
-### Rule 8.2 — Use hyphens to connect words that are directly related
+### Rule 8.2 — Hyphenate (-) words that belong closely together
 
 **RED:**
 
@@ -606,14 +607,14 @@ Each finding is tagged `[House style HS-n]`.
 
 **RED:**
 
-> Remove the fuel quantity indication sensor (FQIS). Examine the FQIS for damage.
-> (The parts catalog gives "fuel quantity indication sensor" as the technical noun and no shorter form. The applicable specification and the company glossary do not list "FQIS".)
+> Remove the oil pressure switch (OPS). Examine the OPS for damage.
+> (The parts catalog gives "oil pressure switch" as the technical noun. The applicable specification and the company glossary do not list "OPS".)
 
 **GREEN:**
 
-> Remove the fuel quantity indication sensor. Examine the fuel quantity indication sensor for damage.
+> Remove the oil pressure switch. Examine the oil pressure switch for damage.
 
-**Expected finding:** `[House style HS-5] "FQIS" is not a standard abbreviation: the applicable specification and the company glossary do not list it. The source gives the full term, so write it in full each time: "Examine the fuel quantity indication sensor for damage." Do not make a shorter form that the source does not give. Issue 9 permits an abbreviation in parentheses (Rule 8.3, p.109) and gives no rules for abbreviations (p.36). Rule 2.2 lets you write a technical noun of more than three words in full each time, and its methods (a shorter form or an approved abbreviation, p.64-65) are permitted, not required. "FQIS" is not one of those methods, but no Issue 9 rule forbids it. Thus this is a house-style finding, not an STE finding.`
+**Expected finding:** `[House style HS-5] "OPS" is not a standard abbreviation: the applicable specification and the company glossary do not list it, and it is not an abbreviation in wide general technical use. The source gives the full term, so write it in full: "Examine the oil pressure switch for damage." Issue 9 permits an abbreviation in parentheses (Rule 8.3, p.109) and gives no rules for abbreviations (p.36). "oil pressure switch" has three words, so Rule 2.1 permits it, and Rule 2.2 does not apply: a technical noun of three words or fewer needs no abbreviation (p.65). Thus this is a house-style finding, not an STE finding.`
 
 ---
 
@@ -683,9 +684,9 @@ Figures for quantities and warning placement are also tested again as house styl
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **41/41 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. The full ASD standard is no longer in the repository and was not used: every Expected finding, rule detail, and cited page was found in `SKILL.md` or `references/`. Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. The previous log's notes were not used; every test was graded from scratch.
+**Verified 2026-10-22.** Result: **41/41 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. No copy of the ASD standard was used: every Expected finding, rule detail, and cited page was found in `SKILL.md` or `references/`. Rule 2.2's shorter form, abbreviation, and hyphens were graded as options, not duties. Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. The worked examples in `SKILL.md` and `references/` were also checked against the skill's own rules, and none breaks them. The previous log's notes were not used; every test was graded from scratch.
 
-Produced against `TESTS.md` body sha256 `bca64478886cb021`, `SKILL.md` sha256 `6a05bc023dd2a13d`, `references/checklist.md` sha256 `2a4f8e85b6b82eb3`, `references/house-style.md` sha256 `5b06725a0791a002`, `references/rules.md` sha256 `b52a967702f57a13`, and `references/word-choices.md` sha256 `c2b783c00de75c5a` (the 4 files concatenated in filename order digest to `a02e3ecf455ee725`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
+Produced against `TESTS.md` body sha256 `7ebd995a27cd0607`, `SKILL.md` sha256 `dd5afd4aeb45eb52`, `references/checklist.md` sha256 `fad7a787889776e6`, `references/house-style.md` sha256 `5e0a03505f20f380`, `references/rules.md` sha256 `297a270f3ce9594f`, and `references/word-choices.md` sha256 `1a8aa0e9082aeb90` (the 4 files concatenated in filename order digest to `eaa06a9ba2b1a726`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
 
 | Test                                                        | RED flags | GREEN clean | Pass |
 |-------------------------------------------------------------|-----------|-------------|------|
@@ -731,4 +732,4 @@ Produced against `TESTS.md` body sha256 `bca64478886cb021`, `SKILL.md` sha256 `6
 | House style HS-7 — Fixed format for warnings and cautions   | ✓         | ✓           | PASS |
 | House style HS-8 — Warnings and cautions before their step  | ✓         | ✓           | PASS |
 
-Counts were checked with a Python split under Rules 8.4 to 8.7 (a hyphenated word is one word): 5.1 RED 25 words and its GREEN 18 before the colon; the description-in-a-procedure step 23, its descriptive sentence 22, and its GREEN sentences 9 and 15; 6.3 RED 38; the 2.1 multi-word noun 8; 6.6 RED 7 sentences, its first GREEN paragraph 6 (longest 19 words); 41 Expected findings in all.
+Counts were checked with a Python split under Rules 8.4 to 8.7 (a hyphenated word is one word, a number with its unit is one word): 5.1 RED 25 words and its GREEN 18 before the colon; the description-in-a-procedure step 23, its descriptive sentence 22, and its GREEN sentences 9 and 15; 6.3 RED 38; the 2.1 multi-word noun 8; 6.6 RED 7 sentences, its first GREEN paragraph 6 (longest 19 words); 41 Expected findings in all.

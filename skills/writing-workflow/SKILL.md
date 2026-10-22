@@ -130,7 +130,7 @@ Deliver: the full document as `humanizer` returns it when embedded (final text o
 
 Load the `no-ai-slop` skill and run its Edit job on the full draft from the previous step, or on its 4A sections in a mixed document. Then run `plain-language` (4A) again on the passages it changed.
 
-Deliver: a revised draft that sounds like the writer, not polished consulting prose.
+Deliver: the full document as `no-ai-slop` returns it, with its What changed list, then the What changed list from this step's `plain-language` re-run. The draft now sounds like the writer, not polished consulting prose.
 
 ---
 

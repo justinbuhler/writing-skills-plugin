@@ -24,7 +24,7 @@ Do not use an em dash (—) or an en dash (–). Write a separate sentence, or c
 
 ## HS-2 No slash for "and" or "or"
 
-Do not use a slash ("/") to mean "and" or "or". Write "and" or "or". The combination "and/or", a unit of measurement (km/h), and quoted text keep their slash. If the source does not show which word it means, keep the slash and write `[needs: "and" or "or" in "<text>"]`.
+Do not use a slash ("/") to mean "and" or "or". Write "and" or "or". The combination "and/or", a unit of measurement (km/h), and quoted text keep their slash. A slash in an established technical noun (a name from the parts data or the glossary, for example "load/unload valve") also stays: Rule 1.8 tells you to use the approved term, and Issue 9 wins over house style. If the source does not show which word it means, keep the slash and write `[needs: "and" or "or" in "<text>"]`.
 
 *Why:* "cloth/tissue" can mean the two items or one of them, and the reader cannot tell which.
 
@@ -54,7 +54,7 @@ Give each measured value its unit of measurement. Put a space between the number
 
 ## HS-5 Standard abbreviations only
 
-Use only standard abbreviations: unit symbols, and abbreviations that the applicable specification or company glossary lists. Write each other term in full. If the source does not give the full term, keep the abbreviation and write `[needs: full term for "<abbreviation>"]`. Without the glossary, say which abbreviations need a glossary check.
+Use only standard abbreviations: unit symbols, abbreviations that the applicable specification or company glossary lists, and abbreviations in wide general technical use whose full term is not in doubt (DC, AC, PVC, LED). Write each other term in full. If the source does not give the full term of such an other abbreviation, keep the abbreviation and write `[needs: full term for "<abbreviation>"]`. A widely used abbreviation does not get this marker. Without the glossary, say which project or company abbreviations need a glossary check.
 
 *Why:* an abbreviation helps only a reader who knows it, and the same letters can have two or more meanings.
 

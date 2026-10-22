@@ -232,13 +232,13 @@ Each test has:
 
 **RED:**
 
-> We shipped. Then we iterated. Then we iterated again. That's it. That's the whole thing. Ship. Learn. Repeat.
+> We shipped. Then we iterated. Then we iterated again. Simple as that. Nothing more to it. Ship. Learn. Repeat.
 
 **GREEN:**
 
 > We shipped, then iterated twice.
 
-**Expected finding:** `[dramatic fragmentation] Stacked one-sentence fragments used as a rhetorical rhythm device. Merge into complete sentences. A single fragment for emphasis would stay; a row of them reads as performance. "That's it. That's the whole thing." and "Ship. Learn. Repeat." are also fake-profound kickers: delete them, do not restate them, and end on the concrete sentence.`
+**Expected finding:** `[dramatic fragmentation] Stacked one-sentence fragments used as a rhetorical rhythm device. Merge into complete sentences. A single fragment for emphasis would stay; a row of them reads as performance. "Simple as that. Nothing more to it." add nothing: cut them. "Ship. Learn. Repeat." is also a fake-profound kicker: delete it, do not restate it, and end on the concrete sentence.`
 
 ---
 
@@ -479,13 +479,13 @@ The portability test is an editing principle, not a pattern, so detect mode does
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **28/28 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. `eval.md` was read only to check it against `SKILL.md`.
+**Verified 2026-10-22.** Result: **28/28 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. `eval.md` was read only to check the GREENs against it.
 
-Produced against `TESTS.md` body sha256 `e617c52e159329fb` and `SKILL.md` sha256 `25420f1a33775626`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `dd824fdda948d940` and `SKILL.md` sha256 `161c43e618f9d4ce`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 Failures: none.
 
-Every count in an Expected finding was checked by a Python split (word-list hits, sentences, colons, trailing -ing clauses, new numbers and words in each GREEN). No GREEN adds a fact, figure, name, source, or actor its RED lacks; P6's "formed" is entailed by "This partnership", P8's "likely" and "may" carry the hedges in "suggest" and "argue", and P12's "twice" is derived from "iterated. Then we iterated again."
+Every count in an Expected finding was checked by a Python split (word-list hits, sentences, colons, trailing -ing clauses, new words in each GREEN). No GREEN adds a fact, figure, name, source, or actor its RED lacks; P6's "formed" is entailed by "This partnership", P8's "likely" and "may" carry the hedges in "suggest" and "argue", and P12's "twice" is derived from "iterated. Then we iterated again."
 
 | Test                                                                    | RED flags | GREEN clean | Pass |
 |-------------------------------------------------------------------------|-----------|-------------|------|

@@ -9,12 +9,15 @@ authority (see `rules.md`).
 ## Words (Section 1)
 
 - [ ] Rule 1.1: each word is approved in the dictionary, a technical noun, or
-      a technical verb. Each word you are not sure of was looked up in
+      a technical verb. A verb is not a technical verb if an approved verb is
+      accurate in the sentence (Rule 1.12). Each word you are not sure of was looked up in
       `word-choices.md`. A word that is not there is reported as needing a
       check in the Issue 9 dictionary, not as approved or not approved.
 - [ ] Rule 1.2: each approved word is used only as its approved part of speech
       ("do a test", not "test the pump"; "do a check of", not "check").
-- [ ] Rule 1.3: each approved word has its approved meaning.
+- [ ] Rule 1.3: each approved word has its approved meaning. Look again at
+      each word in the `word-choices.md` table of restricted meanings (for
+      example GET, COME, LOOK, CHARGE).
 - [ ] Rule 1.4: each verb and adjective is in an approved form.
 - [ ] No word that `word-choices.md` lists is in the text, in the part of
       speech that it gives. A word in a technical noun (Rule 1.6) or in
@@ -27,10 +30,13 @@ authority (see `rules.md`).
 
 ## Multi-word nouns (Section 2)
 
-- [ ] Rule 2.1: no multi-word noun has more than three words. A hyphenated
-      group counts as one word.
+- [ ] Rule 2.1: no multi-word noun that you made has more than three words.
+      A hyphenated group counts as one word. An approved technical noun of
+      more than three words stays whole: Rule 2.2 applies to it.
 - [ ] Rule 2.2: a technical noun of more than three words is written in full
-      the first time, then in a shorter form or with hyphens.
+      the first time. After that, it is a shorter form (from its own words)
+      or an approved abbreviation, or it has hyphens. Either method obeys the
+      rule. Repeating the full noun is allowed, but a shorter form reads better.
 - [ ] A long noun whose meaning the source does not show is kept, with
       `[needs: meaning of "<noun>"]`.
 
@@ -38,14 +44,18 @@ authority (see `rules.md`).
 
 - [ ] Rules 3.2 and 3.4: each verb is the infinitive, the imperative, the
       simple present, past, or future, or a past participle as an adjective.
-      No "has/had" perfect, no progressive, no modal passive ("must be
-      removed", "can be adjusted").
+      A modal with an infinitive ("can adjust") is permitted. No "has/had"
+      perfect, no progressive, no "is to be", no modal passive ("must be
+      removed", "can be adjusted"). A plain "is"/"was" with a past participle
+      is an adjective (Rule 3.3) or a simple passive (Rule 3.6 decides).
 - [ ] Rule 3.5: each "-ing" word is a technical noun, a modifier in a
       technical noun, or an approved "-ing" word.
-- [ ] Rule 3.6: each sentence is in the active voice. A passive appears only
-      in descriptive text, and only if the agent is unknown. No agent was
-      invented. A specific agent the source implies but does not name is
-      `[needs: actor]`.
+- [ ] Rule 3.6: a passive appears only in descriptive text, and only if the
+      agent is unknown. In procedural text it became active, usually the
+      imperative. In descriptive text with a known agent, the agent from the
+      source is the subject, or "you" or "we", or a verb that needs no agent.
+      No agent was invented. A specific agent the source implies but does not
+      name is `[needs: actor]`.
 - [ ] Rule 3.7: an action is described with an approved verb where one
       exists.
 - [ ] "Shall", "should", "may", and "have to" are not used (dictionary: MUST,
@@ -92,7 +102,9 @@ authority (see `rules.md`).
 ## Safety instructions (Section 7)
 
 - [ ] Rule 7.1: each risk of injury or death is a warning. Each risk of
-      damage only is a caution.
+      damage only is a caution. A safety instruction that had no signal word
+      has one now, selected from the risk in the source, or
+      `[needs: level of risk]`.
 - [ ] Rule 7.2: each safety instruction starts with a command or a condition.
 - [ ] Rule 7.3: each safety instruction gives the risk or possible result,
       if the source gives it.
@@ -100,7 +112,8 @@ authority (see `rules.md`).
       is `[needs: command]`, `[needs: condition]`, `[needs: risk or result]`,
       or `[needs: level of risk]`, only where `SKILL.md` Section 7 says so.
 - [ ] Each command agrees with the work steps it applies to.
-- [ ] No safety data was removed.
+- [ ] No safety data was removed. A valid but imprecise command was kept,
+      with a marker, not deleted.
 
 ## Punctuation and word count (Section 8)
 
@@ -109,9 +122,8 @@ authority (see `rules.md`).
       a two-word adjective before a noun).
 - [ ] Rule 8.3: parentheses are used for the uses that Rule 8.3 lists
       (references, item identifiers, step numbers, abbreviations, singular
-      and plural, explanations, alternatives). The rule permits these uses.
-      It does not forbid other uses, so do not report one as a Rule 8.3
-      finding.
+      and plural, explanations, alternatives). A different use is a possible
+      issue: report it as advisory, with Rule 8.3, not as a violation.
 - [ ] Rules 8.4 to 8.7 were used to count words.
 
 ## Writing practices (Section 9)

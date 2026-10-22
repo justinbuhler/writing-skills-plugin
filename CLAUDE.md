@@ -115,7 +115,7 @@ When writing Expected findings: verify any specific counts (word counts, sentenc
 
 ## Key conventions
 
-- `ste100-writer` implements ASD-STE100 Issue 9 from its own summaries in `references/`. The standard is © ASD: never commit its text, and keep the summaries in our own words (no run of 12 or more words matching the standard). Rule numbers and page citations are fine. The pre-push hook checks every cited rule number against the `rules.md` headings.
+- `ste100-writer` implements ASD-STE100 Issue 9 from its own summaries in `references/`. The standard is © ASD: never commit its text, and keep the summaries in our own words (no run of 12 or more words matching the standard). Rule titles are paraphrased too, in `rules.md` headings and wherever another file cites a rule by title: use the `rules.md` paraphrase, never the standard's wording. Rule numbers and page citations are fine. The pre-push hook checks every cited rule number against the `rules.md` headings.
 - When a test agent reports a FAIL, determine whether the error is in the test file (wrong rule citation, wrong count) or the skill file (missing rule content) before editing.
 - Keep each `SKILL.md` under 500 lines. Put deep specifications and long examples in `references/` and link from the skill. Only humanizer's limit is machine-enforced; the rest is discipline.
 - `skills/no-ai-slop/eval.md` is a post-rewrite self-check the skill runs against its own output — not a test file and not covered by the agent test procedure above.

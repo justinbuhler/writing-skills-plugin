@@ -19,7 +19,7 @@ run(){ echo "▶ $*"; "$@" || fail=1; }
 # validate-plugin.yml: manifest listing must equal the skills/ directories
 echo "▶ plugin.json ↔ skills/ set equality"
 listed=$(jq -r '.skills[]' .claude-plugin/plugin.json | sed 's|^\./||' | sort)
-found=$(find skills -maxdepth 1 -mindepth 1 -type d | sort)
+found=$(find skills -maxdepth 1 -mindepth 1 -type d ! -name '.*' | sort)
 if [ "$listed" != "$found" ]; then
   echo "  mismatch:"; diff <(echo "$listed") <(echo "$found"); fail=1
 fi

@@ -22,7 +22,7 @@ jobs:
       - name: Check all skills are listed in plugin.json
         run: |
           listed=$(jq -r '.skills[]' .claude-plugin/plugin.json | sed 's|^\./||' | sort)
-          found=$(find skills -maxdepth 1 -mindepth 1 -type d | sort)
+          found=$(find skills -maxdepth 1 -mindepth 1 -type d ! -name '.*' | sort)
           if [ "$listed" != "$found" ]; then
             echo "Mismatch between plugin.json skills and skills/ directories"
             echo "Listed in plugin.json:"
