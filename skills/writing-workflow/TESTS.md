@@ -220,6 +220,22 @@ Each test has:
 
 ---
 
+### S4 — Out-of-sequence skills are not loaded
+
+**Scenario:** User asks for a full cleanup of a wordy internal memo whose background section includes a short inline list of setup tasks. The memo has no procedure section. The workflow runs Steps 1–5.
+
+**RED (wrong routing):**
+
+> After Step 2, run `concise-writing` to tighten the wordy sections and `diataxis` to split the setup steps from the background, then continue to Step 3.
+
+**GREEN (correct routing):**
+
+> Run Steps 1–5 only, with plain-language at Step 4, since the memo has no procedure section. `concise-writing` and `diataxis` are not part of the sequence, so the workflow does not load them. If the user wants the prose tightened or the steps separated from the background, point them to those skills to run on their own.
+
+**Expected finding:** `[Sequence] concise-writing and diataxis run on their own; the workflow never loads them. Inserting them between steps adds passes the sequence does not define. If the user wants those passes, point them to the skills as separate runs (see routing-guide.md).`
+
+---
+
 ## Pause behavior
 
 ### P1 — Pause after each step for a long, complex document
@@ -438,9 +454,9 @@ Each test has:
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **25/25 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` sections the tests depend on (`document-qa` jobs, number and output rules; `recommendations-and-actions` jobs and ownership step; `scqa-framework`; `scr-narrative` jobs and Critique output; `pyramid-editor` jobs and Step 6; `plain-language` jobs, active-voice and "you"/"we" rules; `no-ai-slop`; `humanizer`'s gate, output modes and pattern list; `ste100-writer`'s change-table step), with no edit to either file afterwards. Checked after the 2026-10-22 revision of W5 against `SKILL.md`:74 (the opening is the text before the first body section; a Background section's content stays in the body) and of `routing-guide.md`:57, whose three filler phrases all appear in `no-ai-slop`'s Often-empty phrases list and in none of `humanizer`'s patterns. Figures computed by script: W4 500 + 410 + 280 = 1,190 and 1,200 − 1,190 = 10, under 24 (2% of 1,200); S1's seven steps; `humanizer`'s 25 pattern headings, matching `routing-guide.md`:63.
+**Verified 2026-10-22.** Result: **26/26 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` sections the tests depend on (`document-qa` jobs, number, unsourced-assertion and output rules; `recommendations-and-actions` jobs, ownership step and rewrite output; `scr-narrative` Critique job and output; `plain-language` passive exception and actor rule; `humanizer`'s embedded mode), with no edit to either file afterwards. Checked after S4 was added: `SKILL.md` "Not in the sequence" (`concise-writing` and `diataxis` run on their own; `routing-guide.md` says when to use each) and `routing-guide.md`'s two sections saying `writing-workflow` runs neither. Figures computed by script: W4 500 + 410 + 280 = 1,190 and 1,200 − 1,190 = 10, under 24 (2% of 1,200); S1's seven steps; 26 test headings.
 
-Produced against `TESTS.md` body sha256 `541ae9c5198441f1` and `SKILL.md` sha256 `83690586d42d4878`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `dd711b7f5f786370` and `SKILL.md` sha256 `83690586d42d4878`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                                                    | RED flags | GREEN clean | Pass |
 |-----------------------------------------------------------------------------------------|-----------|-------------|------|
@@ -456,6 +472,7 @@ Produced against `TESTS.md` body sha256 `541ae9c5198441f1` and `SKILL.md` sha256
 | S1b — Long strategic document → scr-narrative at Step 1                                 | ✓         | ✓           | PASS |
 | S2 — Pyramid before SCQA (wrong order)                                                  | ✓         | ✓           | PASS |
 | S3 — document-qa run before language review                                             | ✓         | ✓           | PASS |
+| S4 — Out-of-sequence skills are not loaded                                              | ✓         | ✓           | PASS |
 | P1 — Pause after each step for a long, complex document                                 | ✓         | ✓           | PASS |
 | P2 — Run straight through for a short memo                                              | ✓         | ✓           | PASS |
 | P3 — Mid-length document with no pause trigger → run straight through                   | ✓         | ✓           | PASS |
@@ -470,4 +487,4 @@ Produced against `TESTS.md` body sha256 `541ae9c5198441f1` and `SKILL.md` sha256
 | L6 — Mixed document with AI patterns → 4.5 on the memo body only                        | ✓         | ✓           | PASS |
 | G1 — Brief lacks an owner and a figure → gaps carried to Step 5's Gaps list             | ✓         | ✓           | PASS |
 
-25 tests: 25 PASS, 0 PASS with discrepancy, 0 FAIL.
+26 tests: 26 PASS, 0 PASS with discrepancy, 0 FAIL.

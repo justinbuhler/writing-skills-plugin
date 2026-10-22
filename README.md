@@ -103,7 +103,7 @@ Know its limits before you rely on it:
 
 - **The rules are close to the standard.** An audit against the full text found 47 of 53 writing rules summarised faithfully and none wrong. The other six were fixed.
 - **The dictionary is not.** The standard's dictionary rules out about 1,300 words. The skill's word list covers the common ones in maintenance and safety text, not all of them. When a rewrite uses a word the list does not cover, the skill names it as one to check in the Issue 9 dictionary.
-- **Measured result.** In a trial on 10 new procedures, descriptions, and safety notices, judged against the full standard, the rewrites had no major defects, and about 84% of sentences complied fully. Nearly all the misses were word choices. That trial ran before the word list grew to its current size.
+- **Measured result.** Two trials, each on 10 new procedures, descriptions, and safety notices, were judged against the full standard. Neither found a major defect. About 84% of sentences complied fully in the first trial and about 82% in the second, which ran on different texts after the word list grew. Nearly all the misses were word choices, so a larger word list has not yet raised the rate on unseen text.
 
 Check STE output against the standard before you publish it.
 
@@ -126,7 +126,7 @@ Each skill has a `TESTS.md` of RED/GREEN cases. RED is text that breaks the skil
 | scqa-framework | 21 |
 | scr-narrative | 23 |
 | ste100-writer | 41 |
-| writing-workflow | 25 |
+| writing-workflow | 26 |
 
 The tests are run by a model, not a script. To run one skill's suite, start a Claude Code session in this repo and give it this prompt:
 
