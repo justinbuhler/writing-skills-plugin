@@ -49,7 +49,7 @@ dictionary.
 | conduct (v) | DO (v) | 198 |
 | confirm (v) | MAKE SURE (v) | 198 |
 | consist of (v) | HAVE (v) | 200 |
-| convert (v) | CHANGE (v) | 202 |
+| convert (v) | CHANGE (v). In engineering, mathematical, and scientific text, refer to Rule 1.12. | 202 |
 | cover (v) | INCLUDE (v), HAVE (v), COVER (TN) | 205 |
 | damage (v) | DAMAGE (n): CAUSE DAMAGE TO | 207 |
 | depress (v) | PUSH (v) | 213 |

@@ -24,9 +24,9 @@ Each test has:
 
 **GREEN (correct routing):**
 
-> Apply `ste100-writer` at Step 4 — the document is a technical procedure, and document type decides the fork.
+> Apply `ste100-writer` at Step 4 — the document is a technical procedure, so its document type decides the fork.
 
-**Expected finding:** `[Step 4 fork] Document type is a maintenance procedure → use ste100-writer. The fork criterion is not whether the topic is technical but whether the document is a procedure, manual, work instruction, or safety notice.`
+**Expected finding:** `[Step 4 fork] Document type is a maintenance procedure → use ste100-writer. The fork criterion is not whether the topic is technical but whether the document is a procedure, manual, work instruction, or safety notice, or must be read accurately by non-native English speakers or processed by machine translation.`
 
 ---
 
@@ -56,7 +56,7 @@ Each test has:
 
 **GREEN (correct routing):**
 
-> Default to `plain-language` at Step 4 without asking: a technical brief fits neither Step 4 list, so the default applies. Note to the user: "I've applied plain-language. Use ste100-writer instead if this document will serve as a procedure, manual, work instruction, or safety notice, or must be read accurately by non-native English speakers or processed by machine translation."
+> Default to `plain-language` at Step 4 without asking: a technical brief fits neither Step 4 list, so the default applies.
 
 **Expected finding:** `[Step 4 fork — default] A document type that fits neither Step 4 list takes the Step 4 default, plain-language, without a question to the user. The one question allowed before Step 1 is not for this case. Do not apply both skills.`
 
@@ -74,7 +74,7 @@ Each test has:
 
 **GREEN (correct routing):**
 
-> Skip Step 3. Note: "This document contains no recommendations or action items — skipping recommendations-and-actions and proceeding to Step 4."
+> Skip Step 3 and go on to Step 4. The briefing contains no recommendations, decisions required, or action items, and its observations alone do not trigger the step.
 
 **Expected finding:** `[Step 3 skip] The document is a purely analytical briefing. Step 3 applies only when the document contains recommendations, decisions required, or action items; findings alone do not trigger it. Applying it here would report its observations as orphans with no recommendation.`
 
@@ -92,7 +92,7 @@ Each test has:
 
 > Apply Step 3. The document contains action items ("Finance to confirm budget") and a recommendation ("Leadership should review the options") — both require the recommendations-and-actions quality check regardless of how the user labeled the document.
 
-**Expected finding:** `[Step 3 detection] Label the document type by its content, not the user's description. Any document containing recommendations, decisions required, or action items must go through Step 3, even if informally worded.`
+**Expected finding:** `[Step 3 detection] Step 3 is skipped only when the document contains no recommendations, decisions required, or action items. This document contains action items and a recommendation, so Step 3 runs. What the user called the document is not a skip condition.`
 
 ---
 
@@ -124,9 +124,9 @@ Each test has:
 
 **GREEN (correct routing):**
 
-> Skip Step 4.5 (humanizer — the text shows none of its patterns). Apply `no-ai-slop` at Step 4.6 to sharpen the voice and remove editorial slop.
+> Skip Step 4.5 (humanizer — the text shows none of its patterns). Apply `no-ai-slop` at Step 4.6 to sharpen the voice and remove editorial slop. Then run the Step 4 skill again on the passages no-ai-slop changed.
 
-**Expected finding:** `[Step 4.5 vs. 4.6] Humanizer applies when the text reaching Step 4.5 shows the patterns it catalogues; no-ai-slop targets voice flatness in any draft. A draft that sounds generic but shows none of humanizer's patterns gets no-ai-slop, not humanizer. The two steps can both apply when a draft shows AI patterns AND is still flat after humanizer.`
+**Expected finding:** `[Step 4.5 vs. 4.6] Humanizer applies when the text reaching Step 4.5 shows the patterns it catalogues; no-ai-slop targets voice flatness in any draft. A draft that sounds generic but shows none of humanizer's patterns gets no-ai-slop, not humanizer, and the Step 4 language skill then runs again on the passages no-ai-slop changed. The two steps can both apply when a draft shows AI patterns AND is still flat after humanizer.`
 
 ---
 
@@ -140,9 +140,9 @@ Each test has:
 
 **GREEN (correct routing):**
 
-> Apply `no-ai-slop` at Step 4.6 after humanizer. The draft has cleared the AI-pattern check but still lacks the writer's voice — no-ai-slop's sharper editorial pass addresses that.
+> Step 4.5 ends with `plain-language` run again on the passages humanizer changed; do that first if it has not been done. Then apply `no-ai-slop` at Step 4.6. The draft has cleared the AI-pattern check but still lacks the writer's voice — no-ai-slop's sharper editorial pass addresses that. Then run `plain-language` again on the passages no-ai-slop changed.
 
-**Expected finding:** `[Steps 4.5 + 4.6 combined] Both steps apply when the text reaching 4.5 shows humanizer's patterns (→ humanizer) and still reads as polished but voiceless after humanizer (→ no-ai-slop). Run 4.5 first, then 4.6 on the output.`
+**Expected finding:** `[Steps 4.5 + 4.6 combined] Both steps apply when the text reaching 4.5 shows humanizer's patterns (→ humanizer) and still reads as polished but voiceless after humanizer (→ no-ai-slop). Run 4.5 first, then 4.6 on the output. After each, run the Step 4 language skill again on the passages it changed.`
 
 ---
 
@@ -150,7 +150,7 @@ Each test has:
 
 ### S1 — Correct full sequence (all steps apply)
 
-**Scenario:** User submits a strategy brief that is AI-drafted, shows humanizer's patterns after Step 4, contains recommendations, still reads flat after the AI-pattern pass, and will go to a senior leadership audience.
+**Scenario:** User submits a short strategy brief that is AI-drafted, shows humanizer's patterns after Step 4, contains recommendations, still reads flat after the AI-pattern pass, and will go to a senior leadership audience.
 
 **RED (wrong sequence):**
 
@@ -163,12 +163,12 @@ Each test has:
 2. pyramid-editor               — body structure and logical flow
 3. recommendations-and-actions  — recommendations, decisions, actions
 4. plain-language               — stakeholder communication (not a procedure)
-4.5 humanizer                   — the text reaching 4.5 shows humanizer's patterns
-4.6 no-ai-slop                  — voice still flat after humanizer
+4.5 humanizer                   — the text reaching 4.5 shows humanizer's patterns; then plain-language again on the passages it changed
+4.6 no-ai-slop                  — voice still flat after humanizer; then plain-language again on the passages it changed
 5. document-qa                  — final pre-delivery gate
 ```
 
-**Expected finding:** `[Sequencing] All seven steps apply here. The governing thought from Step 1 feeds Step 2; the structured draft from Step 2 feeds Step 3; and so on. Each step's output is the next step's input — do not run steps in parallel or skip ahead.`
+**Expected finding:** `[Sequencing] All seven steps apply here. Step 1 is scqa-framework, because a short document needs only the opening framed, and Step 4 is plain-language, because the brief is not a procedure. After Step 4.5 and again after Step 4.6, the Step 4 skill (plain-language) runs again on the passages that step changed. The governing thought from Step 1 feeds Step 2; the structured draft from Step 2 feeds Step 3; and so on. Each step's output is the next step's input — do not run steps in parallel or skip ahead.`
 
 ---
 
@@ -214,9 +214,9 @@ Each test has:
 
 **GREEN (correct sequence):**
 
-> Run the language review (Step 4) before document-qa. document-qa is the final pre-delivery gate; a language rewrite after it would ship unchecked. A user who wants only a QA pass on a finished draft is routed to `document-qa` alone, outside the workflow.
+> Run the language review (Step 4) before document-qa. document-qa is the final pre-delivery gate; a language rewrite after it would ship unchecked.
 
-**Expected finding:** `[Step ordering] Inside the workflow, document-qa is always Step 5 — it is the final pre-delivery gate, so it runs after the language review. A QA-only request is a different route: document-qa alone, per the routing guide.`
+**Expected finding:** `[Step ordering] Inside the workflow, document-qa is always Step 5 — it is the final pre-delivery gate, so it runs after the language review.`
 
 ---
 
@@ -240,7 +240,7 @@ Each test has:
 
 ### P2 — Run straight through for a short memo
 
-**Scenario:** User submits a two-page executive memo for their department head, with its recommendation already stated in the opening, and wants it cleaned up before sending this afternoon.
+**Scenario:** User submits a two-page executive memo for their department head, with its recommendation already stated in the opening, and wants it cleaned up before sending this afternoon. The memo has a simple structure. They did not ask for checkpoints, and no step makes a significant structural change.
 
 **RED (wrong behavior):**
 
@@ -248,15 +248,15 @@ Each test has:
 
 **GREEN (correct behavior):**
 
-> Run all applicable steps without pausing and deliver the final document. A memo under 3 pages with a clear answer and a known audience runs straight through.
+> Run all applicable steps without pausing and deliver the final document. No pause trigger applies, so a memo under 3 pages with a clear answer and a known audience runs straight through.
 
-**Expected finding:** `[Pause behavior] Short memos under 3 pages with a clear answer and known audience run without step-by-step checkpoints. Pausing on a two-pager creates friction without adding value.`
+**Expected finding:** `[Pause behavior] No pause trigger applies: the memo is not long, its structure is simple, no checkpoints were requested, and no step makes a significant structural change. A run with no trigger goes straight through, as for a short memo (under 3 pages) with a clear answer and a known audience. Pausing after every step is wrong here.`
 
 ---
 
 ### P3 — Mid-length document with no pause trigger → run straight through
 
-**Scenario:** User submits a six-page status report for a known audience, with its single recommendation stated in the opening. They did not ask for checkpoints, and no step makes a significant structural change.
+**Scenario:** User submits a six-page status report with a simple structure for a known audience, with its single recommendation stated in the opening. They did not ask for checkpoints, and no step makes a significant structural change.
 
 **RED (wrong behavior):**
 
@@ -342,13 +342,13 @@ Each test has:
 
 **RED (wrong handling):**
 
-> Step 1A writes a new SCQA opening from the topic and audience alone, ignoring the memo's Background and content, and Step 2 outputs only a pyramid outline.
+> Step 1A writes a new SCQA opening from the topic and audience alone, discarding the Background section, and Step 2 outputs only a pyramid outline.
 
 **GREEN (correct handling):**
 
-> Step 1A builds the Situation, Complication, Question, and Answer from the memo's own Background and content, and replaces only the opening. Background facts the opening does not use stay in the memo for Step 2 to place. Step 2 returns the full memo in pyramid order, keeping the author's content.
+> Step 1A builds the Situation, Complication, Question, and Answer from the memo's own Background and content, and replaces only the opening. The opening is the text before the Background section; the Background section is body, and all of its content stays for Step 2 to place. Step 2 returns the full memo in pyramid order, keeping the author's content.
 
-**Expected finding:** `[Input] With a supplied draft, every step works on that draft and keeps the author's content unless a sub-skill rule requires the change. Step 1A builds the opening from the draft's own opening and content. Only a brief-only input has Step 2 write the body prose.`
+**Expected finding:** `[Input] With a supplied draft, every step works on that draft and keeps the author's content unless a sub-skill rule requires the change. Step 1A builds the opening from the draft's own opening and content. A Background section is body, not opening: its content stays in the body. Only a brief-only input has Step 2 write the body prose.`
 
 ---
 
@@ -430,17 +430,17 @@ Each test has:
 
 **GREEN (correct handling):**
 
-> Step 1 writes "Write-offs from miscounts have grown by [needs: figure for write-off growth]." Step 3 writes "Owner: [needs: owner]" and "Due: [needs: date]". Every other step that needs a detail the brief lacks, such as a missing link between annual counting and the write-offs, also writes a [needs: …] marker instead of a value. Steps 4 through 4.6 pass every marker through unchanged. Step 5 runs document-qa's Fix job, adds [needs: source for "Write-offs from miscounts have grown"], and lists every open marker under **Gaps**, which is the author's punch list.
+> Step 1 writes "Write-offs from miscounts have grown by [needs: figure for write-off growth]." Step 3 writes "Owner: [needs: owner]" and "Due: [needs: date]". Every other step that needs a detail the brief lacks, such as the reason quarterly counts would reduce write-offs or what happens if counts stay annual, also writes a [needs: …] marker instead of a value. Steps 4 through 4.6 pass every marker through unchanged. Step 5 runs document-qa's Fix job, adds [needs: source for "Write-offs from miscounts have grown"], and lists every open marker under **Gaps**, which is the author's punch list.
 
-**Expected finding:** `[Use only the facts you were given] The brief supplies no owner, no deadline, no write-off figure, and no link between annual counting and the write-offs. No step may fill these in: each writes a [needs: …] marker instead, including [needs: figure for write-off growth], [needs: owner] and [needs: date], and every later step carries each marker forward untouched. Step 5 adds [needs: source for "Write-offs from miscounts have grown"] and lists every open marker under Gaps, as document-qa's Fix job directs, for the author to supply rather than resolving it. The RED fails because it invents a figure, an owner, and a deadline and reports no gaps.`
+**Expected finding:** `[Use only the facts you were given] The brief supplies no owner, no deadline, no write-off figure, no reason why quarterly counts would reduce write-offs, and no statement of what happens if counts stay annual. No step may fill these in: each writes a [needs: …] marker instead, including [needs: figure for write-off growth], [needs: owner] and [needs: date], and every later step carries each marker forward untouched. Step 5 adds [needs: source for "Write-offs from miscounts have grown"] and lists every open marker under Gaps, as document-qa's Fix job directs, for the author to supply rather than resolving it. The RED fails because it invents a figure ("18%"), a period ("last year"), an owner, and a deadline, and reports no gaps.`
 
 ---
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **25/25 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` files the tests depend on (`document-qa`, `recommendations-and-actions`, `scqa-framework`, `pyramid-editor`, `scr-narrative`, `plain-language`, `no-ai-slop`, the job, output-mode, and pattern-list sections of `humanizer`, and the jobs and procedure sections of `ste100-writer`), with no edit to either file afterwards. Checked after the 2026-10-22 edits to Step 4.6's Deliver line, W5, and G1: the Step 4.6 What changed lists match `no-ai-slop`'s Edit output, G1's `[needs: date]` matches `recommendations-and-actions` step 5, and W4's figures (500 + 410 + 280 = 1,190; 1,200 − 1,190 = 10, under 24) were computed by script.
+**Verified 2026-10-22.** Result: **25/25 passed.** Graded by an Opus agent reading `SKILL.md`, `routing-guide.md`, and `TESTS.md`, plus the sub-skill `SKILL.md` sections the tests depend on (`document-qa` jobs, number and output rules; `recommendations-and-actions` jobs and ownership step; `scqa-framework`; `scr-narrative` jobs and Critique output; `pyramid-editor` jobs and Step 6; `plain-language` jobs, active-voice and "you"/"we" rules; `no-ai-slop`; `humanizer`'s gate, output modes and pattern list; `ste100-writer`'s change-table step), with no edit to either file afterwards. Checked after the 2026-10-22 revision of W5 against `SKILL.md`:74 (the opening is the text before the first body section; a Background section's content stays in the body) and of `routing-guide.md`:57, whose three filler phrases all appear in `no-ai-slop`'s Often-empty phrases list and in none of `humanizer`'s patterns. Figures computed by script: W4 500 + 410 + 280 = 1,190 and 1,200 − 1,190 = 10, under 24 (2% of 1,200); S1's seven steps; `humanizer`'s 25 pattern headings, matching `routing-guide.md`:63.
 
-Produced against `TESTS.md` body sha256 `bc0a9ab324c42164` and `SKILL.md` sha256 `55f1785d6cb59941`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `541ae9c5198441f1` and `SKILL.md` sha256 `83690586d42d4878`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                                                    | RED flags | GREEN clean | Pass |
 |-----------------------------------------------------------------------------------------|-----------|-------------|------|

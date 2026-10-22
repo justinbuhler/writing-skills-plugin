@@ -9,8 +9,10 @@ Use this guide to pick the right skill for a writing task.
 | Draft a full document from a brief or outline, or take an existing draft through every step before delivery | `writing-workflow` |
 | Write an opening hook | `scqa-framework` |
 | Restructure a draft for logical flow | `pyramid-editor` |
+| Sort a page that mixes steps, background, lookup facts, and lessons by documentation type | `diataxis` |
 | Audit findings, recommendations, decisions, actions | `recommendations-and-actions` |
 | Edit for plain English (reports, memos, stakeholder communications) | `plain-language` |
+| Tighten wordy, padded, or inflated prose without losing meaning | `concise-writing` |
 | Edit for controlled language (procedures, manuals) | `ste100-writer` |
 | Remove AI writing patterns from a draft | `humanizer` |
 | Sharpen voice and remove editorial slop from any draft | `no-ai-slop` |
@@ -52,7 +54,7 @@ Both skills remove AI-sounding patterns. Choose based on what the text shows, no
 | Signal | Use |
 |---|---|
 | Text reaching Step 4.5 shows the patterns `humanizer` catalogues | `humanizer` (Step 4.5) |
-| Text has filler phrases ("in conclusion", "it is important to note", "at the end of the day") | `no-ai-slop` |
+| Text has filler phrases ("it's important to note", "when it comes to", "at the end of the day") | `no-ai-slop` |
 | Writing sounds smooth but completely voiceless | `no-ai-slop`; run `humanizer` first only if the text also shows its patterns |
 | Human-authored draft that reads as flat, generic consulting prose | `no-ai-slop` (Step 4.6) |
 | Draft needs voice sharpened and editorial slop removed | `no-ai-slop` |
@@ -63,6 +65,25 @@ Both skills remove AI-sounding patterns. Choose based on what the text shows, no
 **`no-ai-slop`** is sharper — stronger voice preservation, editorial judgment, and a Detect job. Use it for any draft where the writing feels flat, even human-authored ones.
 
 Skip both when the draft already has a clear, natural voice.
+
+## concise-writing compared with plain-language and no-ai-slop
+
+| When | Use |
+|---|---|
+| The text says the right things in too many words | `concise-writing` |
+| The text must meet plain language standards for a stated audience | `plain-language` |
+| The text reads flat or voiceless, or shows editorial slop | `no-ai-slop` |
+
+`writing-workflow` does not run `concise-writing`; use it on its own. It never runs on ASD-STE100 text, whose approved words its substitution tables would undo.
+
+## diataxis compared with pyramid-editor
+
+| When | Use |
+|---|---|
+| The argument is in the wrong order: the answer is buried, or evidence and conclusions are mixed | `pyramid-editor` |
+| A section mixes kinds of content: steps with background, advice in a reference table, or a lookup table in a lesson | `diataxis` |
+
+`writing-workflow` does not run `diataxis`; use it on its own. It moves passages word for word and leaves summaries as written, because argument order belongs to `pyramid-editor`. A split adds headings such as "How to ..." and "About ...", which `document-qa` can flag as not parallel with their neighbours.
 
 ## scqa-framework compared with scr-narrative
 

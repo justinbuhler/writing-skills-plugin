@@ -2,6 +2,14 @@
 name: ste100-writer
 description: Write and rewrite technical documents in ASD-STE100 Simplified Technical English. Use this skill when the user asks for STE, ASD-STE100, Simplified Technical English, simplified English, controlled language, or plain technical English. Also use it for aircraft, defense, machine, or industrial maintenance procedures, work instructions, warnings, cautions, safety notices, and manuals that must be easy to translate or easy to read for non-native readers.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "ste100"
+    - "simplified technical english"
+    - "asd-ste100"
+    - "controlled language"
+    - "write a procedure in STE"
 ---
 
 # ASD-STE100 Writer
@@ -290,11 +298,16 @@ Take each part of a safety instruction from the source only:
   or to objects, keep the signal word and write `[needs: level of risk]`
   (Rule 7.1). A source WARNING already shows a risk to persons, and a source
   CAUTION a risk to objects, so neither needs the marker.
+- When the source has a signal word but gives no risk at all, write only
+  `[needs: risk or result]`: the signal word already shows the level, so do
+  not also write `[needs: level of risk]`.
 
 When a safety instruction in the source has no signal word, select WARNING or
 CAUTION from the risk that the source gives (Rule 7.1, p.104) and tell the
 user. If the source does not show the type of risk, write
-`[needs: level of risk]` in place of the signal word.
+`[needs: level of risk]` in place of the signal word. If it gives no risk at
+all, also write `[needs: risk or result]`: with no signal word, both are
+missing.
 
 A safety command that is valid STE but not precise ("BE CAREFUL WHEN YOU
 DISCONNECT THE LEADS") stays. Do not delete it to obey Rule 7.2. Keep it and

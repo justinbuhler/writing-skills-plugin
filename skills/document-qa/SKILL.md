@@ -2,6 +2,14 @@
 name: document-qa
 description: Systematic quality review of a complete document before client delivery or publication. Checks heading hierarchy and sequence, title clarity, content-heading alignment at every level, repetition across sections, and whether every claim is supported by evidence within the document. Use before any document goes to a client, senior stakeholder, or external audience.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "document qa"
+    - "final document check"
+    - "pre-delivery review"
+    - "heading hierarchy check"
+    - "check before sending"
 ---
 
 # Document QA
@@ -92,7 +100,7 @@ These headings tell the reader nothing about what the section contains:
 - Introduction, Overview, General, Miscellaneous, Other, Additional Information, Further Details, and "Summary" standing alone over a section that is not a summary
 - Any heading that could apply to any section of any document
 
-**Not vague:** a standard section name doing its job: the names in the Area 1 sequence (Purpose, Context, Background, Current State, Findings, Analysis, Conclusions, Implications, Recommendations, Next Steps, Appendix), Executive Summary, Key Terms or Glossary, and the standard parts of the declared document type (such as Scope and Definitions in a policy, or Risks in a status update). Flag one only when its section does something else.
+**Not vague:** a standard section name doing its job: the names in the Area 1 sequence (Purpose, Context, Background, Current State, Findings, Analysis, Conclusions, Implications, Recommendations, Next Steps, Appendix), Executive Summary, Key Terms or Glossary, and the standard parts of the declared document type (such as Scope and Definitions in a policy, or Risks in a status update). A standard name with a qualifier (Key Findings, Current State Analysis, Governance Recommendations) is treated the same way. Flag one only when its section does something else.
 
 **Rewrite each:** A heading should be specific enough that a reader could predict what the first sentence of the section says. Match the rewritten heading's form and capitalization to the other headings of the same kind at its level.
 
@@ -206,7 +214,7 @@ A quoted, attributed statement is evidence, not the author's claim: never flag o
 
 **Unsourced assertion:** A specific number, statistic, or factual claim with no source. Provide the source if the document contains one, label the figure as an estimate only if it is one, or remove the claim. When fixing and the document has no source, write `[needs: source for "<claim>"]`.
 
-**Orphaned evidence:** An exhibit (table, figure, chart) or a data set that appears in the document but is never referenced in the prose or tied to a specific claim. Every exhibit must be introduced and connected to the argument. A fact stated in the prose of a findings section is itself an observation: check it as a claim (sourced, not overstated), not as orphaned evidence, even when no later conclusion cites it.
+**Orphaned evidence:** An exhibit (table, figure, chart) or a data set that appears in the document but is never referenced in the prose or tied to a specific claim. Every exhibit must be introduced and connected to the argument. An exhibit the prose points at under a wrong label ("the table above" for a figure) is referenced: report the wrong label once, as an Area 6 cross-reference error, not as orphaned evidence. A fact stated in the prose of a findings section is itself an observation: check it as a claim (sourced, not overstated), not as orphaned evidence, even when no later conclusion cites it.
 
 ### Conditional claims — special handling
 
@@ -255,7 +263,7 @@ General-audience acronyms (IT, PDF, API, CEO, FY, Q1–Q4) need neither an expan
 
 Every number that appears more than once must match across all appearances. Apply different standards to hard numbers and estimates. Also check every stated count against the list or table it introduces ("four gaps" over five bullets), and every Total or Subtotal against the sum of its rows; a mismatch is [Blocking].
 
-**Hard numbers** (dates, version numbers, contract figures, exact counts) must match exactly wherever they appear. Any discrepancy is a blocking error. An unqualified round figure ("20,000") is an estimate when the document gives a more precise figure for the same quantity: apply the steps below, and if it passes them, at most [Polish] "write it as approximate, or give the exact figure".
+**Hard numbers** (dates, version numbers, contract figures, exact counts) must match exactly wherever they appear. Any discrepancy is a blocking error. An unqualified round figure ("20,000") is an estimate when the document gives a more precise figure for the same quantity: apply the steps below, and if it passes them, raise it as [Polish] "write it as approximate, or give the exact figure".
 
 **Estimates** (figures qualified with "approximately," "estimated," "~", "about," or similar) have inherent variance. Before flagging an estimate mismatch:
 1. Check whether the figures are measuring the same scope. A total population estimate and a licensed-accounts figure may both be correct if one is a subset of the other — look for scope qualifiers ("baseline accounts," "licensed field staff," etc.) that explain the difference.
@@ -274,12 +282,12 @@ Every number that appears more than once must match across all appearances. Appl
 
 ### Cross-reference validity
 
-Every internal cross-reference ("see Section 3," "as shown in Figure 4," "the table below," a footnote marker, a citation number) must point to content that exists and is correctly labeled. In a document with unnumbered headings, "Section N" means the Nth top-level section; if that section holds the content, at most [Polish] "cite the heading by name". When fixing, point a broken reference at its correct target only if the document contains that target; otherwise write `[needs: <what the reference should point to>]`.
+Every internal cross-reference ("see Section 3," "as shown in Figure 4," "the table below," a footnote marker, a citation number) must point to content that exists and is correctly labeled. In a document with unnumbered headings, "Section N" means the Nth top-level section; if that section holds the content, raise it as [Polish] "cite the heading by name". When fixing, point a broken reference at its correct target only if the document contains that target; otherwise write `[needs: <what the reference should point to>]`.
 
 **Flag:**
 - "See Section 3.2" when Section 3.2 does not exist
 - "The table below" when no table follows
-- A footnote marker with no note, which leaves its claim unsourced
+- A footnote marker with no note, which leaves its claim unsourced: report it once, here, not also as an Area 5 unsourced assertion
 - Outdated cross-references from a prior version of the document
 
 ### Exec summary–body consistency

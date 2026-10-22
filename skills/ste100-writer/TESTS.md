@@ -37,7 +37,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 **GREEN:**
 
-> At the start of the inspection, make sure that the apparatus is correctly attached.
+> When you start the inspection, make sure that the apparatus is correctly attached.
 
 **Expected finding:** `[1.1] "Commence" is not approved: use START (p.194). "Verifying" is not approved: use MAKE SURE (p.422); as an "-ing" form it also breaks Rule 3.5. "By" is approved only as a mathematical function word (BY (prep), p.182), so "by verifying" also goes. "Secured" is not approved: for this condition, secure (adj) → CORRECTLY (adv), as in "correctly attached" (p.370). "Inspection" is approved (INSPECTION (n), p.285): keep it. "Apparatus" is not in the dictionary: keep it only if it is a technical noun in the company glossary (Rules 1.5, 1.8), and say that it needs a glossary check.`
 
@@ -75,14 +75,14 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 **RED:**
 
-> Test the pump before you install it.
+> Before you install the pump, test it.
 > (Using "test" as a verb — "test" is approved only as a noun in the dictionary.)
 
 **GREEN:**
 
-> Do a test of the pump before you install it.
+> Before you install the pump, do a test of it.
 
-**Expected finding:** `[1.2] "test" is approved as a noun only (TEST (n), p.401). Use "do a test of" instead of "test the pump".`
+**Expected finding:** `[1.2] "test" is approved as a noun only (TEST (n), p.401). Use "do a test of it" instead of "test it".`
 
 ---
 
@@ -109,7 +109,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 **GREEN:**
 
-> Always obey the safety procedures.
+> Obey the safety procedures at all times.
 
 **Expected finding:** `[1.3] "follow" is approved to mean "come after, go after", not "obey" (FOLLOW (v), p.254). Use "obey".`
 
@@ -149,13 +149,13 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 **RED:**
 
-> The transmitter converts the pressure signal into a voltage.
+> The motor rotates the drive shaft.
 
 **GREEN:**
 
-> The transmitter changes the pressure signal into a voltage.
+> The motor turns the drive shaft.
 
-**Expected finding:** `[1.12] "converts" can be a technical verb (category 3 a, engineering), but an approved verb gives the same information: convert (v) → CHANGE (v) (p.202). If an approved verb gives the same information, use the approved verb (p.59): "The transmitter changes the pressure signal into a voltage."`
+**Expected finding:** `[1.12] "rotates" cannot stay as a technical verb. Do not use a technical verb if you can write the same sentence with approved words (p.59), and an approved verb gives the same information: rotate (v) → TURN (v) (p.364; list of recurring errors, p.145). "The motor turns the drive shaft." The word is thus also not approved (Rule 1.1): a finding with the tag [1.1] and this basis is the same finding.`
 
 ---
 
@@ -163,13 +163,13 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 **RED:**
 
-> Apply a torque of twenty-five newton-metres.
+> Torque the centre bolt to twenty-five newton-meters.
 
 **GREEN:**
 
-> Apply a torque of twenty-five newton-meters.
+> Torque the center bolt to twenty-five newton-meters.
 
-**Expected finding:** `[1.14] "metres" is British English spelling. Use American English spelling, "newton-meters" (p.61), unless an official directive gives a different spelling. Do not change "twenty-five" to a figure: STE has no rule that numbers are figures, and its own examples use number words (p.108, p.111). STE gives no rules for units of measurement (p.36).`
+**Expected finding:** `[1.14] "centre" is British English spelling. Use American English spelling, "center" (p.61; CENTER (TN), p.187), unless an official directive gives a different spelling. Do not change "twenty-five" to a figure: STE has no rule that numbers are figures, and its own examples use number words (p.108, p.111). STE gives no rules for units of measurement (p.36).`
 
 ---
 
@@ -211,18 +211,19 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 **RED (procedural):**
 
 > The valve must be closed before the pump is started.
+> (The source gives an instruction: the reader closes the valve and starts the pump. It does not describe the condition of the valve or of the pump.)
 
 **GREEN:**
 
-> Close the valve before the pump starts.
+> Before you start the pump, close the valve.
 
-**Expected finding:** `[3.6] Passive voice in a procedure ("must be closed", "is started"). Use the active voice, with the imperative: "Close the valve before the pump starts." "must be closed" is also a complex verb construction (Rule 3.4).`
+**Expected finding:** `[3.6] Passive voice in a procedure ("must be closed", "is started"). Use the active voice: the imperative for the command (Method 3, p.73), and "you" as the subject of "start", because the sentence does not give the agent and the agent is the reader (Method 4, p.74): "Before you start the pump, close the valve." The "before" clause only gives the sequence of two actions, so it is not a Rule 5.4 condition: it can come first, as here, or stay after the command. "must be closed" is also a complex verb construction (Rule 3.4).`
 
 ---
 
 ### Rule 3.7 — Express an action with an approved verb, not with a noun or another word class
 
-**RED:**
+**RED (procedural; the reader completes the check):**
 
 > The completion of the check is required before flight.
 
@@ -230,7 +231,7 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 > Complete the check before flight.
 
-**Expected finding:** `[3.7] "completion" describes the action with a noun. Use the approved verb: "Complete the check before flight." Also [1.1]: completion (n) is not approved (→ COMPLETE (v), END (n), p.196), and "is required" uses require (v), which is not approved (→ NECESSARY, p.360).`
+**Expected finding:** `[3.7] "completion" describes the action with a noun. Use the approved verb: "Complete the check before flight." Also [1.1]: completion (n) is not approved (→ COMPLETE (v), END (n), p.196), and "is required" uses require (v), which is not approved (→ NECESSARY, p.360). Also [3.6]: "is required" is a passive. The imperative "Complete" removes it.`
 
 ---
 
@@ -271,13 +272,13 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 **RED:**
 
-> Close isolation valve before you remove pump.
+> Before you remove pump, close isolation valve.
 
 **GREEN:**
 
-> Close the isolation valve before you remove the pump.
+> Before you remove the pump, close the isolation valve.
 
-**Expected finding:** `[4.5] Missing articles ("the") before "isolation valve" and "pump". Use an article where applicable: "Close the isolation valve before you remove the pump." Omitting articles also breaks Rule 4.2.`
+**Expected finding:** `[4.5] Missing articles ("the") before "pump" and "isolation valve". Use an article where applicable: "Before you remove the pump, close the isolation valve." Omitting articles also breaks Rule 4.2.`
 
 ---
 
@@ -296,7 +297,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 > 1. Close the isolation valve.
 > 2. Tell the maintenance controller immediately.
 
-**Expected finding:** `[5.1] This procedural sentence has 25 words. The maximum is 20. Divide it into shorter sentences. Also: it has two instructions (Rule 5.2); "reading" is an "-ing" form (Rule 3.5) and reading (n) is not approved (→ INDICATION, p.350); "above" is for physical positions only, so for a limit use MORE THAN (Rule 9.2, p.150); "notify" is not approved (→ TELL, p.318).`
+**Expected finding:** `[5.1] This procedural sentence has 25 words. The maximum is 20. Divide it into shorter sentences. Also: it has two instructions (Rule 5.2); "reading" is an "-ing" form (Rule 3.5) and reading (n) is not approved (→ INDICATION, p.350), and here the approved verb SHOW gives the same information more clearly ("the pressure gauge shows", SHOW (v), p.377; Rule 3.7, p.75); "above" is for physical positions only, so for a limit use MORE THAN (Rule 9.2, p.150); "notify" is not approved (→ TELL, p.318).`
 
 ---
 
@@ -407,7 +408,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 > - The high-pressure pump
 > - The fuel filters
 > - The fuel metering unit
-> - The pipes and the valves that connect these components.
+> - The pipes and the valves that connect these components together.
 
 **Expected finding:** `[6.3] This descriptive sentence has 38 words. The maximum is 25. Use a vertical list (Rule 4.3). Also [1.1]: "consists of" is not approved (→ HAVE, p.200: "The fuel system has these components:"); "including" is not approved (→ THRU or WITH, p.280); "associated" is not approved (→ CORRECT, RELATED, ITS, or THEIR, p.169); "interconnected" is not approved (interconnect (v) → CONNECT, p.287); "series" is not in the dictionary and is not a technical noun here.`
 
@@ -431,7 +432,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 **RED:**
 
-> The hydraulic system supplies power to the flight control surfaces. It consists of a reservoir, 2 pumps, and a set of actuators. The primary pump operates continuously when the engine runs. If the primary pump fails, the secondary pump starts automatically. The hydraulic system includes a pressure relief valve that limits maximum pressure. The actuators convert hydraulic pressure to mechanical motion. The hydraulic system is monitored by a set of sensors that send data to the flight management system.
+> The hydraulic system supplies power to the flight control surfaces. It consists of a reservoir, 2 pumps, and a set of actuators. The primary pump operates continuously when the engine runs. If the primary pump fails, the secondary pump starts automatically. The hydraulic system includes a pressure relief valve that limits maximum pressure. The actuators change hydraulic pressure to mechanical motion. The hydraulic system is monitored by a set of sensors that send data to the flight management system.
 
 **GREEN:**
 
@@ -439,7 +440,7 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 >
 > A set of sensors monitors the hydraulic system and sends data to the flight management system.
 
-**Expected finding:** `[6.6] The paragraph has 7 sentences. The maximum is 6. Divide it into two paragraphs. Also: the last sentence is passive with a known agent ("by a set of sensors"), so make it active (Rule 3.6). These words are not approved (Rule 1.1, 1.2): "consists" (→ HAVE, p.200), "runs" (→ OPERATE, p.365), "fails" (for equipment → FAILURE (TN): "a failure of … occurs", p.246), "limits" (LIMIT is a noun only, p.299), "convert" (→ CHANGE, p.202), "motion" (→ MOVEMENT, p.313).`
+**Expected finding:** `[6.6] The paragraph has 7 sentences. The maximum is 6. Divide it into two paragraphs. Also: the last sentence is passive with a known agent ("by a set of sensors"), so make it active (Rule 3.6). These words are not approved (Rule 1.1, 1.2): "consists" (→ HAVE, p.200), "runs" (→ OPERATE, p.365), "fails" (for equipment → FAILURE (TN): "a failure of … occurs", p.246), "limits" (LIMIT is a noun only, p.299), "motion" (→ MOVEMENT, p.313).`
 
 ---
 
@@ -463,12 +464,12 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 **RED:**
 
-> WARNING: DO NOT APPLY MORE THAN 5 Nm OF TORQUE TO THE SENSOR CONNECTOR. TOO MUCH TORQUE DAMAGES THE SENSOR CONNECTOR.
+> WARNING: DO NOT TORQUE THE SENSOR CONNECTOR TO MORE THAN 5 Nm. TOO MUCH TORQUE DAMAGES THE SENSOR CONNECTOR.
 > (The risk is damage to equipment only. There is no risk of injury.)
 
 **GREEN:**
 
-> CAUTION: DO NOT APPLY MORE THAN 5 Nm OF TORQUE TO THE SENSOR CONNECTOR. TOO MUCH TORQUE CAUSES DAMAGE TO THE SENSOR CONNECTOR.
+> CAUTION: DO NOT TORQUE THE SENSOR CONNECTOR TO MORE THAN 5 Nm. TOO MUCH TORQUE CAUSES DAMAGE TO THE SENSOR CONNECTOR.
 
 **Expected finding:** `[7.1] The risk is damage to equipment only, so use a caution, not a warning (p.104). Keep "warning" for a risk of injury or death. Also [1.2]: "DAMAGES" uses damage as a verb, but DAMAGE is approved as a noun only (p.207): "CAUSES DAMAGE TO".`
 
@@ -684,9 +685,9 @@ Figures for quantities and warning placement are also tested again as house styl
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **41/41 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. No copy of the ASD standard was used: every Expected finding, rule detail, and cited page was found in `SKILL.md` or `references/`. Rule 2.2's shorter form, abbreviation, and hyphens were graded as options, not duties. Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. The worked examples in `SKILL.md` and `references/` were also checked against the skill's own rules, and none breaks them. The previous log's notes were not used; every test was graded from scratch.
+**Verified 2026-10-22.** Result: **41/41 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. No copy of the ASD standard was used: every Expected finding and rule detail was checked in `SKILL.md` or `references/`; a cited dictionary page that the references do not contain (for example CENTER (TN), p.187, or SHOW (v), p.377) was accepted where the finding's substance could be checked from the references. Rule 2.2's shorter form, abbreviation, and hyphens were graded as options, not duties. The Rule 1.14 and Rule 7.1 (caution) tests and the HS-6 example use the verb TORQUE (TORQUE (v), p.406); "Apply a torque of 25 ±2 Nm." in Rule 4.1 keeps the noun, a technical noun (Rule 1.5, category 7). Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. The worked examples in `SKILL.md` and `references/` were also checked against the skill's own rules, and none breaks them. The previous log's notes were not used; every test was graded from scratch.
 
-Produced against `TESTS.md` body sha256 `7ebd995a27cd0607`, `SKILL.md` sha256 `dd5afd4aeb45eb52`, `references/checklist.md` sha256 `fad7a787889776e6`, `references/house-style.md` sha256 `5e0a03505f20f380`, `references/rules.md` sha256 `297a270f3ce9594f`, and `references/word-choices.md` sha256 `1a8aa0e9082aeb90` (the 4 files concatenated in filename order digest to `eaa06a9ba2b1a726`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
+Produced against `TESTS.md` body sha256 `be98045881a7c57a`, `SKILL.md` sha256 `c0c931d650d7843f`, `references/checklist.md` sha256 `e0ada7e4fd35c647`, `references/house-style.md` sha256 `a07b2cb8a6a31d07`, `references/rules.md` sha256 `67a6308d4aaf2485`, and `references/word-choices.md` sha256 `41164cf4c524654c` (the 4 files concatenated in filename order digest to `cc5361eaded48d0c`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
 
 | Test                                                        | RED flags | GREEN clean | Pass |
 |-------------------------------------------------------------|-----------|-------------|------|

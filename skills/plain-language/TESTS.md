@@ -6,7 +6,7 @@ Each test has:
 - **GREEN:** text that passes the check (should be clean)
 - **Expected finding:** what the skill should flag in the RED case
 
-Unless a test states its own context, the writer of every RED is the agency that receives and decides the applications, so "we" and "us" in a GREEN mean that agency.
+Unless a test states its own context, the writer of every RED is the agency that receives and decides the applications, so "we" and "us" in a GREEN mean that agency. The reader is the applicant, so "you" means the applicant.
 
 ---
 
@@ -56,9 +56,11 @@ Unless a test states its own context, the writer of every RED is the agency that
 
 > **You may be eligible for benefits if you are over 65 or have a qualifying disability.**
 >
-> The Department of Health was established in 1953. Since then, it has administered benefits for over 60 million Americans. The program covers hospital visits, prescription drugs, and preventive care. In 2022, Congress expanded eligibility.
+> The program covers hospital visits, prescription drugs, and preventive care.
+>
+> The Department of Health was established in 1953. Since then, it has administered benefits for over 60 million Americans. In 2022, Congress expanded eligibility.
 
-**Expected finding:** `[bottom-line-up-front] The eligibility statement is buried at the end of a long preamble. Move the key message — who qualifies — to the first sentence, in its own paragraph above the background.` No separate topic-sentence finding: the buried main point is the same defect, reported once as bottom-line-up-front. No passive finding for "was established": who established the Department does not matter to the reader (passive exception).
+**Expected finding:** `[bottom-line-up-front] The eligibility statement is buried at the end of a long preamble. Move the key message — who qualifies — to the first sentence, in its own paragraph above the rest.` `[one idea per paragraph] The 5-sentence paragraph covers three topics: who qualifies, what the program covers, and background (the Department's history and the 2022 expansion). Give each its own paragraph, with who qualifies first and the background last.` No separate topic-sentence finding: the buried main point is the same defect, reported once as bottom-line-up-front. No passive finding for "was established": who established the Department does not matter to the reader (passive exception).
 
 ---
 
@@ -103,6 +105,7 @@ Unless a test states its own context, the writer of every RED is the agency that
 **Expected finding:**
 
 - `[passive] "must be submitted by the deadline" → "Send us your application by the deadline"`
+- `[word choice] "submitted" → "send"`
 - `[passive] "will be rejected" → "We will reject incomplete forms"`
 - `[passive] "will be communicated to the applicant by" → "The reviewing officer will notify you" ("the applicant" becomes "you")`
 
@@ -373,7 +376,7 @@ Unless a test states its own context, the writer of every RED is the agency that
 - `[modal] "FISMA compliance is required for all federal information systems" → "All federal information systems must comply with…" ("must" for an obligation)`
 - No passive finding for "is governed by the Privacy Act": the law is the actor (passive exception). Keep "collected" without an actor: the RED names no collector, so do not supply "we".
 - `[passive] "will be processed" → "We will process"`
-- `[one idea per paragraph] The paragraph covers three topics: the Privacy Act, FISMA, and the processing software. Give each its own paragraph.`
+- No [one idea per paragraph] finding: the RED has 3 sentences, and the rule needs more than 3.
 - The rewrite lists all three `[needs: …]` markers under **Gaps**.
 
 ---
@@ -518,6 +521,7 @@ Unless a test states its own context, the writer of every RED is the agency that
 - `[word choice] "Obtain" → "Get"`
 - `[word choice] "prior to booking" → "before you book"`
 - No acronym finding: the glossary defines TMS before its first use, "SSO (single sign-on)" defines SSO in reverse order, and PDF is everyday vocabulary for staff.
+- No [one idea per paragraph] finding: the four sentences cover one topic, how to use TMS for a work trip.
 
 ---
 
@@ -686,6 +690,32 @@ Unless a test states its own context, the writer of every RED is the agency that
 
 ---
 
+### 4.8 — Standard heading and named decision-maker stay unflagged
+
+**RED (input to review; writer: the county transport office; audience: residents):**
+
+> ## Decision needed
+>
+> The county board must approve the new route map by May 1.
+>
+> ## Background
+>
+> We run 42 bus routes.
+
+**GREEN (expected output — returned unchanged):**
+
+> ## Decision needed
+>
+> The county board must approve the new route map by May 1.
+>
+> ## Background
+>
+> We run 42 bus routes.
+
+**Expected finding:** `(No finding — "Background" is a standard section name doing its job, so it is not a vague heading. "The county board" is a named decision-maker who is not the reader, so it stays named and does not become "you". "We" is the writer, the county transport office. No other finding.)`
+
+---
+
 ## Area 5: Audience Fit
 
 ### 5.1 — First-time reader can act
@@ -696,7 +726,9 @@ Unless a test states its own context, the writer of every RED is the agency that
 
 **GREEN:**
 
-> You may apply for help under this subpart ([needs: what "this subpart" refers to]) if you are an eligible entity. An eligible entity is [needs: plain definition of "eligible entities"], as defined in 42 U.S.C. § 1437a(b)(3). You also need to meet the criteria set by the regulations at 24 CFR Part 5. These regulations carry out the Act ([needs: name of the Act]). This rule comes from § 203(a)(1)(B) of the Act, as amended by Public Law 104-66.
+> You may apply for help under this subpart ([needs: what "this subpart" refers to]) if you are an eligible entity. An eligible entity is [needs: plain definition of "eligible entities"], as defined in 42 U.S.C. § 1437a(b)(3). You also need to meet the criteria set by the regulations at 24 CFR Part 5.
+>
+> These regulations carry out the Act ([needs: name of the Act]). This rule comes from § 203(a)(1)(B) of the Act, as amended by Public Law 104-66.
 >
 > **Gaps:**
 > - what "this subpart" refers to
@@ -730,14 +762,14 @@ Unless a test states its own context, the writer of every RED is the agency that
 > - You are a full-time employee.
 > - You have been employed continuously for at least one year.
 > - You are not on a temporary contract.
-> - You are not in a probationary period. If your probationary period was extended for documented performance reasons, you may still qualify if you get written approval from your supervisor.
+> - You are not in a probationary period, or you are in one extended for documented performance reasons and get written approval from your supervisor.
 
 **Expected finding:**
 
 - `[conditional stacking] Nested conditions with "unless", "except", and "provided" in a single sentence. Every condition must hold for the one outcome, so convert to a bulleted list of the conditions (an if/then table or labeled sections also works).`
 - `[sentence length] 62-word sentence. The list fixes it: no sentence in the rewrite is over 25 words.`
 - `[word choice] "obtain" → "get"`
-- `[word choice] "provided" → "if"`
+- `[word choice] "provided" → "and" (the supervisor's approval joins the extended-period case in one either/or condition, so every listed condition must hold)`
 - No passive finding for "was extended": the text names no actor, and who extended the period does not matter to the reader.
 
 ---
@@ -769,9 +801,9 @@ Unless a test states its own context, the writer of every RED is the agency that
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **35/35 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards.
+**Verified 2026-10-22.** Result: **36/36 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards.
 
-Produced against `TESTS.md` body sha256 `54d76a2681c8a14d` and `SKILL.md` sha256 `2cee510a99908ec0`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `a6df8bcda26c251e` and `SKILL.md` sha256 `720e463c9cb7ac66`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                             | RED flags | GREEN clean | Pass |
 |------------------------------------------------------------------|-----------|-------------|------|
@@ -807,6 +839,7 @@ Produced against `TESTS.md` body sha256 `54d76a2681c8a14d` and `SKILL.md` sha256
 | 4.5 — White space / paragraph length                             | ✓         | ✓           | PASS |
 | 4.6 — Paragraph over five sentences                              | ✓         | ✓           | PASS |
 | 4.7 — Captions a required format mandates                        | ✓         | ✓           | PASS |
+| 4.8 — Standard heading and named decision-maker stay unflagged   | ✓         | ✓           | PASS |
 | 5.1 — First-time reader can act                                  | ✓         | ✓           | PASS |
 | 5.2 — No conditional stacking                                    | ✓         | ✓           | PASS |
 | 5.3 — Legalese → precise plain language                          | ✓         | ✓           | PASS |

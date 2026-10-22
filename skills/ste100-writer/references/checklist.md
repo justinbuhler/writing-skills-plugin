@@ -57,7 +57,7 @@ authority (see `rules.md`).
       No agent was invented. A specific agent the source implies but does not
       name is `[needs: actor]`.
 - [ ] Rule 3.7: an action is described with an approved verb where one
-      exists.
+      exists and the source gives the subject of that verb.
 - [ ] "Shall", "should", "may", and "have to" are not used (dictionary: MUST,
       CAN, or an imperative).
 

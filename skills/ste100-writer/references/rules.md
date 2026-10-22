@@ -305,6 +305,20 @@ drained, ..."). Use only a past participle that the dictionary gives. Some
 approved adjectives, such as PERMITTED and DAMAGED, have the form of a past
 participle of a verb that is not approved. You can use them as adjectives.
 
+This skill applies the rule as follows; the standard does not state these
+points. The standard gives one test for the passive, the question "by whom or
+by what?" (p.72), and no test that tells a past participle adjective from a
+passive with no agent. A past participle after "keep" and its object is
+permitted: the dictionary has such an example ("KEEP THE FIRE BOTTLE ARMED
+UNTIL THE END OF THE TEST.", UNTIL (prep), p.418), so do not flag that
+position. After "to be", read the past participle as an adjective only when
+it shows the condition of something. When it gives an action, read it as a
+passive (Rule 3.6). After a modal or "is to be" ("must be", "can be", "will
+be", "is to be"), always read it as a verb form (Rule 3.4). For a condition
+that is necessary, write "must stay closed" (as in "THE VALVE MUST STAY
+CLOSED", p.161) or "make sure that ... is closed" (as in "MAKE SURE THAT THE
+DOORS ARE CLOSED DURING THE TEST.", p.404).
+
 ### Rule 3.4 Avoid chains of auxiliary verbs that build complex verb phrases. (p.69)
 
 Three cases:

@@ -1,6 +1,6 @@
 # writing-skills
 
-A Claude Code plugin with 10 writing skills for consulting documents, technical procedures, and strategic communications. The skills cover the whole cycle: framing the argument, structuring the body, reviewing the language, and a final quality check before delivery.
+A Claude Code plugin with 12 writing skills for consulting documents, technical procedures, and strategic communications. The skills cover the whole cycle: framing the argument, structuring the body, reviewing the language, and a final quality check before delivery.
 
 ## Install
 
@@ -47,12 +47,14 @@ The skills use only the facts in your text. When a fix needs a detail the text d
 | `scr-narrative` | Narrative spine for a strategic recommendation or business case (Situation → Complication → Resolution) |
 | `pyramid-editor` | Answer-first structure: buried recommendations, headings that don't tell the story, evidence mixed with conclusions |
 | `recommendations-and-actions` | Findings, recommendations, decisions required, and action items with owners and dates |
+| `diataxis` | Pages that mix steps, background, lookup facts, and lessons: type each section and split it by documentation type |
 
 ### Language
 
 | Skill | When to use |
 |---|---|
 | `plain-language` | Reports, memos, letters, policy documents, and web content for a general or public audience |
+| `concise-writing` | Wordy, padded or inflated prose that needs tightening without losing meaning |
 | `ste100-writer` | Procedures, maintenance manuals, work instructions, and safety notices in Simplified Technical English |
 | `humanizer` | Text with AI writing tells: not-X-but-Y contrasts, forced triads, inflated claims, stock AI words |
 | `no-ai-slop` | Any draft that reads flat, generic, or over-polished, including human-written ones |
@@ -90,6 +92,7 @@ Steps 4.5 and 4.6 never touch STE text. For which skill to use at each step, see
 - `plain-language` follows the Plain Writing Act of 2010 and the federal guidelines at [plainlanguage.gov](https://www.plainlanguage.gov).
 - `pyramid-editor` applies Barbara Minto's Pyramid Principle.
 - `scqa-framework` and `scr-narrative` apply the Situation–Complication structures that come from the same tradition.
+- `diataxis` applies Daniele Procida's [Diátaxis](https://diataxis.fr) framework for documentation types (tutorial, how-to, reference, explanation).
 - `humanizer` is based on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
 
 ### ste100-writer and ASD-STE100
@@ -112,11 +115,13 @@ Each skill has a `TESTS.md` of RED/GREEN cases. RED is text that breaks the skil
 
 | Skill | Tests |
 |---|---|
+| concise-writing | 20 |
+| diataxis | 21 |
 | document-qa | 28 |
 | humanizer | 33 |
 | no-ai-slop | 28 |
-| plain-language | 35 |
-| pyramid-editor | 20 |
+| plain-language | 36 |
+| pyramid-editor | 21 |
 | recommendations-and-actions | 27 |
 | scqa-framework | 21 |
 | scr-narrative | 23 |
@@ -141,7 +146,10 @@ Claude Code sessions in this repo turn it on for you. `CLAUDE.md` has the conven
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Two skills are forks of other MIT-licensed projects and keep their own licenses:
+MIT. See [LICENSE](LICENSE). Three skills are forks of other MIT-licensed projects and keep their own licenses:
 
 - `skills/humanizer/` is a fork of [blader/humanizer](https://github.com/blader/humanizer). See its [LICENSE](skills/humanizer/LICENSE).
 - `skills/no-ai-slop/` is a fork of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop). See its [LICENSE](skills/no-ai-slop/LICENSE).
+- `skills/ste100-writer/` began as a fork of [blagoySimandov/asd-ste100-writer-skill](https://github.com/blagoySimandov/asd-ste100-writer-skill), which declares the MIT license in its `package.json`. It has since been rewritten. See its [LICENSE](skills/ste100-writer/LICENSE).
+
+The other nine skills were written for this repository.

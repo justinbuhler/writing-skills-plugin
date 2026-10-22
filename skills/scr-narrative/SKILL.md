@@ -2,6 +2,14 @@
 name: scr-narrative
 description: Crafts a tight Situation-Complication-Resolution narrative framework for strategic recommendations. Use when the user needs to sharpen a business case, align stakeholders on a recommendation, or structure a presentation opening before expanding into a full document.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "scr narrative"
+    - "situation complication resolution"
+    - "business case narrative"
+    - "storyline for a recommendation"
+    - "presentation opening"
 ---
 
 # SCR Narrative Framework
@@ -16,7 +24,7 @@ You are a strategic communications expert. You build airtight narrative foundati
 
 **Use only the facts you were given.** Do not add a fact, name, number, date, owner, source, or claim that is not in the input or supplied by the user. When a rule calls for a detail the input lacks, write `[needs: <detail>]` in its place, for example `[needs: owner]` or `[needs: source for "Eight of twelve branches use the new tills"]`, and list every gap under **Gaps** at the end of your response. Leave any `[needs: …]` already in the input where it is.
 
-**In Critique, map before you judge.** Map the document's parts (headings, summary, slide titles, opening paragraphs) to S, C, and R, and quote the sentence or sentences you treat as each. Apply the length rules to those sentences, not to whole sections. When a mapped section runs longer than its element allows, quote as the element the one or two sentences (one to three for C and R) that state the baseline, pressure, or action the other elements build on, and treat the rest as supporting detail; no length finding applies to the section. A length finding applies when the input presents the block itself as the element (a labelled SITUATION, say), or when no such selection can state the element. If the input is presented as a full SCR or document and an element is absent, report that first as `[Structure — element missing]` and ask for it: do not fault the other elements for the gap, and do not invent the missing one. A single element submitted on its own is checked on its own.
+**In Critique, map before you judge.** Map the document's parts (headings, summary, slide titles, opening paragraphs) to S, C, and R, and quote the sentence or sentences you treat as each. Apply the length rules to those sentences, not to whole sections. When a mapped section runs longer than its element allows, quote as the element the one or two sentences (one to three for C and R) that state the baseline, pressure, or action the other elements build on, and treat the rest as supporting detail; no length finding applies to the section. A length finding applies when the input presents the block itself as the element (a labelled SITUATION, say), or when no such selection can state the element. If the input is presented as a full SCR or document and an element is absent, report that first as `[Structure — element missing]` and ask for it: do not fault the other elements for the gap, and do not invent the missing one. Still give the corrected block, with `[needs: …]` for the missing element; as Situation take the 1 or 2 sentences that state what the Resolution changes. A single element submitted on its own is checked on its own. Two elements submitted without the third are checked as they stand; raise no Structure finding for the absent one.
 
 ## What to ask for
 
@@ -76,7 +84,7 @@ Frame the recommended action as the logical, direct response to the Complication
 **Criteria:**
 - Must address the Complication directly. If the Complication is about speed, the Resolution cannot just solve cost. If the Complication is about accountability, the Resolution cannot just solve tools.
 - Stated as an action or a decision, not as a concept or a principle.
-- Names who acts and by when. The owner is a named role, team, or body, not the organisation as a whole ("the airline", "the client"). A Resolution with no owner and no timing is not something an audience can approve. If the input names no owner or timing, write `[needs: owner]` or `[needs: date]` in its place.
+- Names who acts and by when. The owner is a named role, team, or body, not the organisation as a whole ("the airline", "the client"). A Resolution with no owner and no timing is not something an audience can approve. If the input names no owner or timing, write `[needs: owner]` or `[needs: date]` in its place. A deadline in the Complication is not that date: keep the link to it and still write `[needs: date]`. Timing the input itself gives for an action, including a relative one ("before role design starts"), is timing: do not add `[needs: date]` to it. In a Resolution with several actions, each action needs timing of its own, given or relative, except an action that only marks when another one happens. One timing phrase that closes a list of actions by the same owner counts for each of them.
 - When a Resolution is missing or misses the Complication, the corrected Resolution may reverse the cause the Complication states, in the Complication's own terms (dates invisible to the roster → make the dates visible to the roster). Any other action, mechanism, or step the input does not supply becomes `[needs: …]`.
 - Scoped to what this audience can approve or act on.
 - Do not over-explain the how — the Resolution names the move; supporting documents fill in the mechanics.

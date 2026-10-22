@@ -20,15 +20,13 @@ Each test has:
 
 **GREEN:**
 
-> **S:** Roster clerks process shift swaps under minimum-rest rules.
+> **S:** [needs: Situation the board already accepts]
 >
-> **C:** Clerks breach those rules on about one swap in twelve. Every swap now needs a manual check, and the backlog grows each week.
+> **C:** Roster clerks breach minimum-rest rules on about one shift swap in twelve. Every swap now needs a manual check, and the backlog grows each week.
 >
-> **Q** _(implicit)_: How do we keep shift swaps moving without breaching rest rules?
->
-> **A:** [needs: the recommendation]
+> **Gaps:** Situation the board already accepts.
 
-**Expected finding:** `[Situation missing] The opening jumps directly to the complication with no shared ground established. This audience has not been briefed on rostering, so it needs a neutral, uncontroversial starting point it can nod at before the problem lands. Add a 1–2 sentence Situation that both sides already accept as true.`
+**Expected finding:** `[Situation missing] The opening jumps directly to the complication with no shared ground established. This audience has not been briefed on rostering, so it needs a neutral, uncontroversial starting point it can nod at before the problem lands. The input gives no Situation, so do not write one from the Complication: put [needs: Situation the board already accepts] ahead of the Complication and leave the Complication as written. List the gap under Gaps.`
 
 ---
 
@@ -40,11 +38,13 @@ Each test has:
 
 **GREEN:**
 
-> **S:** The trust has an imaging archive. [needs: a structural fact about the archive, such as the volume or workflow it was designed for]
+> **S:** The trust has an imaging archive.
 >
 > **C:** The archive is inadequate and fails to support modern clinical workflows. [needs: which workflows, and what the failure costs clinical staff]
+>
+> **Gaps:** which workflows, and what the failure costs clinical staff.
 
-**Expected finding:** `[Situation quality] "Inadequate and fails to support modern clinical workflows" is an evaluative claim, not a neutral fact — the audience may push back on it. The Situation should be something every reader already accepts. State the structural fact (what the process is) rather than the judgment (what's wrong with it). Move the judgment ("inadequate and fails to support modern clinical workflows") to the Complication rather than dropping it, and mark what it lacks with [needs: …].`
+**Expected finding:** `[Situation quality] "Inadequate and fails to support modern clinical workflows" is an evaluative claim, not a neutral fact — the audience may push back on it. The Situation should be something every reader already accepts. State the structural fact (what the archive is) rather than the judgment (what's wrong with it). Move the judgment ("inadequate and fails to support modern clinical workflows") to the Complication rather than dropping it, and mark what it lacks with [needs: …]. List the gap under Gaps.`
 
 ---
 
@@ -53,12 +53,18 @@ Each test has:
 **RED:**
 
 > **S:** Digital transformation is reshaping every industry worldwide, and organizations everywhere are being forced to adapt to rapidly changing technology landscapes.
+>
+> _(Audience: the client's executive team.)_
 
 **GREEN:**
 
-> **S:** [needs: a specific fact about the client's own systems or processes that the audience can confirm from its own experience]
+> **S:** [needs: a specific fact about the client's own systems or processes that its executive team can confirm]
+>
+> **Body material:** digital transformation is reshaping every industry worldwide, and organizations everywhere are being forced to adapt to rapidly changing technology landscapes.
+>
+> **Gaps:** a specific fact about the client's own systems or processes that its executive team can confirm.
 
-**Expected finding:** `[Situation scope] The Situation restates industry-level trends the audience already knows and considers obvious. Ground the Situation in the client's specific context — a specific process, a specific system, a specific fact the audience can confirm from their own experience.`
+**Expected finding:** `[Situation scope] The Situation is a generic trend statement, not a fact this audience can confirm from its own context. Ground it in the client's own context: a specific process, system, or fact the executive team can confirm. The input gives no such fact, so write [needs: …] for it rather than invent one, move the trend sentence to Body material rather than dropping it, and list the gap under Gaps.`
 
 ---
 
@@ -75,8 +81,10 @@ Each test has:
 > **Q** _(implicit)_: How do the colleges keep payroll running after 2028?
 >
 > **A:** The colleges should run one joint re-tender for both platforms.
+>
+> Variant: **SCQA**. The implicit Question is marked in the block.
 
-**Expected finding:** `(No finding — the audience is the whole regional sector, so a specific sector fact is the audience's own context and passes the Situation check. Do not raise [Situation scope]: that finding is for generic trend statements such as S3's, not for a specific fact the audience can confirm.)`
+**Expected finding:** `(No finding — the audience is the whole regional sector, so a specific sector fact is the audience's own context and passes the Situation check. Do not raise [Situation scope]: that finding is for generic trend statements such as S3's, not for a specific fact the audience can confirm. Name the variant as SCQA, because the implicit Question is marked in the block.)`
 
 ---
 
@@ -89,14 +97,18 @@ Each test has:
 > **S:** Train operators build driver rosters in a scheduling system installed in 2016.
 >
 > **C:** There is some room to tighten how rest rules get checked.
+>
+> _(Audience: rostering managers across train operators.)_
 
 **GREEN:**
 
 > **S:** Train operators build driver rosters in a scheduling system installed in 2016.
 >
 > **C:** There is some room to tighten how rest rules get checked [needs: figure for how often a breach gets through], and [needs: consequence of a breach for the operator].
+>
+> **Gaps:** figure for how often a breach gets through; consequence of a breach for the operator.
 
-**Expected finding:** `[Complication urgency] "Some room to tighten how rest rules get checked" creates no urgency — the audience can continue as-is without feeling pressure. A complication must give the audience a reason to act: a cost, a failure rate, a deadline, a conflict, a risk, or an opportunity. Quantify only with figures the input supplies; otherwise mark [needs: figure for …]. Keep the author's wording: do not harden "some room to tighten" into a stronger claim such as "not checked tightly enough", which the input never made.`
+**Expected finding:** `[Complication urgency] "Some room to tighten how rest rules get checked" creates no urgency — the audience can continue as-is without feeling pressure. A complication must give the audience a reason to act: a cost, a failure rate, a deadline, a conflict, a risk, or an opportunity. Quantify only with figures the input supplies; otherwise mark [needs: figure for how often a breach gets through], mark the missing consequence with [needs: consequence of a breach for the operator], and list both under Gaps. Keep the author's wording: do not harden "some room to tighten" into a stronger claim such as "not checked tightly enough", which the input never made.`
 
 ---
 
@@ -113,8 +125,12 @@ Each test has:
 > **S:** The trust routes every diagnostic image through one archive that was sized for 2019 volumes.
 >
 > **C:** [needs: what the archive has run into since it was sized for 2019 volumes, and what that costs clinical staff]
+>
+> **Body material:** clinical staff satisfaction across the sector has declined because of rising administrative workload.
+>
+> **Gaps:** what the archive has run into since it was sized for 2019 volumes, and what that costs clinical staff.
 
-**Expected finding:** `[Complication–Situation link] The Complication (sector-wide staff satisfaction) does not follow from the Situation (one undersized imaging archive). The Complication must be the thing the Situation has run into — it should feel inevitable given the Situation. Replace with a Complication that connects directly to the archive established above.`
+**Expected finding:** `[Complication–Situation link] The Complication (sector-wide staff satisfaction) does not follow from the Situation (one undersized imaging archive). The Complication must be about the same archive as the Situation, not a separate problem. The input gives no such Complication, so write [needs: …] in its place, move the author's sentence to Body material rather than dropping it, and list the gap under Gaps.`
 
 ---
 
@@ -130,11 +146,15 @@ Each test has:
 
 > **S:** University departments are beginning to choose software for next year's teaching.
 >
-> **C:** Departments may place their orders before any campus licensing standard is agreed, and [needs: what goes wrong when orders are placed without the standard].
+> **C:** [needs: what goes wrong when departments place their orders without a campus licensing standard]
 >
-> **A:** Agree a campus licensing standard before departments place their orders.
+> **A:** We need to agree a campus licensing standard before departments place their orders.
+>
+> Variant: **SCA**. The block has no Q line.
+>
+> **Gaps:** what goes wrong when departments place their orders without a campus licensing standard.
 
-**Expected finding:** `[Complication is the solution] "We need to agree a campus licensing standard" belongs in the Answer, not the Complication. The Complication should describe the problem that makes the current situation unsustainable — not the recommended fix. State what goes wrong without the standard; the Answer will name the standard.`
+**Expected finding:** `[Complication is the solution] "We need to agree a campus licensing standard before departments place their orders" carries the recommendation, so it is the Answer, not the Complication. Label it A unchanged. The Complication should describe the problem that makes the current situation unsustainable, and the input states none: write [needs: …] for what goes wrong without the standard, and do not infer a Complication from the Answer. The block has no Q line, so note the variant as SCA, and list the gap under Gaps.`
 
 ---
 
@@ -153,8 +173,10 @@ Each test has:
 > **S:** The county library service lends laptops from twelve branches using a paper sign-out sheet.
 >
 > **C:** Laptops go missing more often than they used to [needs: figure for laptop losses per month], and [needs: what each loss costs the service].
+>
+> **Gaps:** figure for laptop losses per month; what each loss costs the service.
 
-**Expected finding:** `[Complication urgency] "Go missing more often than they used to" names a pain but gives no figure, and the input supplies none. Do not invent one: keep the author's words, write [needs: figure for laptop losses per month] where the number belongs, and list it under Gaps.`
+**Expected finding:** `[Complication urgency] "Go missing more often than they used to" names a pain but gives no figure, and the input supplies none. Do not invent one: keep the author's words, write [needs: figure for laptop losses per month] where the number belongs and [needs: what each loss costs the service] for the cost, and list both under Gaps.`
 
 ---
 
@@ -169,8 +191,10 @@ Each test has:
 > **Q** _(implicit)_: How do we meet summer demand if the order is adopted?
 >
 > **A:** Bring the standby borehole back into service before May.
+>
+> Variant: **SCQA**. The implicit Question is marked in the block.
 
-**Expected finding:** `(No finding — a dated conditional risk with an estimate and a range is a valid Complication. Do not raise [Complication urgency]. Any rewrite must keep "If", "may", "about", "up to", and "75–80" exactly as written.)`
+**Expected finding:** `(No finding — a dated conditional risk with an estimate and a range is a valid Complication. Do not raise [Complication urgency]. Any rewrite must keep "If", "may", "about", "up to", and "75–80" exactly as written. Name the variant as SCQA, because the implicit Question is marked in the block.)`
 
 ---
 
@@ -185,8 +209,10 @@ Each test has:
 > **Q** _(implicit)_: Which fuel should the next replacements use while the scheme runs?
 >
 > **A:** Order every replacement due before March 2028 as an electric truck.
+>
+> Variant: **SCQA**. The implicit Question is marked in the block.
 
-**Expected finding:** `(No finding — a Complication can be an opportunity that makes the status quo worth changing. Do not raise [Complication urgency] and do not add a pain, such as rising diesel costs, that the input does not state.)`
+**Expected finding:** `(No finding — a Complication can be an opportunity that makes the status quo worth changing. Do not raise [Complication urgency] and do not add a pain, such as rising diesel costs, that the input does not state. Name the variant as SCQA, because the implicit Question is marked in the block.)`
 
 ---
 
@@ -215,13 +241,13 @@ Each test has:
 >
 > **C:** Pharmacy turnaround for take-home medicines has slowed since the winter bed plan started. Its median in the step table is 1.0 hours in November and 3.5 in February.
 >
-> **Q** _(implicit)_: How do we cut pharmacy turnaround in the discharge lounge?
->
 > **A:** Place a pharmacist in the discharge lounge until the bed plan ends.
 >
 > **Body material:** since the winter bed plan started, patients wait longer for transport home and weekend discharges have fallen; the per-step table (Transport, Pharmacy, Paperwork medians for November and February).
+>
+> Variant: **SCA**. The block has no Q line.
 
-**Expected finding:** `[Complication form] The Complication runs to three bullets and a table, where the block allows one or two sentences. Name the pain that drives the Answer — pharmacy turnaround, a median of 1.0 hours in November and 3.5 in February — and keep those figures without tying November to the start of the bed plan, which the input does not do, because they are why the Answer targets pharmacy. List the transport wait, the fall in weekend discharges, and the table under Body material rather than dropping them.`
+**Expected finding:** `[Complication form] The Complication runs to three bullets and a table, where the block allows one or two sentences. Name the pain that drives the Answer — pharmacy turnaround, a median of 1.0 hours in November and 3.5 in February — and keep those figures without tying November to the start of the bed plan, which the input does not do, because they are why the Answer targets pharmacy. List the transport wait, the fall in weekend discharges, and the table under Body material rather than dropping them. The input writes no Question and none is added: the block has no Q line, so note the variant as SCA.`
 
 ---
 
@@ -243,7 +269,7 @@ Each test has:
 >
 > **C:** Retrieval requests have tripled and radiologists now wait an average of four minutes to open a study.
 >
-> **Q** _(implicit)_: How do we cut retrieval time?
+> **Q:** How do we cut retrieval time?
 
 **Expected finding:** `[Question–Complication fit] The Question ("How can the trust improve its digital maturity?") does not arise from the Complication (four-minute image retrieval). The reader coming off that Complication is asking how to make retrieval fast again. Align the Question to the exact tension the Complication created.`
 
@@ -268,8 +294,12 @@ Each test has:
 > **Q** _(implicit)_: How do we get decisions back inside eight weeks?
 >
 > **A:** Moving the case system to the county's shared platform halves the annual hosting fee. [needs: how the move shortens decision times — ask the author whether it does]
+>
+> Variant: **SCQA**. The implicit Question is marked in the block.
+>
+> **Gaps:** how the move shortens decision times.
 
-**Expected finding:** `[Answer–Question fit] Written from the Complication alone, the implicit Question is how to get decisions back inside eight weeks. The Answer addresses the hosting fee instead. Do not infer the Question from the Answer ("How do we cut hosting cost?"), which makes the fit check pass by construction. Keep the Answer as written, mark the gap, and ask the author whether the move shortens decisions; do not add that claim to the Answer or delete the hosting-fee claim.`
+**Expected finding:** `[Answer–Question fit] Written from the Complication alone, the implicit Question is how to get decisions back inside eight weeks. The Answer addresses the hosting fee instead. Do not infer the Question from the Answer ("How do we cut hosting cost?"), which makes the fit check pass by construction. Keep the Answer as written, mark the gap, and ask the author whether the move shortens decisions; do not add that claim to the Answer or delete the hosting-fee claim. The implicit Question is marked in the block, so note the variant as SCQA, and list the gap under Gaps.`
 
 ---
 
@@ -288,8 +318,10 @@ Each test has:
 > **Q:** How do we keep shift swaps moving without breaching rest rules?
 >
 > **A:** The rostering module offers a configurable rules engine and supports multiple swap request channels. [needs: how the module keeps swaps moving and stops rest breaches — ask the author whether the rules engine checks each swap against the rest rules]
+>
+> **Gaps:** how the module keeps swaps moving and stops rest breaches.
 
-**Expected finding:** `[Answer–Question fit] The Question asks for two things — that swaps keep moving and that rest rules hold — and the Answer lists the module's features instead. These are adjacent, not the same. The Answer must address the Question directly, covering both clauses: how swaps stay fast and how breaches are prevented. If the input does not say the module does this, change the stated Question to fit what it does only if the new Question still arises from the Complication, or ask the author; keep the Answer's two claims, mark the gap, and do not add a capability to the Answer.`
+**Expected finding:** `[Answer–Question fit] The Question asks for two things — that swaps keep moving and that rest rules hold — and the Answer lists the module's features instead. These are adjacent, not the same. The Answer must address the Question directly, covering both clauses: how swaps stay fast and how breaches are prevented. If the input does not say the module does this, change the stated Question to fit what it does only if the new Question still arises from the Complication, or ask the author; keep the Answer's two features, mark the gap, and do not add a capability to the Answer. List the gap under Gaps.`
 
 ---
 
@@ -301,11 +333,11 @@ Each test has:
 
 **GREEN:**
 
-> **A:** Roster clerks will enter swaps through the new module, which validates rest rules at entry.
+> **A:** Roster clerks will enter swaps through the new module.
 >
-> **Body material:** sign-off along delegated approval chains; audit logging for every change; offline depot access from terminals; rest-compliance reporting by depot and grade for duty managers.
+> **Body material:** validation of rest rules at entry; sign-off along delegated approval chains; audit logging for every change; offline depot access from terminals; rest-compliance reporting by depot and grade for duty managers.
 
-**Expected finding:** `[Answer complexity] The Answer is one sentence but lists five module features. An SCQA Answer states one decision or claim; lists of three or more features or steps go to the body. Details about delegated approval chains, audit logging, offline depot access, and rest-compliance reporting by depot and grade belong in the pyramid body that follows.`
+**Expected finding:** `[Answer complexity] The Answer is one sentence but lists five module features. An SCQA Answer states one decision or claim; lists of three or more features or steps go to the body. Details about validation of rest rules at entry, delegated approval chains, audit logging, offline depot access, and rest-compliance reporting by depot and grade belong in the pyramid body that follows.`
 
 ---
 
@@ -368,8 +400,10 @@ Each test has:
 > **Q** _(implicit)_: How do we get collection booking started?
 >
 > **A:** Leadership must approve the four-zone layout before any shift finalizes its pick paths. [needs: how approving the four-zone layout lets the carrier begin booking collections — ask the author]
+>
+> **Gaps:** Situation for a reader new to the project; how approving the four-zone layout lets the carrier begin booking collections.
 
-**Expected finding:** `[Variant mismatch] CSA leads with the Complication and leaves the Situation brief or implied, on the assumption the audience already knows it. For a new external client with no prior context, that assumption is wrong — they need the Situation to understand what the Complication is disrupting. Use SCQA for this audience. Reserve CSA for audiences who were present for the full project context.`
+**Expected finding:** `[Variant mismatch] CSA leads with the Complication and leaves the Situation brief or implied, on the assumption the audience already knows it. For a new external client with no prior context, that assumption is wrong: the client needs the Situation to understand what the Complication is disrupting. Use a Situation-first variant, SCQA as shown because the Answer fails the fit check and the implicit Question is written to show it, and write [needs: …] for the Situation because the input gives none. Reserve CSA for an audience that already knows the Situation. Also report the fit between Answer and Question: written from the Complication alone, the implicit Question is how to get collection booking started, and the Answer approves a zone layout instead. Keep the Answer as written, mark the gap with [needs: …], and ask the author; do not refit the Question to the Answer. List both gaps under Gaps.`
 
 ---
 
@@ -431,7 +465,7 @@ Each test has:
 
 **Verified 2026-10-22.** Result: **21/21 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards.
 
-Produced against `TESTS.md` body sha256 `14985a86aba29aff` and `SKILL.md` sha256 `3a69a9efe21208f6`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `1000818be68c241a` and `SKILL.md` sha256 `525ab7ca5d7dbc17`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                                     | RED flags | GREEN clean | Pass |
 |--------------------------------------------------------------------------|-----------|-------------|------|

@@ -10,12 +10,13 @@
     {
       "name": "writing-skills",
       "source": "./",
-      "description": "10 writing skills covering narrative framing, structure, language review, and quality gate for consulting and technical documents.",
+      "description": "12 writing skills covering narrative framing, structure, language review, and quality gate for consulting and technical documents.",
       "license": "MIT",
       "keywords": [
         "writing",
         "consulting",
         "plain-language",
+        "concise",
         "pyramid",
         "scqa",
         "ste100",
