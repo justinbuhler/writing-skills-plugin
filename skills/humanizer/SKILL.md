@@ -8,6 +8,14 @@ description: |
 license: MIT
 metadata:
   version: "3.0.0"
+routing:
+  category: content-creation
+  triggers:
+    - "humanize this"
+    - "sounds like AI"
+    - "remove AI tells"
+    - "make it sound human"
+    - "AI writing signs"
 ---
 
 # Humanizer: remove AI writing patterns
@@ -215,7 +223,7 @@ The fact underneath is usually sound. Keep it and remove the dressing.
 **Before (stock section):**
 > Despite its industrial prosperity, Korattur faces challenges typical of urban areas, including traffic congestion and water scarcity. Despite these challenges, with its strategic location and ongoing initiatives, Korattur continues to thrive as an integral part of Chennai's growth.
 **After:**
-> Korattur is industrially prosperous, with a strategic location and ongoing initiatives. Like many urban areas, it has traffic congestion and water scarcity.
+> Korattur is industrially prosperous, with a strategic location and ongoing initiatives, and is part of Chennai's growth. Like many urban areas, it has traffic congestion and water scarcity.
 **Before (send-off):**
 > The future looks bright for the company. Exciting times lie ahead as they continue their journey toward excellence.
 **After:**
@@ -251,7 +259,7 @@ The fact underneath is usually sound. Keep it and remove the dressing.
 ### 17. Borrowed authority
 
 **Watch for:** experts argue, observers have cited, industry reports, some critics, several publications; cited, featured, or profiled in [a list of outlets], trade publications, independent coverage; active social media presence, over N followers
-**Problem:** A name or an unnamed authority stands in for what was said. Unnamed experts prop up a claim; a list of prestige outlets props up a person. When the source text names the real source and what it said, use that. Otherwise cut the unsupported claim or the list. Never invent a source. A footnote or reference entry that names the source counts as naming it; put that name in the sentence in place of the vague label. A missing citation alone is not a tell; most writing is unsourced.
+**Problem:** A name or an unnamed authority stands in for what was said. Unnamed experts prop up a claim; a list of prestige outlets props up a person. When the source text names the real source and what it said, use that. Otherwise cut the unsupported claim or the list. Never invent a source. A footnote or reference entry that names the source counts as naming it; put that name in the sentence in place of the vague label, and keep the footnote. A missing citation alone is not a tell; most writing is unsourced.
 **Before (unnamed authority):**
 > Due to its unique characteristics, the Haolai River is of interest to researchers and conservationists. Experts believe it plays a crucial role in the regional ecosystem.
 **After:**
@@ -276,7 +284,7 @@ Templates and visual editors also produce clean formatting. The tell is decorati
 
 ### 19. Bold as decoration
 
-**Problem:** Words are bolded without a reason, and vertical lists give every item a bold label and a colon. Remove the bold and keep any definition it wraps. Turn a labeled list into prose when the labels carry no information of their own.
+**Problem:** Words are bolded without a reason, and vertical lists give every item a bold label and a colon. Remove the bold and keep any definition it wraps. Turn a labeled list into prose when the labels carry no information of their own. A label carries no information when its sentence repeats it or the statement makes it obvious; otherwise keep the label and drop only the bold.
 **Before:**
 > It blends **OKRs (Objectives and Key Results)**, **KPIs (Key Performance Indicators)**, and visual strategy tools such as the **Business Model Canvas (BMC)** and **Balanced Scorecard (BSC)**.
 **After:**

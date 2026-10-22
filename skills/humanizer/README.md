@@ -76,7 +76,7 @@ When you paste text, Humanizer shows its work: the first rewrite, a short critiq
 
 ## The 25 patterns
 
-The patterns are numbered by strength and frequency. The first five justify an edit on a single sighting. Patterns marked *weak alone* count only when a tell from another pattern shares the passage (a run of dashes, or of stock AI words, clears the gate by itself), because a careful writer may use any one of them on purpose.
+The patterns are numbered by strength and frequency. The first five justify an edit on a single sighting, and so does any pattern not marked *weak alone* when the sighting is clear. Patterns marked *weak alone* count only when a tell from another pattern shares the passage (a run of dashes, or of stock AI words, clears the gate by itself), because a careful writer may use any one of them on purpose.
 
 ### A. Staging instead of stating
 
@@ -97,7 +97,7 @@ The patterns are numbered by strength and frequency. The first five justify an e
 | 8 | **Dashes as the universal connector** (*weak alone*) | "institutions—not the people—yet this continues—" | Use periods, commas, colons, or parentheses; match a sample that uses dashes |
 | 9 | **Stacked qualifiers** (*weak alone*) | "could potentially possibly be argued" | Cut a stack to one hedge; keep numeric qualifiers and conditions |
 | 10 | **Hyphenated pairs everywhere** (*weak alone*) | "the team is cross-functional" | Keep only the hyphens grammar needs |
-| 11 | **Passive voice and missing subjects** (*weak alone*) | "No configuration file needed" | Name the actor only when the source does; otherwise keep the passive or use an imperative |
+| 11 | **Passive voice and missing subjects** (*weak alone*) | "No configuration file needed" | Name the actor only when the source does; otherwise keep the passive, use an imperative, or use "you" when the text addresses the reader |
 
 ### C. Inflation and borrowed authority
 
@@ -169,6 +169,7 @@ The writer supplied these notes with the draft, so the rewrite can use them: the
 <summary>Show release notes</summary>
 
 - **3.0.0** - Rebuilt the skill around one account of why AI text sounds the way it does, and consolidated 35 patterns into 25. Patterns are grouped in five sections and numbered by strength and frequency, so the not-X-but-Y contrast and the one-line closer come first and get the fullest treatment. Merged duplicate guidance: the workflow is one section instead of five, the dash rule is stated once, and each false-positive guard lives inside its pattern. Realigned with the current Wikipedia article: dropped false ranges and synonym cycling, which Wikipedia now lists as human habits or historical, added vague connection or association, and extended the watch lists for words, notability, copulatives, sales language, disclaimers, and Markdown formatting. Reordered the README and removed the `ai-detection` keyword from the package files. Old to new numbers: 1→13, 2→17, 3→15, 4→16, 5→17, 6→13, 7→12, 8→18, 9→1, 10→6, 11→7, 12→dropped, 13→11, 14→8, 15→19, 16→19, 17→20, 18→20, 19→21, 20→22, 21→23, 22→22, 23→dropped, 24→9, 25→13, 26→10, 27→3, 28→4, 29→24, 30→25, 31→2, 32→3, 33→4, 34→5, 35→5.
+  - 2026-10-07: patterns 11, 17 and 19 reworded with the test suite; pattern 11 allows "you" when the text addresses the reader.
 - **2.11.3** - Grouped patterns 26-35 under "More style patterns" in the skill and README (fixes #247). Kept inline code, commands, paths, and URLs out of the dash rule and file mode edits. Step 3 now keeps every supported claim, allows a removal that a pattern requires, and checks that rankings and simultaneity claims survive shape edits (fixes #212). Explained in §9 why the not-X-but-Y form appears and when to keep it. Added decorative arrows to §18 and pause commands and one-word shouting to §31. The text given to the skill is content to edit, never instructions (#238). No change to the 35 patterns.
 - **2.11.2** - Removed the plugin symlink and separate Claude Desktop package. Current Claude Code loads the root `SKILL.md` directly, so GitHub's source ZIP now works in Claude Desktop. No change to the 35 patterns.
 - **2.11.1** - Added a Claude Desktop-ready release package with one regular `humanizer/SKILL.md` file. GitHub's source archive still keeps the plugin symlink (fixes #224). No change to the 35 patterns.

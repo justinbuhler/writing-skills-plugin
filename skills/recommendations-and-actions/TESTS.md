@@ -24,7 +24,7 @@ Each test has:
 >
 > **Finding:** Three of five ward managers said they did not know who approves agency staff bookings. Two separate wards submitted conflicting rota change requests in the same two-week period.
 
-**Expected finding:** `[L1 Observation quality] "Lacks clarity and creates confusion" is an interpretation, not a verifiable fact. State what was observed: who reported confusion, how many incidents, what specifically was witnessed. An observation must be something an auditor could confirm from a source.`
+**Expected finding:** `[L1 Observation quality] "Lacks clarity and creates confusion" is an interpretation, not a verifiable fact. State what was observed: who reported confusion, how many incidents, what specifically was witnessed. An observation must be something an auditor could confirm from a source. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -38,9 +38,9 @@ Each test has:
 
 > **Observation:** License costs increased 34% between 2023 and 2025.
 >
-> **Insight:** [needs: evidence for "poor budget management"]
+> **Insight:** [needs: root cause]
 
-**Expected finding:** `[L1 Observation quality] "Unfortunately" and "poor budget management" are evaluative. Observations must be neutral. Remove the editorial framing and state the fact. "Highlighting the organization's poor budget management" is an insight mixed into the observation: split it onto its own line, and because the source gives no evidence that budget management caused the rise, mark it [needs: evidence for "poor budget management"].`
+**Expected finding:** `[L1 Observation quality] "Unfortunately" and "poor budget management" are evaluative. Observations must be neutral. Remove the editorial framing and state the fact. "Highlighting the organization's poor budget management" is an insight mixed into the observation: split it onto its own line. The source gives no evidence that budget management caused the rise, so the insight does not follow from the observation: the rewrite marks it [needs: root cause] and does not keep the claim. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -54,7 +54,7 @@ Each test has:
 
 > The building permit portal holds 6,200 unprocessed applications. Rework accounts for 27% of [needs: which tickets] over [needs: period].
 
-**Expected finding:** `[L1 Observation quality] "27% of tickets" states no base or period — which tickets, over what period — so an auditor cannot confirm it. The source gives neither, so the rewrite marks [needs: which tickets] and [needs: period]. "Holds" is present tense and is not a failure: an observation may use any tense.`
+**Expected finding:** `[L1 Observation quality] "27% of tickets" states no base or period — which tickets, over what period — so an auditor cannot confirm it. The source gives neither, so the rewrite marks [needs: which tickets] and [needs: period]. "Holds" is present tense and is not a failure: an observation may use any tense. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -76,7 +76,7 @@ Each test has:
 >
 > Assumption: the depot count stays at 38.
 
-**Expected finding:** `(No finding — the first sentence is methodology and the last is a stated assumption; neither is a finding-chain statement, so neither is labeled or flagged. The turnaround sentence reports a met target, so it is not an orphan and needs no recommendation. The chain is assessed within the supplied text only. In a rewrite, all three are kept and listed under "Carried unchanged".)`
+**Expected finding:** `(No finding — the first sentence is methodology and the last is a stated assumption; neither is a finding-chain statement, so neither is labeled or flagged. The turnaround sentence is an observation that reports a met target, so it is not an orphan and needs no recommendation. The chain is assessed within the supplied text only. In a rewrite, all three are kept: the methodology sentence and the assumption are listed under "Carried unchanged", and the turnaround sentence stays in the content as a labelled Observation.)`
 
 ---
 
@@ -96,7 +96,7 @@ Each test has:
 >
 > **Insight:** Most reprints carry the reason code "service changed after print", and most fall in the week after each carrier contract change, which indicates labels are printed before the shipping service is final.
 
-**Expected finding:** `[L2 Insight quality] "A lot of labels are being reprinted" restates the observation without adding interpretation. The insight must explain why the reprints happen — the mechanism behind the number — drawn from what the source supports (here, the reason code and timing in the reprint log), not a new fact.`
+**Expected finding:** `[L2 Insight quality] "A lot of labels are being reprinted" restates the observation without adding interpretation. The insight must explain why the reprints happen — the mechanism behind the number — drawn from what the source supports (here, the reason code and timing in the reprint log), not a new fact. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -114,7 +114,7 @@ Each test has:
 >
 > **Insight:** The common factor across the three plants is the unpublished asset condition standard: all three are waiting on it, so the delay sits with the Asset Management team, not with the plants.
 
-**Expected finding:** `[L2 Insight quality] "A common challenge in large utilities" is a generic principle, not an insight specific to this client. The insight must explain what this observation means for this client's situation — not what risk register delays mean in general.`
+**Expected finding:** `[L2 Insight quality] "A common challenge in large utilities" is a generic principle, not an insight specific to this client. The insight must explain what this observation means for this client's situation — not what risk register delays mean in general. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -130,7 +130,7 @@ Each test has:
 
 > If the untested backup restore is not addressed, [needs: consequence], affecting [needs: who is affected].
 
-**Expected finding:** `[L3 Implication quality] "Could cause problems down the line" is vague and creates no urgency. Name the specific consequence — cost, timeline impact, risk event, compliance exposure, or reputational damage — and scope it to who is affected. The source states none of these, so the rewrite marks each one [needs: …] rather than inventing a consequence or figure, and keeps the source's condition "If the untested backup restore is not addressed" without adding a deadline it does not state.`
+**Expected finding:** `[L3 Implication quality] "Could cause problems down the line" is vague and creates no urgency. Name the specific consequence — cost, timeline impact, risk event, compliance exposure, or reputational damage — and scope it to who is affected. The source states none of these, so the rewrite marks each one [needs: …] rather than inventing a consequence or figure, and keeps the source's condition "If the untested backup restore is not addressed" without adding a deadline it does not state. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -146,11 +146,9 @@ Each test has:
 
 > **Observation:** No software licensing policy has been agreed.
 >
-> **Insight:** [needs: insight]
->
-> **Implication:** Without an agreed software licensing policy, each department will independently request licenses based on assumptions rather than validated needs, [needs: cost or provisioning impact of those requests].
+> **Implication:** Without an agreed software licensing policy, each department will independently request licenses based on assumptions rather than validated needs. [needs: consequence]
 
-**Expected finding:** `[L2/L3 misclassification] The statement describes what will happen if the finding is left unaddressed — that is the implication (L3), not the insight (L2). The insight should explain what the observation means; the implication should name the cost of inaction. Split into separate labeled statements. The source states no insight beyond the observation, so the Insight is marked [needs: insight] rather than written by rewording the observation. [L3 Implication quality] Once moved to L3, "each department will independently request licenses based on assumptions" names a behaviour, not a consequence — no cost, timeline impact, or risk event. The source states none, so the rewrite marks [needs: cost or provisioning impact of those requests].`
+**Expected finding:** `[L2/L3 misclassification] The statement describes what will happen if the finding is left unaddressed — that is the implication (L3), not the insight (L2). The insight should explain what the observation means; the implication should name the cost of inaction. [L3 Implication quality] Once moved to L3, "each department will independently request licenses based on assumptions" states what the departments will choose to do: a behaviour, not a consequence. It names no cost, timeline impact, or risk event, and the source states none, so the rewrite keeps the statement and adds [needs: consequence]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -160,15 +158,15 @@ Each test has:
 
 > **Observation:** The checkout terminal vendor has missed two of its four interim milestones. Staff training on the new terminals starts in about 140 stores on 1 June, and each store needs its terminals installed to run the training. Terminals ship to stores only after the vendor passes its 30 April factory acceptance test; if it fails, the earliest retest is 15 May, and installation takes four weeks from shipment.
 >
-> **Implication:** If the vendor also fails the 30 April factory acceptance test, about 140 stores will reach the 1 June training start without terminals.
+> **Implication:** If the vendor also fails the 30 April factory acceptance test, about 140 stores will have no terminals when training starts on 1 June.
 
 **GREEN:**
 
 > **Observation:** The checkout terminal vendor has missed two of its four interim milestones. Staff training on the new terminals starts in about 140 stores on 1 June, and each store needs its terminals installed to run the training. Terminals ship to stores only after the vendor passes its 30 April factory acceptance test; if it fails, the earliest retest is 15 May, and installation takes four weeks from shipment.
 >
-> **Implication:** If the vendor also fails the 30 April factory acceptance test, about 140 stores will reach the 1 June training start without terminals.
+> **Implication:** If the vendor also fails the 30 April factory acceptance test, about 140 stores will have no terminals when training starts on 1 June.
 
-**Expected finding:** `(No finding on the implication — it is conditional, but its consequence is specific (about 140 stores without terminals), dated, and grounded in the observations: a failed test means shipment no earlier than the 15 May retest, and four weeks of installation from then ends after 1 June. A conditional implication passes L3 when its consequence does; "not speculation" does not mean "unconditional".)`
+**Expected finding:** `(No finding on the implication — it is conditional, but its consequence is specific (about 140 stores without terminals), dated, and grounded in the observations: a failed test means shipment no earlier than the 15 May retest, and four weeks of installation from then ends after 1 June. A conditional implication passes L3 when its consequence does; "not speculation" does not mean "unconditional". The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".)`
 
 ---
 
@@ -184,7 +182,7 @@ Each test has:
 
 > [needs: owner] should [needs: specific change] to the intake process by [needs: date].
 
-**Expected finding:** `[L4 Recommendation quality] "Consider whether it might be worth exploring" is an invitation to defer, not a recommendation. Replace with a direct verb, a named owner, and a deadline or milestone. "The team" names no owner and the source gives no change or date, so the rewrite carries [needs: owner], [needs: specific change], and [needs: date].`
+**Expected finding:** `[L4 Recommendation quality] "Consider whether it might be worth exploring" is an invitation to defer, not a recommendation. Replace with a direct verb, a named owner, and a deadline or milestone. "The team" names no owner and the source gives no change or date, so the rewrite carries [needs: owner], [needs: specific change], and [needs: date]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -202,11 +200,11 @@ Each test has:
 >
 > **Recommendation:** [needs: owner] should [needs: specific change to the process] so that cycle time meets the 5-day SLA, and should invest in staff training to improve process knowledge, both by [needs: date].
 
-**Expected finding:** `[L4 Recommendation–implication fit] The implication is about speed and SLA penalties; the recommendation addresses staff training. The recommendation must directly address the implication it responds to. If the implication is about cycle time, the recommendation must fix cycle time; the training recommendation can stay, but it cannot be the only response. [Ownership gap] "The team" names no owner, so the rewrite carries [needs: owner]. The source gives no date for either recommendation, so the rewrite carries [needs: date].`
+**Expected finding:** `[L4 Recommendation–implication fit] The implication is about speed and SLA penalties; the recommendation addresses staff training. The recommendation must directly address the implication it responds to. If the implication is about cycle time, the recommendation must fix cycle time; the training recommendation can stay, but it cannot be the only response. [Ownership gap] "The team" names no owner, so the rewrite carries [needs: owner]. The source names no change that fixes cycle time, so the added clause carries [needs: specific change to the process]. The source gives no date for either recommendation, so the rewrite carries [needs: date]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
-### 4.3 — Wrong modal verb
+### 4.3 — Deferral form ("may want to")
 
 **RED:**
 
@@ -216,7 +214,7 @@ Each test has:
 
 > The Finance team should move unspent contingency into the device refresh line before the next cycle.
 
-**Expected finding:** `[L4 Modal verb] "May want to" signals permission or suggestion, not a recommendation. Use "must" (required, no discretion), "should" (recommended, judgment allowed), or "may" (permitted, reader's choice). "May want to" is not on this list — it obscures the recommendation entirely. The source states no requirement, so the rewrite uses "should", not "must", and keeps the action and the "before the next cycle" limit unchanged.`
+**Expected finding:** `[L4 Recommendation quality] "May want to" is a deferral form (review step 4): it suggests a change and does not commit to one. Replace it with a direct verb. The source states no requirement, so the rewrite uses "should", not "must", and keeps the owner (the Finance team), the action, and the "before the next cycle" limit unchanged. The text gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -230,7 +228,7 @@ Each test has:
 
 > If the patient-intake system pilot misses its 12 May readiness review, [needs: owner] should bring in [needs: number] extra admissions staff by [needs: date].
 
-**Expected finding:** `[L4 Recommendation quality] "Think about" is a hedge and "we" names no accountable owner. The source gives no owner, date, or number of staff, so the rewrite carries [needs: owner], [needs: date], and [needs: number] instead of an invented team, date, or headcount, keeps the condition "If the patient-intake system pilot misses its 12 May readiness review", and lists all three gaps under Gaps.`
+**Expected finding:** `[L4 Recommendation quality] "Think about" is a hedge and "we" names no accountable owner. The source gives no owner, date, or number of staff, so the rewrite carries [needs: owner], [needs: date], and [needs: number] instead of an invented team, date, or headcount, keeps the condition "If the patient-intake system pilot misses its 12 May readiness review", and lists all three gaps under Gaps. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -244,7 +242,7 @@ Each test has:
 
 > The Service Desk should [needs: specific change] for student self-service password reset by [needs: date].
 
-**Expected finding:** `[L4 Recommendation quality] "Evaluate options" commits only to studying a change, not to making one — the same deferral as "explore". A study verb passes only when the study is itself the deliverable with an output and a date, and the source gives neither. The Service Desk is a named owner and stays; the change is marked [needs: specific change]. The source gives no date, so [needs: date].`
+**Expected finding:** `[L4 Recommendation quality] "Evaluate options" commits only to studying a change, not to making one — the same deferral as "explore". A study verb passes only when the study is itself the deliverable with an output and a date, and the source gives neither. The Service Desk is a named owner and stays; the change is marked [needs: specific change]. The source gives no date, so [needs: date]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -259,7 +257,7 @@ Each test has:
 > - Start issuing new permits from the verified address record alongside the application form.
 > - Stop issuing from the application form before the Zone 3 rollout.
 >
-> **Why.** In the July zone, 96 of 610 permits (16%) were reissued because the address changed after issue. Permits are issued from the application form, which is filed before the address is verified. Any address change after application therefore forces a reissue. Zone 3 adds 2,300 permits. At the July rate, about 360 Zone 3 permits would be reissued.
+> **Why.** Of the 610 permits issued in the July 2026 zone, 96 (16%) were reissued by the end of August 2026 because the address changed after issue. Permits are issued from the application form, which is filed before the address is verified. Any address change after application therefore forces a reissue. Zone 3 adds 2,300 permits. At the July rate, about 360 Zone 3 permits would be reissued.
 
 **GREEN:**
 
@@ -270,9 +268,9 @@ Each test has:
 > - Start issuing new permits from the verified address record alongside the application form.
 > - Stop issuing from the application form before the Zone 3 rollout.
 >
-> **Why.** In the July zone, 96 of 610 permits (16%) were reissued because the address changed after issue. Permits are issued from the application form, which is filed before the address is verified. Any address change after application therefore forces a reissue. Zone 3 adds 2,300 permits. At the July rate, about 360 Zone 3 permits would be reissued.
+> **Why.** Of the 610 permits issued in the July 2026 zone, 96 (16%) were reissued by the end of August 2026 because the address changed after issue. Permits are issued from the application form, which is filed before the address is verified. Any address change after application therefore forces a reissue. Zone 3 adds 2,300 permits. At the July rate, about 360 Zone 3 permits would be reissued.
 
-**Expected finding:** `(No finding — the "Start …" and "Stop …" bullets spell out Recommendation 2, so they are labeled Level 4 with it, not Level 6 actions, and the action tests for output and status do not apply. Both inherit the owner (Parking Permits Manager) and the deadline (14 September 2026) from the heading and the Owner label, so there is no ownership gap. The evidence sits below the recommendation, but the chain is judged by what supports what, not by position: observation (96 of 610 reissued), insight (issuing from the application form before the address is verified), implication (about 360 reissues in Zone 3), recommendation.)`
+**Expected finding:** `(No finding — the "Start …" and "Stop …" bullets spell out Recommendation 2, so they are labeled Level 4 with it, not Level 6 actions, and the action tests for output and status do not apply. Both inherit the owner (Parking Permits Manager) and the deadline (14 September 2026) from the heading and the Owner label, so there is no ownership gap. The evidence sits below the recommendation, but the chain is judged by what supports what, not by position: observation (96 of 610 reissued), insight (issuing from the application form before the address is verified), implication (about 360 reissues in Zone 3), recommendation. The text gives no as-of date, so the overdue check is skipped and the review says so. The input is "Recommendation 2" of a longer document, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".)`
 
 ---
 
@@ -312,7 +310,7 @@ Each test has:
 
 > [needs: decision-maker role within leadership] must decide by [needs: date] whether to [needs: option A for the vendor contract] or [needs: option B]. Without a decision by that date, [needs: consequence of delay].
 
-**Expected finding:** `[L5 Decision quality] "Leadership needs to make a decision" does not name the decision-maker, the question being decided, the options, or the consequence of delay. A decision required must name: the role, the specific question (option A vs. option B), and the deadline with its consequence. The source supplies none of them, so each is marked [needs: …].`
+**Expected finding:** `[L5 Decision quality] "Leadership needs to make a decision" does not name the decision-maker, the question being decided, the options, or the consequence of delay. A decision required must name: the role, the specific question (option A vs. option B), and the deadline with its consequence. The source supplies none of them, so each is marked [needs: …]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -335,7 +333,7 @@ Each test has:
 > | Board | Whether to fund the secondary supplier budget | (a) fund the secondary supplier; (b) install meters with manual reading only | [needs: deadline] | [needs: consequence of delay] |
 > | Steering Committee | Whether to approve the FY27 licence budget | Approve / reject | 12 June 2026 | [needs: consequence of delay] |
 
-**Expected finding:** `[L5 Decision buried] "Should the Board decline the secondary supplier budget, the fallback is …" turns on the Board's yes or no, so it is a Level 5 decision even though it matches no decision pattern; surface it in the Decisions table. "The Steering Committee must approve the FY27 licence budget" is an approval by a governing body, so it is Level 5, not a recommendation: approve or reject is its fork, so the rule that a "whether to X" question needs a stated alternative does not apply. Neither states a consequence of delay and the Board item states no deadline, so those cells read [needs: …]. The Procurement recommendation keeps its condition "If the primary vendor fails the 30 April factory acceptance test".`
+**Expected finding:** `[L5 Decision buried] "Should the Board decline the secondary supplier budget, the fallback is …" turns on the Board's yes or no, so it is a Level 5 decision even though it matches no decision pattern; surface it in the Decisions table. "The Steering Committee must approve the FY27 licence budget" is an approval by a governing body, so it is Level 5, not a recommendation: approve or reject is its fork, so the rule that a "whether to X" question needs a stated alternative does not apply. Neither states a consequence of delay and the Board item states no deadline, so those cells read [needs: …]. The Procurement recommendation keeps its condition "If the primary vendor fails the 30 April factory acceptance test". The text gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -351,7 +349,7 @@ Each test has:
 
 > [needs: owner] to sign off the warehouse scanner allowlist before the first site handover ([needs: date]). Output: [needs: output]. Status: [needs: status].
 
-**Expected finding:** `[L6 Action quality] "All stakeholders" is not a single owner — it has no accountability. An action must have one named person, specific named role, or named team, a specific deadline, a named output, and a stated status. Replace "all stakeholders" with the accountable owner; the source names none, so write [needs: owner]. The source names no output either, so the rewrite writes [needs: output] rather than deriving one from the task. "Before the first site handover" is not a date: the document gives no handover date, so the rewrite marks [needs: date]. No status is stated, so [needs: status].`
+**Expected finding:** `[L6 Action quality] "All stakeholders" is not a single owner — it has no accountability. An action must have one named person, specific named role, or named team, a specific deadline, a named output, and a stated status. Replace "all stakeholders" with the accountable owner; the source names none, so write [needs: owner]. The source names no output either, so the rewrite writes [needs: output] rather than deriving one from the task. "Before the first site handover" is not a date: the document gives no handover date, so the rewrite marks [needs: date]. No status is stated, so [needs: status]. The text gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -365,7 +363,7 @@ Each test has:
 
 > Clinical Systems to complete system configuration by [needs: date before go-live]. Output: [needs: output]. Status: [needs: status].
 
-**Expected finding:** `[L6 Action quality] "Before go-live" is not a specific deadline — the document gives no go-live date, so it cannot be tracked or enforced. Actions require a specific date, a named output, and a stated status. The source gives none of them, so each is marked [needs: date before go-live], [needs: output], [needs: status], keeping the source's "before go-live" limit.`
+**Expected finding:** `[L6 Action quality] "Before go-live" is not a specific deadline — the document gives no go-live date, so it cannot be tracked or enforced. Actions require a specific date, a named output, and a stated status. The source gives none of them, so each is marked [needs: date before go-live], [needs: output], [needs: status], keeping the source's "before go-live" limit. The text gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -391,7 +389,7 @@ Each test has:
 > | A2 | Confirm the handheld scanner firmware baseline | Library Systems | 29 May 2026 | [needs: output] | In Progress |
 > | A3 | Issue the revised staff joiner form | HR Operations | 5 June 2026 | [needs: output] | Not started |
 
-**Expected finding:** `[L6 Action quality — table] Each row is one action, and its Owner, Due, and Status cells are its attributes, so no row is an ownership gap. The table has no Output column: report that once for the table, not once per row. The rewrite adds the Output column and fills each cell with [needs: output], because the source names no output for any action; Gaps lists [needs: output] once. "Not started" is a stated status and is not a failure. The log gives no as-of date, so the overdue check is skipped and the review says so.`
+**Expected finding:** `[L6 Action quality — table] Each row is one action, and its Owner, Due, and Status cells are its attributes, so no row is an ownership gap. The table has no Output column: report that once for the table, not once per row. The rewrite adds the Output column and fills each cell with [needs: output], because the source names no output for any action; Gaps lists [needs: output] once. "Not started" is a stated status and is not a failure. The log gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -415,7 +413,7 @@ Each test has:
 >
 > **Decision D1:** The CIO must decide by 30 May 2026 whether contractor renewals are approved by sponsors or by central IAM. Without a decision, renewals continue under the current manual process.
 
-**Expected finding:** `[Date conflict] As at 14 April 2026, "close legacy VPN accounts" is Open and past its 31 March 2026 deadline: overdue. "Configure the renewal workflow chosen under decision D1" is due 15 May 2026, before D1's 30 May 2026 deadline: sequence conflict. The source gives no revised dates, so each is marked [needs: …].`
+**Expected finding:** `[Date conflict] As at 14 April 2026, "close legacy VPN accounts" is Open and past its 31 March 2026 deadline: overdue. "Configure the renewal workflow chosen under decision D1" is due 15 May 2026, before D1's 30 May 2026 deadline: sequence conflict. The source gives no revised dates, so each is marked [needs: …]. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -437,7 +435,7 @@ Each test has:
 > - Fleet Services to tag the pilot vehicles by 90 days before handover ([needs: calendar date for 90 days before handover]). Output: 200 tagged vehicles. Status: Open.
 > - Finance to confirm the FY27 licence budget by 14 March [needs: year]. Output: confirmation memo. Status: In Progress.
 
-**Expected finding:** `[L6 Action quality — deadline] "By 90 days before handover" does not resolve to a calendar date: the document never gives the handover date. "By 14 March" has no year, and the programme spans two Marches (2026, 2027). Mark [needs: calendar date for 90 days before handover] and [needs: year]. "By Gate 3 (12 June 2026)" passes because the document gives the milestone's date.`
+**Expected finding:** `[L6 Action quality — deadline] "By 90 days before handover" does not resolve to a calendar date: the document never gives the handover date. "By 14 March" has no year, and the programme spans two Marches (2026, 2027). Mark [needs: calendar date for 90 days before handover] and [needs: year]. "By Gate 3 (12 June 2026)" passes because the document gives the milestone's date. The document gives no as-of date, so the overdue check is skipped and the review says so. The input states no scope, so it is not known to be the full document: the review writes "Chain assessed within the supplied text only".`
 
 ---
 
@@ -463,7 +461,7 @@ Each test has:
 >
 > **Recommendation:** The Finance team should adopt zero-based budgeting by Q4.
 
-**Expected finding:** `[Chain integrity] The recommendation for zero-based budgeting has no supporting observation, insight, or implication. A recommendation without an evidence chain is an assertion. Add the supporting levels or remove the recommendation. The skill does not write the missing levels; it marks each one [needs: …].`
+**Expected finding:** `[Chain integrity] The recommendation for zero-based budgeting has no supporting observation, insight, or implication. A recommendation without an evidence chain is an assertion. Add the supporting levels or remove the recommendation. The skill does not write the missing levels; it marks each one [needs: …]. The text gives no as-of date, so the overdue check is skipped and the review says so.`
 
 ---
 
@@ -539,7 +537,7 @@ Each test has:
 >
 > **Recommendation:** [needs: owner] should [needs: action on encrypting exported footage] by [needs: date].
 
-**Expected finding:** `[Chain integrity — orphan observation] The statement-of-work observation (the supplier "should consider" encrypting exported footage) has no recommendation; add one, marking what the source lacks [needs: …]. The source gives no insight or implication about encryption, so those levels are [needs: insight] and [needs: implication]. The quoted words are not flagged: "must be retained" is the contract's wording, "should consider" is the statement of work's, and "an accident waiting to happen" is the warehouse manager's. Each is an observation of its source, so the modal, hedge, and neutrality tests do not apply and the quotes are not rewritten.`
+**Expected finding:** `[Chain integrity — orphan observation] The statement-of-work observation (the supplier "should consider" encrypting exported footage) has no recommendation; add one, marking what the source lacks [needs: …]. The source gives no insight or implication about encryption, so those levels are [needs: insight] and [needs: implication]. The quoted words are not flagged: "must be retained" is the contract's wording, "should consider" is the statement of work's, and "an accident waiting to happen" is the warehouse manager's. Each is an observation of its source, so the modal, hedge, and neutrality tests do not apply and the quotes are not rewritten. The text gives no as-of date, so the overdue check is skipped and the review says so.`
 
 ---
 
@@ -565,7 +563,7 @@ Each test has:
 
 **Verified 2026-10-22.** Result: **27/27 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards.
 
-Produced against `TESTS.md` body sha256 `807817fe83c655fb` and `SKILL.md` sha256 `efd17fc252185d67`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `3292f4238fe63dcf` and `SKILL.md` sha256 `89ae7e9ad71d4a8e`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test                                                                     | RED flags | GREEN clean | Pass |
 |--------------------------------------------------------------------------|-----------|-------------|------|
@@ -580,7 +578,7 @@ Produced against `TESTS.md` body sha256 `807817fe83c655fb` and `SKILL.md` sha256
 | 3.3 — Conditional implication stays unflagged                            | ✓         | ✓           | PASS |
 | 4.1 — Hedged recommendation ("consider" / "explore")                     | ✓         | ✓           | PASS |
 | 4.2 — Recommendation doesn't address the implication                     | ✓         | ✓           | PASS |
-| 4.3 — Wrong modal verb                                                   | ✓         | ✓           | PASS |
+| 4.3 — Deferral form ("may want to")                                      | ✓         | ✓           | PASS |
 | 4.4 — Missing owner and timing are marked, not invented                  | ✓         | ✓           | PASS |
 | 4.5 — Study verb in place of a commitment                                | ✓         | ✓           | PASS |
 | 4.6 — Owner and deadline in the heading, evidence below: stays unflagged | ✓         | ✓           | PASS |

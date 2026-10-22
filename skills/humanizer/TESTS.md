@@ -30,7 +30,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 > The report sets out the data and the actions it points to, so nothing is left to infer.
 
-**Expected finding:** `[1 not X but Y] Two consecutive flip constructions — "It's not just a report; it's a roadmap" and "It's not merely data; it's a call to action" — plus the clipped negative tail "no guessing." Remove the rhetorical flip; state each point directly.`
+**Expected finding:** `[1 not X but Y] Two consecutive flip constructions — "It's not just a report; it's a roadmap" and "It's not merely data; it's a call to action" — plus the clipped negative tail "no guessing." Remove the two flips and restate the tail as a plain clause; state the point directly: the report sets out the data and the actions it points to, so nothing is left to infer.`
 
 ---
 
@@ -54,13 +54,13 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> The real question is whether the schema survives the move. At its core, this is a documentation problem. What really matters is field-level meaning, and fundamentally, migration is the currency of trust between the two systems.
+> The real question is how much of the schema survives the move. At its core, this is a documentation problem. What really matters, fundamentally, is field-level meaning.
 
 **GREEN:**
 
-> The question is whether the schema survives the move, which depends on whether each field's meaning is documented.
+> The question is how much of the schema survives the move. This is a documentation problem, and the part that matters is field-level meaning.
 
-**Expected finding:** `[3 sayings that sound deep] "The real question is," "At its core," "What really matters," "fundamentally," and the aphorism "the currency of trust" — ordinary points dressed as hidden truths. Replace each saying with the specific claim. "Migration is the currency of trust" has no specific claim behind it, so it is cut rather than restated.`
+**Expected finding:** `[3 sayings that sound deep] "The real question is," "At its core," "What really matters," and "fundamentally" — ordinary points dressed as hidden truths. Drop the four sayings and keep the three claims under them: how much of the schema survives the move, that this is a documentation problem, and that field-level meaning is the part that matters.`
 
 ---
 
@@ -98,7 +98,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> Seamless, frictionless, and effortless onboarding is what every vendor in this category promises. Our scoring weighed cost, risk, and cultural fit before anything else was considered.
+> Seamless, frictionless, and effortless onboarding is what every vendor in this category promises. Our scoring weighed cost, risk, and cultural fit first.
 
 **GREEN:**
 
@@ -116,7 +116,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **GREEN:**
 
-> She completed the audit in March, submitted the report in April, presented to the board in May, and had approval by June.
+> She completed the audit in March, submitted the report in April, presented to the board in May, and received approval by June.
 
 **Expected finding:** `[7 repeated openings] Four consecutive sentences opening with "She." Merge the sentences, change the subject, or begin with the action.`
 
@@ -154,13 +154,13 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> The form must be submitted by the deadline. Approval will be granted upon review, and the portal serves as the system of record. Errors may be corrected before submission is finalized.
+> To apply, the form is submitted through the portal. Approval is granted upon review, and the portal serves as the system of record. Errors in your form can be corrected before the submission is finalized.
 
 **GREEN:**
 
-> Submit the form by the deadline. Approval will be granted after review, and the portal is the system of record. You can correct errors before the submission is finalized.
+> To apply, submit the form through the portal. Approval is granted upon review, and the portal is the system of record. You can correct errors in your form before the submission is finalized.
 
-**Expected finding:** `[11 passive voice] Four passive constructions across three sentences — "must be submitted," "will be granted," "may be corrected," "is finalized" — hide who acts. Where the reader acts (submits, corrects), use the imperative or "you". The RED never names who grants approval or who finalizes the submission, so keep those passives rather than invent an actor. §11 is *weak alone*; the §18 verb "serves as" in the same passage supplies the company the gate requires.`
+**Expected finding:** `[11 passive voice] Four passive constructions across three sentences — "is submitted," "is granted," "can be corrected," "is finalized" — hide who acts. "To apply" and "your form" show that the reader submits and corrects, so use the imperative ("submit the form") and "you" ("You can correct errors"), and keep "can." The RED never names who grants approval or who finalizes the submission, so keep those passives rather than invent an actor. §11 is *weak alone*; the §18 verb "serves as" in the same passage supplies the company the gate requires, and it becomes "is."`
 
 ---
 
@@ -170,13 +170,13 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> Additionally, this initiative showcases the team's commitment to fostering a vibrant, inclusive culture. It is crucial that all stakeholders align with the pivotal values that underscore our enduring mission.
+> Additionally, this initiative showcases how the team is fostering a vibrant, inclusive culture. It is crucial that all stakeholders align with the pivotal values that underscore our enduring mission.
 
 **GREEN:**
 
-> This initiative shows the team supports an inclusive culture. All stakeholders must follow the core values behind our mission.
+> This initiative shows how the team is building an inclusive culture. All stakeholders must follow the core values behind our mission.
 
-**Expected finding:** `[12 overused AI words] Cluster of high-frequency AI vocabulary in one passage: "Additionally," "showcases," "fostering," "vibrant," "crucial," "align," "pivotal," "underscore," "enduring." The §16 phrase "commitment to" goes with them. Replace each with plain words or cut the phrase.`
+**Expected finding:** `[12 overused AI words] Cluster of high-frequency AI vocabulary in one passage: "Additionally," "showcases," "fostering," "vibrant," "crucial," "align," "pivotal," "underscore," "enduring." Replace each with plain words or cut the phrase.`
 
 ---
 
@@ -190,7 +190,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 > The university's IT team moved staff sign-in to a shared identity provider last year, part of a broader shift toward federated trust.
 
-**Expected finding:** `[13 inflated significance] "stands as a watershed," "reflects a broader shift," "left an indelible mark" — a routine change of sign-in provider is framed as a turning point with a legacy. Cut the watershed and the indelible mark; they state no fact. The RED does assert the broader shift toward federated trust, so keep the shift as a fact: the change is part of it.`
+**Expected finding:** `[13 inflated significance] "stands as a watershed," "reflects a broader shift," "left an indelible mark" — a routine change of sign-in provider is framed as a turning point with a legacy. Cut the watershed and the indelible mark; they state no fact. The RED does assert the broader shift toward federated trust, so keep the shift as a fact. "Reflects a broader shift" is the watch-list phrasing; "part of a broader shift" states the same claim, that this change is one instance of the shift, without the significance frame.`
 
 ---
 
@@ -220,9 +220,9 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **GREEN:**
 
-> _(Cut the paragraph. End on the last concrete fact or action item.)_
+> _(Cut the paragraph. End on the last concrete fact.)_
 
-**Expected finding:** `[13 inflated significance] "a step in the right direction," "well positioned to shape the next chapter," "digital journey" — a send-off paragraph that promises a future without stating a plan. Remove it and end on the last substantive sentence.`
+**Expected finding:** `[13 inflated significance] "a step in the right direction," "well positioned to shape the next chapter," "digital journey" — a send-off paragraph that promises a future without stating a plan. Remove it and end on the last concrete fact.`
 
 ---
 
@@ -244,13 +244,13 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> The program's three-year timeline reflects the organization's commitment to sustainable growth, fostering deeper community relationships while ensuring long-term impact across all stakeholder groups.
+> The program runs for three years, reflecting how seriously the organization takes sustainable growth, fostering deeper community relationships while ensuring long-term impact across all stakeholder groups.
 
 **GREEN:**
 
 > The program runs for three years.
 
-**Expected finding:** `[15 shallow -ing riders] "fostering," "ensuring" — participial phrases riding on the main clause that add no factual content. They make a timeline sound meaningful without stating what will happen. Keep the fact (the three-year timeline) and cut the riders; the RED supports neither. The "reflects the organization's commitment" clause is the same inflation and goes with them.`
+**Expected finding:** `[15 shallow -ing riders] "reflecting," "fostering," "ensuring" — three participial phrases riding on the main clause that add no factual content. They make a timeline sound meaningful without stating what will happen. Keep the fact (the program runs for three years) and cut the riders: each draws a conclusion the three-year length cannot support, since duration shows neither seriousness, relationships, nor impact.`
 
 ---
 
@@ -310,7 +310,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 >
 > [^1]: Harbour Analytics, Retail Systems Survey, March 2026.
 
-**Expected finding:** `[17 borrowed authority] "Industry reports" stands in for the source, but footnote [^1] names it, which counts as naming the source: name the survey in the sentence and keep the roughly 25% figure. "Experts argue it will keep growing" names no one; cut it. Never invent a source.`
+**Expected finding:** `[17 borrowed authority] "Industry reports" stands in for the source, but footnote [^1] names it, which counts as naming the source. §17 says to use the real source when the text names it: name the survey in the sentence, and keep the roughly 25% figure and the footnote. "Experts argue it will keep growing" names no one; cut it. Never invent a source.`
 
 ---
 
@@ -340,7 +340,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 > The rollout covers Identity and Access Management (IAM), Network Access Control (NAC), and Public Key Infrastructure (PKI), with Segmentation handled in a later phase.
 
-**Expected finding:** `[19 bold as decoration] Four terms bolded without a reason — three wrap acronym definitions and one is a plain term; none is critical information. Remove the bold formatting and keep each parenthetical acronym with its expansion.`
+**Expected finding:** `[19 bold as decoration] Four terms bolded without a reason; the bold flags no critical information. Remove the bold and keep each acronym's spelled-out form and parenthetical, which later uses of the acronym depend on.`
 
 ---
 
@@ -358,7 +358,7 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 > The main improvements include automatic routing of requests to the owning team, two approvers required for changes above £50k, and an immutable log of every decision.
 
-**Expected finding:** `[19 bold as decoration] Every list item carries a bold label and a colon. The labels carry no information of their own. Turn the list into prose, or drop the bold labels. "Key" in "Key improvements" is §12 *weak alone*; the §19 labels supply the company, so it becomes "main".`
+**Expected finding:** `[19 bold as decoration] Every list item carries a bold label and a colon. Each sentence makes its label obvious (routing requests is intake, two approvers is review, an immutable decision log is the audit trail), so the labels carry no information of their own. Turn the list into prose. "Key" in "Key improvements" is §12 *weak alone*; the §19 labels supply the company, so it becomes "main".`
 
 ---
 
@@ -380,15 +380,17 @@ Patterns with no test case: 5, 10, 21, 24, 25.
 
 **RED:**
 
-> 📌 **Discovery:** Site surveys complete at nine of twelve pumping stations.
-> ⚡ **Build:** Cabling starts in the first week of March.
-> → **Handover:** Operations takes ownership at go-live.
+> 📌 Site surveys complete at nine of twelve pumping stations.
+> ⚡ Cabling starts in the first week of March.
+> → Operations takes ownership at go-live.
 
 **GREEN:**
 
-> Site surveys complete at nine of twelve pumping stations. Cabling starts in the first week of March, and operations takes ownership at go-live.
+> Site surveys complete at nine of twelve pumping stations.
+> Cabling starts in the first week of March.
+> Operations takes ownership at go-live.
 
-**Expected finding:** `[20 decorative headings] Emojis and an arrow used as decorative list-item prefixes. Remove the decoration. The bold labels on each item are also pattern 19.`
+**Expected finding:** `[20 decorative headings] Two emojis and an arrow used as decorative list-item prefixes. Remove the three prefixes and keep the three statements as written.`
 
 ---
 
@@ -516,7 +518,7 @@ Each input below contains no tell that clears its gate, or only text the skill m
 >
 > WARNING: Disconnect the mains supply before you open the rack. Fuses are replaced only by a qualified electrician.
 
-**Expected finding:** `(No finding — return the text unchanged. "MUST NOT," "SHOULD," and "WARNING" are normative keywords and a callout label, not §2 capitals. The three "The supplier shall" sentences are separate requirements, not §7 openings. The one passive names its actor, so it is not a §11 tell.)`
+**Expected finding:** `(No finding — return the text unchanged. "MUST NOT" and "SHOULD" are normative keywords and "WARNING" is a callout label, not §2 capitals. The three "The supplier shall" sentences are separate requirements, not §7 openings. The one passive names its actor, so it is not a §11 tell.)`
 
 ---
 
@@ -559,9 +561,9 @@ Two tests were removed because v3.0.0 has no rule they map to. They are recorded
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **33/33 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. `python3 scripts/validate-package.py` run in the same pass: `Humanizer package v3.0.0 is valid`, exit 0. Every `SKILL.md` worked example was also checked against the skill's own rules (no added facts, no lost claims) and none breaks them. For N1 to N5, "RED flags" means the skill correctly stays quiet and "GREEN clean" means the unchanged text is what the skill would return.
+**Verified 2026-10-22.** Result: **33/33 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. `python3 scripts/validate-package.py` run in the same pass: `Humanizer package v3.0.0 is valid`, exit 0. Every `SKILL.md` worked example was also checked against the skill's own rules (no added facts, no lost claims) and none breaks them. Counts (9 §12 words, 2 em and 1 en dash in §8, 4 passives in 3 sentences in §11, 4 "She" openings, 4 bolded terms, longest RED/`Before:` word-run 5) were verified by script. For N1 to N5, "RED flags" means the skill correctly stays quiet and "GREEN clean" means the unchanged text is what the skill would return.
 
-Produced against `TESTS.md` body sha256 `b389efa1a4bd58aa` and `SKILL.md` sha256 `881d1697e5f7d353`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `2598d70b3f24d964` and `SKILL.md` sha256 `a9252356fc85a7bc`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 | Test | RED flags | GREEN clean | Pass |
 |------|-----------|-------------|------|

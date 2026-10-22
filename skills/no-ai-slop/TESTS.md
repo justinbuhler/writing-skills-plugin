@@ -14,11 +14,11 @@ Each test has:
 
 **RED:**
 
-> We need to leverage the payroll team's audit checklist to streamline month-end close and empower regional leads to deliver robust, cutting-edge reports at every stage of this ever-evolving journey.
+> We need to leverage the payroll team's audit checklist to streamline month-end close and empower regional leads to deliver robust, cutting-edge reports at every stage of the ever-evolving audit.
 
 **GREEN:**
 
-> We need to use the payroll team's audit checklist to simplify month-end close and help regional leads deliver reports at every stage.
+> We need to use the payroll team's audit checklist to simplify month-end close and help regional leads deliver reports at every stage of the audit.
 
 **Expected finding:** `[banned words] "leverage," "streamline," "empower," "robust," "cutting-edge," "ever-evolving" — all on the banned list. Replace the verbs "leverage," "streamline," and "empower" with plain verbs, cut the adjectives "robust," "cutting-edge," and "ever-evolving," and add no claim the draft does not make.`
 
@@ -34,7 +34,7 @@ Each test has:
 
 > The login bug is blocking sign-ups. We need to fix it.
 
-**Expected finding:** `[empty adverbs] "literally," "truly," "fundamentally" add nothing and compound each other. Cut them.`
+**Expected finding:** `[empty adverbs] "literally," "truly," "fundamentally" add nothing here. Cut all 3 and change nothing else.`
 
 ---
 
@@ -48,7 +48,7 @@ Each test has:
 
 > Speed matters when shipping great software.
 
-**Expected finding:** `[empty phrases] "At the end of the day," "when it comes to," "it's worth noting that," "in today's world," "the reality is" — five consecutive throat-clearing phrases before the point. Cut all of them and lead with the point.`
+**Expected finding:** `[empty phrases] "At the end of the day," "when it comes to," "it's worth noting that," "in today's world," "the reality is" — five filler phrases before the point. Cut all of them and lead with the point. "Shipping great software" is the subject, not filler, so it stays, joined to the point by "when".`
 
 ---
 
@@ -64,7 +64,7 @@ Each test has:
 
 > The new rota is a commitment to the crew. Shift swaps are how people keep their weekends. Fairness matters more than flexibility.
 
-**Expected finding:** `[binary contrasts] Three consecutive "not X / it's Y" constructions. State Y directly each time. No negated item is an alternative the reader might assume, such as a ruled-out cause or a scope exclusion, and the draft is not first-person, so neither keep condition applies.`
+**Expected finding:** `[binary contrasts] Three consecutive "not X / it's Y" constructions. State Y directly each time. The third follows the skill's own example: "The question isn't X. It's Y." becomes "Y matters more than X." No negated item is an alternative the reader might assume, such as a ruled-out cause or a scope exclusion, and the draft is not first-person, so neither keep condition applies.`
 
 ---
 
@@ -86,13 +86,13 @@ Each test has:
 
 **RED:**
 
-> Here's what most people miss: the bottleneck isn't the API. What nobody tells you about deployments: the real cost is the rollback. The part everyone skips: you have to test the unhappy path.
+> Here's what most people miss: the bottleneck isn't the API. What nobody tells you: the real cost of a deployment is the rollback. The part everyone skips: you have to test the unhappy path.
 
 **GREEN:**
 
-> The bottleneck is not the API. The real cost of a deployment is the rollback. Test the unhappy path.
+> The bottleneck isn't the API. The real cost of a deployment is the rollback. You have to test the unhappy path.
 
-**Expected finding:** `[faux-insight setups] "Here's what most people miss," "What nobody tells you," "The part everyone skips" — these frame common knowledge as secret insider wisdom. Cut the flattering setup; make the claim stand on its own.`
+**Expected finding:** `[faux-insight setups] "Here's what most people miss," "What nobody tells you," "The part everyone skips": 3 setups that frame common knowledge as secret insider wisdom. Cut each setup and its colon. Keep each claim as written; only its first letter changes case.`
 
 ---
 
@@ -128,13 +128,13 @@ Each test has:
 
 **RED:**
 
-> This partnership marks a pivotal moment for the industry. It stands as a testament to what's possible when two organizations align on shared values and plays a vital role in solidifying their position as market leaders.
+> The two hospitals signed a shared-records agreement in May. The agreement marks a pivotal moment for the region. It stands as a testament to what partnership can achieve, plays a vital role in the future of care, and solidifies their position in the sector.
 
 **GREEN:**
 
-> The two organizations formed a partnership.
+> The two hospitals signed a shared-records agreement in May.
 
-**Expected finding:** `[importance puffery] "Marks a pivotal moment," "stands as a testament," "plays a vital role," "solidifying their position" — four consecutive importance claims with no supporting facts. State what actually happened and let the reader judge whether it matters.`
+**Expected finding:** `[importance puffery] "Marks a pivotal moment," "stands as a testament," "plays a vital role," "solidifies their position": four importance claims in the second and third sentences. The draft gives no fact to put in place of any of them, so cut both sentences whole and keep the first sentence as written, because it states what happened. Add nothing.`
 
 ---
 
@@ -142,13 +142,13 @@ Each test has:
 
 **RED:**
 
-> This distinction matters. What's worth noticing here is that the index is stale. To put it another way, the report's figures are out of date. The takeaway is that the numbers can't be trusted.
+> This distinction matters. What's worth noticing here is that the index has not been rebuilt since March. To put it another way, the report's figures are out of date. The takeaway is that the figures can't be trusted until the rebuild runs.
 
 **GREEN:**
 
-> The index is stale. The report's figures are out of date and can't be trusted.
+> The index has not been rebuilt since March. The report's figures are out of date. The figures can't be trusted until the rebuild runs.
 
-**Expected finding:** `[interpretive metadiscourse] "This distinction matters," "What's worth noticing here is," "To put it another way," "The takeaway is that" — four consecutive lines telling the reader what to notice instead of showing the fact. State the claim directly and cut all the commentary.`
+**Expected finding:** `[interpretive metadiscourse] "This distinction matters," "What's worth noticing here is that," "To put it another way," "The takeaway is that": 4 pieces of commentary that tell the reader what to notice. Cut the first sentence whole and cut the other 3 phrases. Keep the 3 claims as written; only the first letter of each changes case.`
 
 ---
 
@@ -174,15 +174,17 @@ Each test has:
 
 **GREEN:**
 
-> Remote work improves productivity [needs: source for "remote work improves productivity"]. The trend will likely continue [needs: source for "the trend will continue"]. It may cut staff turnover [needs: source for "it cuts staff turnover"].
+> Remote work improves productivity [needs: figure for productivity improvement] [needs: source for "remote work improves productivity"]. The trend will likely continue [needs: source for "the trend will continue"]. It may cut staff turnover [needs: figure for staff turnover reduction] [needs: source for "it cuts staff turnover"].
 >
 > **Gaps**
 >
+> - [needs: figure for productivity improvement]
 > - [needs: source for "remote work improves productivity"]
 > - [needs: source for "the trend will continue"]
+> - [needs: figure for staff turnover reduction]
 > - [needs: source for "it cuts staff turnover"]
 
-**Expected finding:** `[weasel attribution] "Experts agree," "industry reports suggest," "many argue" — no source named for any claim. The draft gives no source, so remove each weasel phrase, keep the claim with its hedge ("suggest" becomes "likely", "argue" becomes "may"), and write [needs: source for "<claim>"] after it. List all three markers under Gaps. Do not cut the claims unless the user says to, and do not invent a source.`
+**Expected finding:** `[weasel attribution] "Experts agree," "industry reports suggest," "many argue": no source named for any of the 3 claims. The draft gives no source, so remove each weasel phrase, keep the claim with its hedge ("suggest" becomes "likely", "argue" becomes "may"), and write [needs: source for "<claim>"] after it. "Improves productivity" and "cuts staff turnover" are also claimed results with no figure in the draft, so the be-concrete rule puts [needs: figure for <result>] after each of those 2 claims; the order of the 2 markers on a claim does not matter. List all 5 markers under Gaps. Do not cut the claims unless the user says to, and do not invent a source or a figure.`
 
 ---
 
@@ -210,7 +212,7 @@ Each test has:
 
 > The gritter leaves the depot at 5 a.m., salts the main roads first, then covers the bus routes, and is back by 9 a.m.
 
-**Expected finding:** `[synonym cycling] "Gritter," "truck," "vehicle," "lorry" all refer to the same thing. Use one clear term consistently. Don't rotate names for style — it confuses the reader about whether these are the same or different entities.`
+**Expected finding:** `[synonym cycling] "Gritter," "truck," "vehicle," "lorry" all refer to the same thing. Use one clear term consistently: keep "the gritter" and join the four sentences into one so the name is not repeated, adding only "and" and changing no other word. Don't rotate names for style — it confuses the reader about whether these are the same or different entities.`
 
 ---
 
@@ -266,7 +268,7 @@ Each test has:
 
 > We fixed the bug, shipped the patch, and closed the incident.
 
-**Expected finding:** `[fake-profound kicker] The last two sentences ("reliability isn't a feature. It's a promise.") turn a concrete incident resolution into a metaphor. Delete it. End on the last concrete sentence. Don't rewrite the kicker into a better one — remove it.`
+**Expected finding:** `[fake-profound kicker] The last two sentences ("In the end, reliability isn't a feature. It's a promise.") turn a concrete incident resolution into a metaphor. Delete them. End on the last concrete sentence. Don't rewrite the kicker into a better one — remove it. The kicker also holds a binary contrast ("isn't a feature. It's a promise."). Detect mode may name it as well, but the kicker rule governs the edit: delete both sentences rather than stating Y directly as "Reliability is a promise."`
 
 ---
 
@@ -274,13 +276,15 @@ Each test has:
 
 **RED:**
 
-> Overall, we've seen that the new process reduces handoffs, improves quality, and gives teams clearer ownership. In conclusion, this approach is the right move for the organization. Ultimately, it comes down to execution.
+> The new intake form cut handoffs per request from five to two. In the pilot, rework on first drafts fell from 30% to 12%. Each request now has one named owner from intake to delivery.
+>
+> Overall, we've seen that the new form reduces handoffs, cuts rework, and gives each request one owner. In conclusion, the pilot showed fewer handoffs and less rework. Ultimately, every request now has a single owner.
 
 **GREEN:**
 
-> _(Cut the paragraph. End on the last concrete sentence before this recap.)_
+> The new intake form cut handoffs per request from five to two. In the pilot, rework on first drafts fell from 30% to 12%. Each request now has one named owner from intake to delivery.
 
-**Expected finding:** `[summary-recap ending] "Overall," "In conclusion," "Ultimately" — three sentences that restate the document without adding anything. "This approach is the right move for the organization" restates the case the piece has made; it records no decision (no one approves, adopts, or schedules anything) and adds no figure, date, or action, so the keep condition does not apply. The reader was just there. End on the last concrete point or next action.`
+**Expected finding:** `[summary-recap ending] The second paragraph restates the three points of the first (handoffs, rework, one owner) in three sentences opened by "Overall," "In conclusion," and "Ultimately." It adds no figure, date, decision, or action, so no sentence in it stays. Cut the whole paragraph and end on "Each request now has one named owner from intake to delivery."`
 
 ---
 
@@ -297,9 +301,9 @@ Each test has:
 
 **GREEN:**
 
-> From Monday the night shift starts at 19:30. Handover moves to the nurses' station, and each nurse hands over four beds.
+> From Monday the night shift starts at 19:30. Two changes: handover moves to the nurses' station, and each nurse hands over four beds.
 
-**Expected finding:** `[formatting slop] Emoji in the heading, a header over a short section (one sentence, a "Two changes:" lead-in, and a two-item list), bold sprinkled mid-sentence on "night shift", and a two-item bullet list where two sentences of prose would read better. Format follows content — drop the heading and the bold, and merge the bullets into prose. The draft makes no unsupported claim, so no [needs: …] marker is called for.`
+**Expected finding:** `[formatting slop] Emoji in the heading, a header over a short section (one sentence, a "Two changes:" lead-in, and a two-item list), bold sprinkled mid-sentence on "night shift", and a two-item bullet list where prose would read better. Format follows content — drop the heading and the bold, and merge the two bullets into one sentence of prose. Keep "Two changes" as a plain lead-in, so the items still read as changes; a colon before a list is allowed. The draft makes no unsupported claim, so no [needs: …] marker is called for.`
 
 ---
 
@@ -349,7 +353,7 @@ Each test has:
 
 > I'll be honest, I argued against the four-day week for most of last year. I assumed output would drop, and it didn't. It went up 8% over two quarters, and I was slow to admit it. Honestly, that stung.
 
-**Expected finding:** `(No finding — return it unchanged. "I'll be honest" introduces a genuine admission (the writer argued against the change), so the throat-clearing cut does not apply. "It didn't. It went up" is the writer's own first-person contrast. "Honestly, that stung." is one short sentence in the writer's spoken rhythm, not a run of fragments, so the adverb and the sentence both stay.)`
+**Expected finding:** `(No finding — return it unchanged. "I'll be honest" introduces a genuine admission (the writer argued against the change), so the throat-clearing cut does not apply. "I assumed output would drop, and it didn't. It went up 8% over two quarters" states what happened, with a figure. It is not a "not X, it's Y" setup, so the binary-contrast cut does not apply. "Honestly, that stung." is one short sentence in the writer's spoken rhythm, not a run of fragments, so the adverb and the sentence both stay.)`
 
 ---
 
@@ -431,7 +435,7 @@ Each test has:
 
 **GREEN (expected output — returned unchanged):**
 
-> _(Same as RED. Naming the survey inline is an optional suggestion, not a required edit.)_
+> _(Same as RED. The survey is named inline only if the user asks.)_
 
 **Expected finding:** `(No finding — return it unchanged. The three depot rows are deliberately parallel status entries, exempt from robotic rhythm. "acts as" marks an interim role, so it stays. "just confirmed" means recently, a time meaning, so it stays. "Honestly," "game changer," and "leverage" sit inside a quotation, "Streamline Fleet 3.1" is a product name, and the harness-reset command is code, so the word lists do not apply. "Studies show" carries footnote [2], so the claim already has its source and gets no [needs: …] marker. "Risk:" is a field label.)`
 
@@ -445,21 +449,21 @@ Each test has:
 
 > Is this AI slop?
 >
-> This groundbreaking initiative marks a pivotal moment for our industry. Leveraging cutting-edge technology, our team has worked to streamline processes and empower stakeholders across the organization. It's worth noting that experts agree this transformative approach will fundamentally reshape how we operate going forward.
+> This initiative marks a pivotal moment for our industry. Leveraging cutting-edge technology, our team has worked to streamline processes and empower stakeholders across the organization. It's worth noting that experts agree this transformative approach will fundamentally reshape how we operate going forward.
 
 **Expected finding (detect mode output — no rewrite):**
 
 > **Patterns found:**
 >
-> - [importance puffery] "groundbreaking," "marks a pivotal moment" — sentence 1; "will … reshape how we operate" — sentence 3. Fix: cut them, or state what the initiative is and what it changes; the writer must supply that.
+> - [importance puffery] "marks a pivotal moment" — sentence 1. Fix: cut the sentence, or state what the initiative is and what it changes; the writer must supply that.
 > - [banned words] "Leveraging," "cutting-edge," "streamline," "empower" — sentence 2; "transformative" — sentence 3. Fix: replace the verbs ("Leveraging," "streamline," "empower") with plain verbs and cut the adjectives ("cutting-edge," "transformative").
 > - [empty phrases] "It's worth noting that," "going forward" — sentence 3. Fix: cut both.
-> - [weasel attribution] "experts agree" — sentence 3. Fix: if the claim stays, name the source; the writer must supply it.
-> - [empty adverb] "fundamentally" — sentence 3. Fix: cut.
+> - [weasel attribution] "experts agree" — sentence 3. Fix: remove "experts agree" and keep the claim; the writer must supply a source.
+> - [empty adverbs] "fundamentally" — sentence 3. Fix: cut.
 >
 > Want me to edit the draft?
 
-The portability test is an editing principle, not a pattern, so detect mode does not report it.
+The portability test is an editing principle, not a pattern, so detect mode does not report it. Likewise "will fundamentally reshape how we operate" is a claimed result with no figure, which falls under the "be concrete" principle, so detect mode does not report it as a pattern.
 
 ---
 
@@ -481,11 +485,11 @@ The portability test is an editing principle, not a pattern, so detect mode does
 
 **Verified 2026-10-22.** Result: **28/28 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. `eval.md` was read only to check the GREENs against it.
 
-Produced against `TESTS.md` body sha256 `dd824fdda948d940` and `SKILL.md` sha256 `161c43e618f9d4ce`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `291b21f8ff08a791` and `SKILL.md` sha256 `23d0b11078a93847`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
 Failures: none.
 
-Every count in an Expected finding was checked by a Python split (word-list hits, sentences, colons, trailing -ing clauses, new words in each GREEN). No GREEN adds a fact, figure, name, source, or actor its RED lacks; P6's "formed" is entailed by "This partnership", P8's "likely" and "may" carry the hedges in "suggest" and "argue", and P12's "twice" is derived from "iterated. Then we iterated again."
+Every count in an Expected finding was checked by a Python split (word-list hits, sentences, colons, trailing -ing clauses, new words in each GREEN). No GREEN adds a fact, figure, name, source, or actor its RED lacks; P1's "matters more than" follows the skill's own binary-contrast example, P8's "likely" and "may" carry the hedges in "suggest" and "argue", P10 adds only "and", and P12's "twice" is derived from "iterated. Then we iterated again." No worked example in `SKILL.md` breaks the skill's own rules.
 
 | Test                                                                    | RED flags | GREEN clean | Pass |
 |-------------------------------------------------------------------------|-----------|-------------|------|

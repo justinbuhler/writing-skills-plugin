@@ -2,6 +2,14 @@
 name: plain-language
 description: Review documents, emails, reports, or web content for compliance with Plain Language standards (Plain Writing Act of 2010, federal plainlanguage.gov guidelines). Use when the user wants to audit writing clarity, audience fit, or structure against federal plain language requirements — or when they ask to improve readability, cut jargon, or make content more accessible.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "plain language"
+    - "plain language review"
+    - "cut jargon"
+    - "improve readability"
+    - "plain writing act"
 ---
 
 # Plain Language Review
@@ -102,13 +110,13 @@ If a sentence runs more than 20 words, ask whether it can be split. More than 25
 
 ### One idea per paragraph
 
-Each paragraph covers one idea. If you can write two separate topic sentences for a paragraph, split it. Keep paragraphs to 3–5 sentences.
+Each paragraph covers one idea. If a paragraph has more than 3 sentences and you can write two separate topic sentences for it, split it; do not flag a paragraph of 3 sentences or fewer under this rule. Keep paragraphs to 5 sentences or fewer.
 
 The stages of one process (sending, the deadline, how long it takes, the decision) are one topic. Who qualifies, applying, and appealing a denial are three topics.
 
 **Flag:**
 - A paragraph that opens about eligibility requirements and ends talking about deadlines
-- Paragraphs over 5 sentences that could be split
+- Paragraphs over 5 sentences that cover more than one topic
 
 ### Topic sentences
 
@@ -225,10 +233,10 @@ A noun string is two or more nouns stacked before another noun. They force reade
 Define any term the reader cannot be expected to know on first encounter. Do not define terms the reader uses every day.
 
 **Legal archaisms — always cut:**
-aforementioned, foregoing, hereafter, hereby, herein, hereinabove, hereinafter, hereof, hereto, herewith, thereafter, therefrom, therein, thereof, thereto, therewith, whereas (as a recital; as a plain contrast it stays), whereof, wherein.
+aforementioned, foregoing, hereafter, hereby, herein, hereinabove, hereinafter, hereunder, hereof, hereto, herewith, thereafter, therefrom, therein, thereof, thereto, therewith, whereas (as a recital; as a plain contrast it stays), whereof, wherein.
 
 **Business jargon — cut or rewrite, unless the term is precise for a specialist reader** ("robust" and "scalable" to engineers):
-best practice, circle back, core competency, deep dive, going forward, incentivize, leverage (as a verb), moving the needle, on-board (as a verb), paradigm shift, reach out, robust, scalable, synergistic, thinking outside the box, touch base, unpack, value-added, value proposition.
+best practice, circle back, core competency, deep dive, going forward, incentivize, leverage (as a verb), moving the needle, on-board (as a verb), paradigm shift, reach out, robust, scalable, synergistic, synergize, thinking outside the box, touch base, unpack, value-added, value proposition.
 
 **Acronyms:** An acronym counts as defined when a glossary before its first use, or a parenthetical in either order ("single sign-on (SSO)" or "SSO (single sign-on)"), defines it; do not spell out a defined acronym again. Acronyms the audience uses every day (U.S., PDF, ID) need no definition, and acronyms inside a legal citation (42 U.S.C., 24 CFR Part 5) stay as written. Define any other acronym on first use, or, if it appears fewer than three times, spell out the full term every time instead. Spelling out an acronym with a fixed, well-known public expansion (ADA, EEO, HR) adds no fact; if the expansion is ambiguous, has changed over time, or you are not sure of it (FISMA), write `[needs: full name of "<acronym>"]`.
 
@@ -269,7 +277,7 @@ Weasel words soften claims that should be direct, or emphasize claims that shoul
 
 ### Use "you" and "we"
 
-Speak directly to the reader. "You must apply by June 1" is clearer than "Applicants must apply by June 1."
+Speak directly to the reader. "You must apply by June 1" is clearer than "Applicants must apply by June 1." Use "you" only for the person reading and acting. A named decision-maker or owner who is not the reader stays named: "The steering committee must approve the plan" stays as written.
 
 Use "we," "our," and "us" for the organization when the writer is that organization. Avoid "the agency," "the department," "this office."
 
@@ -286,8 +294,8 @@ Use "we," "our," and "us" for the organization when the writer is that organizat
 Headings help readers scan and decide what to read. Every heading should tell the reader what the section is about — or better, what they need to do.
 
 **Flag:**
-- Vague headings: "Introduction," "Background," "Overview," "General" — these say nothing. Headings a required format mandates (Federal Register preamble captions such as "SUMMARY:") stay; review the prose under them.
-- Missing headings in long sections (more than 3 paragraphs without a break)
+- Vague headings: "Introduction," "Overview," "General" — these say nothing. A standard section name doing its job (Background, Context, Current State, Findings, Recommendations, Next Steps, Appendix) is not vague; flag it only when its section does something else. Headings a required format mandates (Federal Register preamble captions such as "SUMMARY:") stay; review the prose under them.
+- Missing headings in long sections (more than 3 paragraphs and more than 150 words with no heading, list, or table)
 - Headings that don't match the content that follows
 
 **Better heading patterns:**
@@ -356,7 +364,7 @@ After reviewing structure and word choice, assess whether the content actually w
 
 **Section clarity test:** For each section over 100 words, write one sentence summarizing what the reader must do or decide after reading it. If you cannot write that sentence, the section fails — it either buries its purpose or lacks one. A reference section (definitions, fee tables, contacts) passes when its purpose is lookup. Flag the section and identify what the opening sentence should state.
 
-**Reading level:** Public-facing content should target approximately 8th-grade reading level (Flesch-Kincaid Grade Level 8–10; Flesch Reading Ease 60–70). Content dense with polysyllabic words, long sentences, and passive constructions typically scores at college level (Grade Level 13+, Reading Ease below 40). Flag a passage where nearly every sentence leans on 3+ syllable words, unless a word-choice or audience-fit finding already covers that density. Long words with no plain equivalent (eligible, regulations) are not a finding on their own. In Microsoft Word: Review → Check Accessibility → Readability Statistics. Online: paste into readable.io or hemingwayapp.com. You cannot run these tools, so never report a numeric grade or score: flag passages by the syllable heuristic and tell the user which tool to run. The heuristic is a diagnostic: when other findings already shorten the sentences and replace the long words, do not report it as a separate finding.
+**Reading level:** Public-facing content should target approximately 8th-grade reading level (Flesch-Kincaid Grade Level 8–10; Flesch Reading Ease 60–70). Content dense with polysyllabic words, long sentences, and passive constructions typically scores at college level (Grade Level 13+, Reading Ease below 40). Flag a passage of 5 or more sentences in a row in which each sentence has 3 or more words of 3 or more syllables; do not count names, defined terms, verbatim text, or long words with no plain equivalent (eligible, regulations). Do not flag it when a word-choice or audience-fit finding already covers that density. In Microsoft Word: Review → Check Accessibility → Readability Statistics. Online: paste into readable.io or hemingwayapp.com. You cannot run these tools, so never report a numeric grade or score: flag passages by the syllable heuristic and tell the user which tool to run. The heuristic is a diagnostic: when other findings already shorten the sentences and replace the long words, do not report it as a separate finding.
 
 **Red flags for audience mismatch:**
 - Technical terms without definitions (public audience)
@@ -383,7 +391,7 @@ Run through these areas in order. Check each before moving to the next.
 - [ ] Active voice wherever the actor matters (flag each such passive; stative participles are not passive)
 - [ ] Present tense for rules and procedures
 - [ ] No sentence over 25 words
-- [ ] No hidden verbs (nominalizations)
+- [ ] No hidden verbs (nominalizations; legal terms of art exempt)
 - [ ] Positive statements (minimal "do not"; "must not" prohibitions and negative conditions are fine)
 - [ ] One idea per paragraph
 - [ ] Topic sentences: each paragraph opens with its main point
@@ -397,7 +405,7 @@ Run through these areas in order. Check each before moving to the next.
 - [ ] No legal archaisms
 - [ ] No redundant phrases (advance planning, past history, end result, etc.)
 - [ ] No weasel-word intensifiers (very, really, basically, actually, clearly)
-- [ ] "You" throughout; "we" only for the organization that is writing
+- [ ] "You" for the reader who acts; named decision-makers and owners stay named; "we" only for the organization that is writing
 - [ ] Acronyms defined on first use (glossary or either-order parenthetical; everyday and citation acronyms exempt)
 
 **4. Structure and design**

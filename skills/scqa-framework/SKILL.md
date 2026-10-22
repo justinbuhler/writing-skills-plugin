@@ -2,6 +2,14 @@
 name: scqa-framework
 description: Use when an opening, hook, or persuasive narrative needs to create reader tension before delivering a recommendation — especially for white papers, problem-solution docs, or any content where the audience must care before they'll listen.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "scqa"
+    - "situation complication question answer"
+    - "opening hook"
+    - "white paper opening"
+    - "problem-solution opening"
 ---
 
 # SCQA Framework
@@ -12,11 +20,11 @@ SCQA (Situation → Complication → Question → Answer) is Barbara Minto's pat
 
 **Build (default).** The user gives a topic, notes, or a recommendation. You produce the labeled block in **Output format**.
 
-**Critique.** The user shares an existing opening and asks whether it works. Report findings and change nothing unless the user asks for a rewrite. For each element, say whether it is present and quote the sentence or clause that carries it. Then list each failed check as `[Label] <what fails and why>`, using the label that the **Quality checklist** gives for that check, for example `[Complication urgency] …`. Use only those labels. Label by function, not by sentence position: one clause can carry an element, so "Although the cycle was built for X, it now covers Y" holds both S and C. If no check fails, say so and name the variant.
+**Critique.** The user shares an existing opening and asks whether it works. Report findings and change nothing unless the user asks for a rewrite. For each element, say whether it is present and quote the sentence or clause that carries it. Then list each failed check as `[Label] <what fails and why>`, using the label that the **Quality checklist** gives for that check, for example `[Complication urgency] …`. Use only those labels. Label by function, not by sentence position: one clause can carry an element, so "Although the cycle was built for X, it now covers Y" holds both S and C. If no check fails, say so and name the variant. An input that does not hold both a Complication and an Answer, and is not presented as a whole opening, is an excerpt: check the elements it holds, add a marker for an absent element only when a check names it, write no deferred A line, and note the variant only when the returned block has both a C line and an A line.
 
 ## What to ask for
 
-If the audience is not stated, ask who it is and what it already knows. The audience decides whether a Situation is needed and which variant fits. Do not ask more than two questions. If you have enough to draft, draft, state your assumption about the audience, and write `[needs: …]` for each missing detail.
+If the audience is not stated, ask who it is and what it already knows. The audience decides whether a Situation is needed and which variant fits. Do not ask more than two questions. If you have enough to draft, draft, state your assumption about the audience, and write `[needs: …]` for each missing detail. When the input is a block or opening to check or rewrite, do not ask: state an assumption about the audience only where the Situation check or the choice of variant turns on it.
 
 ## The four elements
 
@@ -72,14 +80,14 @@ Each check carries the label a critique uses when it fails.
 
 - [ ] `[Situation missing]` A Situation comes before the Complication; a Complication-first opening is a defect only when the audience lacks the Situation (for an audience that has it, the opening is CSA)
 - [ ] `[Situation quality]` Situation is familiar and non-controversial: a structural fact, not a judgment; move an evaluative claim to C rather than dropping it
-- [ ] `[Situation scope]` Situation is a fact the audience can confirm from its own context; for a sector-wide audience a specific sector fact qualifies, and generic trends ("digital transformation is reshaping every industry") fail; if the input gives no such fact, write `[needs: …]` for it
-- [ ] `[Complication–Situation link]` Complication follows from the Situation: it is what the Situation has run into, not an unrelated trend or a problem about something else
-- [ ] `[Complication is the solution]` Complication states the problem, not the fix; "we need to …" or a recommended action belongs in A, and C says what goes wrong without it
+- [ ] `[Situation scope]` Situation is a fact the audience can confirm from its own context; for a sector-wide audience a specific sector fact qualifies, and generic trends ("digital transformation is reshaping every industry") fail; if the input gives no such fact, write `[needs: …]` for it, and move a generic trend sentence to **Body material**
+- [ ] `[Complication–Situation link]` Complication follows from the Situation: it is about the same system, process, or arrangement as the Situation (stated, or implied under CSA), not an unrelated trend or a separate problem; it need not state a change; a sentence about a separate problem moves to **Body material**, and `[needs: …]` takes its place in C
+- [ ] `[Complication is the solution]` Complication states the problem or opportunity, not the fix; a sentence that carries the recommendation ("we need to …") is the Answer: label it A unchanged, and if nothing else states the problem, write `[needs: …]` for the Complication rather than infer one from the Answer
 - [ ] `[Complication urgency]` Complication gives this audience a reason to act (not "could be better"), using only figures the input supplies; a conditional risk, an estimate, a range, or an opportunity qualifies; where urgency needs a number the input lacks, write `[needs: figure for …]`
 - [ ] `[Complication form]` Complication fits in one or two sentences; for several pains or a table, see **Output format**
 - [ ] `[Question–Complication fit]` Question naturally arises from complication; when implicit, write it from C alone before reading A; it does not presuppose A (no "the transition" before A has named one)
-- [ ] `[Answer–Question fit]` Answer directly addresses the question — not adjacent to it. If it does not and the text states the Question outright, you may change that stated Q to fit A only if the new Q still arises from C; otherwise, and always when Q is implicit, keep the Q written from C, mark the gap with `[needs: …]`, and ask the author. Never add claims to A
-- [ ] `[Answer complexity]` Answer states one decision or claim in one or two sentences; thresholds, tier specifications, and lists of three or more features or steps go to the body
+- [ ] `[Answer–Question fit]` Answer directly addresses the question — not adjacent to it. If it does not and the text states the Question outright, you may change that stated Q to fit A only if the new Q still arises from C; otherwise, and always when Q is implicit, keep the Q written from C, mark the gap in A with `[needs: …]`, and ask the author. Never add claims to A
+- [ ] `[Answer complexity]` Answer states one decision or claim in one or two sentences; two features or steps in one sentence still count as one claim; thresholds, tier specifications, and lists of three or more features or steps go to the body
 - [ ] `[Variant mismatch]` The variant fits the audience and the document: CSA only for an audience that already knows the Situation, SCQ only when the body is the answer; flow reads S → C → Q → A (C → S → A under CSA)
 
 ## Output format
@@ -95,7 +103,7 @@ Deliver as a labeled block:
 
 Variant shapes:
 
-- **SCA:** omit the Q line. In a prose opening, a Question that no sentence states counts as SCA.
+- **SCA:** omit the Q line. In a prose opening, a Question that no sentence states counts as SCA. When the input is an opening or block whose author wrote no Question, write the implicit Question only when the Answer fails the fit check against it; otherwise omit the Q line and note SCA, or CSA when the Complication leads for an audience that already knows the Situation.
 - **SCQ:** write `**A:** (deferred to body)`, then `**Governing thought for body:** [one sentence]`. That sentence becomes Level 1 of the pyramid.
 - **CSA:** put the C line first; the S line is brief or reads `(implied — audience already knows it)`; omit the Q line.
 

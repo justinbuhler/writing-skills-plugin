@@ -26,12 +26,12 @@ For detect requests, make sure the response names each pattern found (Words to c
 
 1. Are binary contrasts, negative listings, rhetorical setups, and throat-clearing openers removed, except a contrast that carries the writer's own voice in a first-person draft, a negation that rules out a real alternative, an "I'll be honest" that introduces a genuine admission, and FAQ question-and-answer pairs?
 2. Are faux-insight setups, colon reveals, superficial analysis, fake-strong verbs, synonym cycling, runs of dramatic fragments, and robotic rhythm fixed, leaving field labels, acting or interim roles, single emphatic fragments, and deliberately parallel structure alone?
-3. Is importance puffery replaced with plain facts from the draft or cut, and is weasel attribution replaced with a source the draft or user named or kept with `[needs: source for "…"]`, cut only when the user said to, and left as written when the claim already carries a citation or footnote?
+3. Is importance puffery replaced with plain facts from the draft or cut, and is each weasel phrase replaced with a source the draft or user named, or removed with its claim and any hedge kept and `[needs: source for "…"]` written after it, the claim cut only when the user said to, and the claim left as written when it already carries a citation or footnote?
 4. Is interpretive metadiscourse removed, including authorial metacommentary, reader guidance, emphasis markers, and redundant glossing, with any pointer to a table, figure, or section kept as a plain reference?
 5. Are fake-profound kicker lines deleted instead of rewritten into better metaphors?
 6. Are endings that restate the piece cut so it ends on a concrete point, takeaway, or next action already in the draft, while a closing sentence that adds a figure, date, decision, or action stays?
 7. Is formatting slop removed: Emoji headings, decorative bold, bullets that should be prose, headers over tiny sections? Bold UI labels, FAQ questions, numbered procedures, status rows, and other deliberately parallel entries stay.
-8. Is text after a colon in sentence case where that reads naturally (a preference, not a hard fail), unless grammar, a proper noun, a title, or code requires otherwise?
+8. Is text after a colon inside a sentence in lower case where that reads naturally (a preference, not a hard fail), unless grammar, a proper noun, a title, or code requires otherwise, and is the case after a field label or a signal word left as written ("Owner: Finance team", "CAUTION: Hot surface")?
 
 ## Final read
 

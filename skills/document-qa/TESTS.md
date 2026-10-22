@@ -49,7 +49,7 @@ Each excerpt is part of a longer, unseen document unless a context note says it 
 ```
 ## Findings
 
-### Key Finding
+### Missed Reporting Deadlines
 Three of five districts missed the reporting deadline.
 ```
 
@@ -60,7 +60,7 @@ Three of five districts missed the reporting deadline.
 Three of five districts missed the reporting deadline.
 ```
 
-**Expected finding:** `[Area 1 — hierarchy, Structural] "Key Finding" is the only child under "Findings." A single sub-heading serves no purpose — absorb its content into the parent section or remove the sub-heading.`
+**Expected finding:** `[Area 1 — hierarchy, Structural] "Missed Reporting Deadlines" is the only child under "Findings." A single sub-heading serves no purpose — absorb its content into the parent section or remove the sub-heading.`
 
 ---
 
@@ -73,14 +73,14 @@ Three of five districts missed the reporting deadline.
 - Redesign the intake process by March 1.
 - Assign a dedicated case manager per district.
 
-## Current State Analysis
+## Current State
 The current process has 14 manual handoffs and averages 8 days.
 ```
 
 **GREEN:**
 
 ```
-## Current State Analysis
+## Current State
 The current process has 14 manual handoffs and averages 8 days.
 
 ## Recommendations
@@ -88,7 +88,7 @@ The current process has 14 manual handoffs and averages 8 days.
 - Assign a dedicated case manager per district.
 ```
 
-**Expected finding:** `[Area 1 — sequence, Structural] Recommendations appear before the findings that justify them. The reader has not yet been shown the evidence. Move "Current State Analysis" before "Recommendations."`
+**Expected finding:** `[Area 1 — sequence, Structural] Recommendations appear before the findings that justify them. The reader has not yet been shown the evidence. Move "Current State" before "Recommendations."`
 
 ---
 
@@ -205,7 +205,7 @@ When the program launched in 2019, the agency relied on ad hoc coordination betw
 ```
 ## Every depot vehicle falls into one of four service classes
 ## Inspection Status
-## Governance
+## Governance Recommendations
 ```
 
 _(The first section describes the service class framework; the second reports the inspection findings; the third sets out the governance recommendations.)_
@@ -215,10 +215,10 @@ _(The first section describes the service class framework; the second reports th
 ```
 ## Vehicle Service Class Framework
 ## Inspection Status
-## Governance
+## Governance Recommendations
 ```
 
-**Expected finding:** `[Area 2 — heading convention, Polish] The H2 headings follow neither accepted pattern: the context section has a claim heading ("Every depot vehicle falls into one of four service classes") while the findings and recommendations sections have topic labels ("Inspection Status," "Governance"). Use one form throughout, or topic labels for context and claims for findings. With all topic labels, the context heading becomes "Vehicle Service Class Framework." [Area 1 — parallelism, Polish] The clause heading "Every depot vehicle falls into one of four service classes" breaks the noun-phrase pattern of "Inspection Status" and "Governance"; because the headings follow neither Area 2 pattern, parallelism is checked across all three. [Area 1 — capitalization, Polish] "Every depot vehicle falls into one of four service classes" is in sentence case while the other two headings are in title case. The topic-label rewrite fixes both.`
+**Expected finding:** `[Area 2 — heading convention, Polish] The H2 headings follow neither accepted pattern: the context section has a claim heading ("Every depot vehicle falls into one of four service classes") while the findings and recommendations sections have topic labels ("Inspection Status," "Governance Recommendations"). Use one form throughout, or topic labels for context and claims for findings. With all topic labels, the context heading becomes "Vehicle Service Class Framework." [Area 1 — parallelism, Polish] The clause heading "Every depot vehicle falls into one of four service classes" breaks the noun-phrase pattern of "Inspection Status" and "Governance Recommendations"; because the headings follow neither Area 2 pattern, parallelism is checked across all three. [Area 1 — capitalization, Polish] "Every depot vehicle falls into one of four service classes" is in sentence case while the other two headings are in title case. The topic-label rewrite fixes both.`
 
 ---
 
@@ -327,7 +327,7 @@ _(No table appears anywhere earlier in the document. Figure 4 shows several fail
 >
 > **Figure 4: District Approval Flowchart**
 
-**Expected finding:** `[Area 3 — figure alignment, Structural] Figure 4 appears without being introduced in the prose before it. Add a sentence referencing Figure 4 before the exhibit. [Area 6 — cross-reference, Blocking] The prose refers to "the table above", but no table precedes it; the exhibit is a flowchart. Point the reference at Figure 4.`
+**Expected finding:** `[Area 3 — figure alignment, Structural] Figure 4 appears without being introduced in the prose before it. Add a sentence referencing Figure 4 before the exhibit. [Area 6 — cross-reference, Blocking] The prose refers to "the table above", but no table precedes it; the exhibit is a flowchart. Point the reference at Figure 4. Not flagged separately: orphaned evidence, because the prose does point at the exhibit, under the wrong label.`
 
 ---
 
@@ -719,11 +719,11 @@ AMS [needs: whether this AMS is the Asset Management System or a separate system
 >
 > Recycling drop-off will run at no fewer than 6 depots.
 >
-> **Section 4:** The rota schedules 11 agents on the peak day shift [needs: whether the peak shift is an exception to the 8–10 range or the range is wrong].
+> **Section 4:** The rota schedules 11 agents on the peak day shift [needs: whether the peak day shift is an exception to the 8–10 range, or whether the range or the 11 is wrong].
 >
 > Drop-off points are confirmed at 7 depots.
 
-**Expected finding:** `[Area 6 — numerical consistency, Structural] Section 4 schedules 11 agents on the peak day shift, outside the "8–10 agents per shift" range in the executive summary. State which figure is correct, which the author must confirm. Not flagged: 7 depots meets "no fewer than 6 depots".`
+**Expected finding:** `[Area 6 — numerical consistency, Structural] Section 4 schedules 11 agents on the peak day shift, outside the "8–10 agents per shift" range in the executive summary. The author must say whether the peak day shift is an exception to the range or one of the two figures is wrong. Not flagged: 7 depots meets "no fewer than 6 depots".`
 
 ---
 
@@ -731,11 +731,11 @@ AMS [needs: whether this AMS is the Asset Management System or a separate system
 
 **Verified 2026-10-22.** Result: **28/28 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, with no edit to either file afterwards. The skill has no `references/`.
 
-Produced against `TESTS.md` body sha256 `09403328f18d7d5a` and `SKILL.md` sha256 `d8416eb6bf201669`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `756594b35fde7f23` and `SKILL.md` sha256 `d77f5acfc6c16925`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
-Excerpts were read as parts of longer documents, per the header at line 13, except where a context note says otherwise; in 5.1 and 5.5, whose notes make the excerpt the whole document, every rule applies. Each Expected finding's tier was checked against the checklist tag it cites, and each GREEN was checked against every rule in the skill and for facts, figures, names or actors absent from its RED; `[needs: …]` markers were read as Fix-mode output per line 9. Precedence rules at `SKILL.md:172` (4.1) and `SKILL.md:201` (5.4) were applied as written. The worked examples in `SKILL.md` (lines 70, 100–102, 201, 219–221, 256, 265, 272) were checked against the skill's own rules; none breaks one.
+Excerpts were read as parts of longer documents, per the header at line 13, except where a context note says otherwise; in 5.1 and 5.5, whose notes make the excerpt the whole document, every rule applies. Each Expected finding's tier was checked against the checklist tag it cites, and each GREEN was checked against every rule in the skill and for facts, figures, names or actors absent from its RED; `[needs: …]` markers were read as Fix-mode output per line 9. Precedence rules at `SKILL.md:180` (4.1), `SKILL.md:209` (5.4) and the orphaned-evidence rule at `SKILL.md:217` (3.3 wrong-label reference, 4.3 prose observation, 5.3 unreferenced chart) were applied as written; 5.3 has no reference of any kind, so the new wrong-label sentence does not reach it. 6.7's GREEN marker and finding now name the same three possibilities (exception, range wrong, 11 wrong). The worked examples in `SKILL.md` (lines 78–79, 108–110, 209, 227–229, 258–260) were checked against the skill's own rules; none breaks one.
 
-Counts were checked with a Python script: 3.2 lists four items under "four problems" and its GREEN three under "three problems"; 3.4 has three decision rows and 6.6 two; 1.1 has two H3s and 1.5 two H4s; 4.1's two sentences differ only by "end-to-end" (8 days against a 5-day target is 60% over); 4.3's thirteen wards less nine leaves four; 2.4's 14 stores less 11 leaves three; 6.5's rows sum to 8,890 (110 below 9,000, about 1.2%; 10 below the stated Total of 8,990); 6.7's 11 exceeds 8–10 and 7 meets "no fewer than 6"; 6.2's 20,000 exceeds "up to 18,500".
+Counts were checked with a Python script: 3.2 lists four items under "four problems" and its GREEN three under "three problems"; 3.4 has three decision rows and 6.6 two; 1.1 has two H3s and 1.5 two H4s; 4.1's two sentences differ only by "end-to-end" (8 days against a 5-day target is 60% over); 4.3's thirteen wards less nine leaves four; 2.4's 14 stores less 11 leaves three; 6.5's rows sum to 8,890 (110 below 9,000, about 1.22%; 100 below the stated Total of 8,990); 6.7's 11 exceeds 8–10 and 7 meets "no fewer than 6"; 6.2's 20,000 exceeds "up to 18,500".
 
 FAIL notes: none.
 

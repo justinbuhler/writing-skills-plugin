@@ -22,7 +22,7 @@ python3 scripts/validate-package.py
 **Run tests for a single skill** — launch a Claude agent with this prompt:
 > Read `skills/<name>/SKILL.md` and `skills/<name>/TESTS.md`. For each test, apply the skill's rules to the RED text and compare your finding to the Expected finding. Report Total X/Y passed and list any FAILs.
 
-**Run all 10 skills in parallel** — launch one agent per skill simultaneously with the above prompt. Re-run after any fix until X/X with no discrepancies noted. "PASS with discrepancy noted" is not clean.
+**Run all 12 skills in parallel** — launch one agent per skill simultaneously with the above prompt. Re-run after any fix until X/X with no discrepancies noted. "PASS with discrepancy noted" is not clean.
 
 ## What gates a change
 
@@ -36,14 +36,14 @@ One check catches people: `.claude-plugin/plugin.json`'s `skills[]` must equal t
 
 This is a Claude Code plugin. There is no build step — all content is markdown.
 
-**Plugin manifest:** `.claude-plugin/plugin.json` lists the 10 skill directories. `.claude-plugin/marketplace.json` is what makes `claude plugin marketplace add <repo-url>` work; it points at `./` as a single plugin source.
+**Plugin manifest:** `.claude-plugin/plugin.json` lists the 12 skill directories. `.claude-plugin/marketplace.json` is what makes `claude plugin marketplace add <repo-url>` work; it points at `./` as a single plugin source.
 
 **Skill structure:** Each skill directory contains:
 - `SKILL.md` — YAML frontmatter (`name`, `description`, `allowed-tools`) followed by the instruction body. The `description` is the primary triggering mechanism — it determines when Claude loads the skill.
 - `TESTS.md` — RED/GREEN test pairs (see below).
-- `references/` — optional reference files the skill loads on demand (only `ste100-writer` uses this).
+- `references/` — optional reference files the skill loads on demand (only `ste100-writer` and `concise-writing` use this).
 
-**Skills are read-only reviewers.** Nine of the ten declare `allowed-tools: Read`. A skill returns findings or rewritten prose in its response; it never edits the user's files. Preserve this when adding a skill. `humanizer` is the exception and must stay that way — its validator rejects the field (see below).
+**Skills are read-only reviewers.** Eleven of the twelve declare `allowed-tools: Read`. A skill returns findings or rewritten prose in its response; it never edits the user's files. Preserve this when adding a skill. `humanizer` is the exception and must stay that way — its validator rejects the field (see below).
 
 **Review-or-rewrite contract:** most skills open with a `## Two jobs` section splitting a review pass (report findings, change nothing) from a rewrite pass. A skill that only ever rewrites is the odd one out — match the surrounding convention.
 
@@ -51,7 +51,7 @@ This is a Claude Code plugin. There is no build step — all content is markdown
 
 **Routing reference:** `skills/writing-workflow/routing-guide.md` is a human planning reference for the workflow. `SKILL.md` contains the executable instruction for the model. Some overlap between them is intentional — they serve different audiences.
 
-**`no-ai-slop` is a fork** of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT, © Peter Yang). Keep `skills/no-ai-slop/LICENSE`: the MIT terms require the notice to ship with the code.
+**`no-ai-slop` is a fork** of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT, © Peter Yang). Keep `skills/no-ai-slop/LICENSE`: the MIT terms require the notice to ship with the code. `ste100-writer` began as a fork of [blagoySimandov/asd-ste100-writer-skill](https://github.com/blagoySimandov/asd-ste100-writer-skill) (MIT per its `package.json`, © Blagoy Simandoff) and keeps `skills/ste100-writer/LICENSE` for the same reason, however far it is rewritten. The other nine skills are original to this repo.
 
 **Cross-harness adapters:** `skills/humanizer/agents/openai.yaml` and `skills/no-ai-slop/agents/openai.yaml` expose those two skills to non-Claude harnesses. Nothing in this repo reads them; leave them alone unless changing the skill's public name or one-line pitch.
 
@@ -59,20 +59,21 @@ This is a Claude Code plugin. There is no build step — all content is markdown
 
 `skills/humanizer/` is a fork of [blader/humanizer](https://github.com/blader/humanizer) taken at tag `v3.0.0`. It carries its own `LICENSE`, `README.md`, `AGENTS.md`, `.claude-plugin/`, `.github/workflows/`, and `scripts/`. It was copied in by hand, never added via `skills add` and never a git subtree or submodule, so nothing tracks upstream automatically. We do not send changes upstream.
 
-**The fork differs from the tag in `TESTS.md`, 45 `SKILL.md` hunks, and 5 `README.md` hunks, all deliberate:**
+**The fork differs from the tag in `TESTS.md`, 46 `SKILL.md` hunks, and 6 `README.md` hunks, all deliberate:**
 
 1. `TESTS.md` — our test suite; upstream has none.
 2. `SKILL.md:362` — the *weak alone* gate, rewritten to remove an ambiguity in upstream v3.0.0.
-3-6. `SKILL.md` §4, §12, §18, §20 — each `After:` block invented facts its `Before:` never supplied, which the skill's own `:31`/`:36`/`:37` forbid; §20's manufactured "User research showed" also breaks `:17` "never invent a source". Found 2026-09-15 when three skills' test GREENs turned out to be imitating these examples.
-7-14. `SKILL.md:36` keeps other skills' `[needs: …]` gap markers; `:188` forbids inventing an actor for a passive; the `After:` blocks at §3 `:103`, §6 `:145`, §11 `:192`, §17 `:262`, §19 `:289`, §25 `:358` invented details. Found 2026-09-22 by a functional review.
-15. The rest of that review (2026-09-23): code, links, quotations and tables are protected in every mode (`:33`); dated status lines, definitions, real requests and range dashes are kept (§23, §19, §22, §8); literal and technical uses of listed words are exempt (§3, §10, §12); one §12 word is *weak alone*; a footnote names a source (§17); clean text comes back unchanged (`:48`); the description no longer claims filler (`:7`). `README.md:75`, `:79`, `:98`, `:100`, `:106` match.
-16. The 2026-10-22 review: `:29` says unmarked patterns act on one clear sighting; the §1 `:65`, `:69` and `:73`, §2 `:82`, §3 `:103` and `:107`, §6 `:145` and `:149`, §12 `:205`, §13 `:214` and `:218`, §14 `:231`, §15 `:240`, §17 `:258` and §19 `:289` `After:` blocks no longer add or drop details, and §8 `:166` no longer leaves a §17 tell; `:362` says worked examples show how to rewrite once a gate is met, not when to act; §11 `:188` allows "you" where the text addresses the reader; §12 `:200-201` admits its overlap with §13, §15, §16 instead of claiming to be the only list; §17 `:254` says to put a footnoted source's name in the sentence. `README.md:106` matches.
+3-6. `SKILL.md` §4, §12, §18, §20 — each `After:` block invented facts its `Before:` never supplied, which the skill's own `:39`/`:44`/`:45` forbid; §20's manufactured "User research showed" also breaks `:25` "never invent a source". Found 2026-09-15 when three skills' test GREENs turned out to be imitating these examples.
+7-14. `SKILL.md:36` keeps other skills' `[needs: …]` gap markers; `:196` forbids inventing an actor for a passive; the `After:` blocks at §3 `:111`, §6 `:153`, §11 `:200`, §17 `:270`, §19 `:297`, §25 `:366` invented details. Found 2026-09-22 by a functional review.
+15. The rest of that review (2026-09-23): code, links, quotations and tables are protected in every mode (`:41`); dated status lines, definitions, real requests and range dashes are kept (§23, §19, §22, §8); literal and technical uses of listed words are exempt (§3, §10, §12); one §12 word is *weak alone*; a footnote names a source (§17); clean text comes back unchanged (`:56`); the description no longer claims filler (`:15`). `README.md:75`, `:87`, `:106`, `:108`, `:114` match.
+16. The 2026-10-22 review: `:37` says unmarked patterns act on one clear sighting; the §1 `:73`, `:77` and `:81`, §2 `:90`, §3 `:111` and `:115`, §6 `:153` and `:157`, §12 `:213`, §13 `:222` and `:226`, §14 `:239`, §15 `:248`, §17 `:266` and §19 `:297` `After:` blocks no longer add or drop details, and §8 `:174` no longer leaves a §17 tell; `:370` says worked examples show how to rewrite once a gate is met, not when to act; §11 `:196` allows "you" where the text addresses the reader; §12 `:208-201` admits its overlap with §13, §15, §16 instead of claiming to be the only list; §17 `:262` says to put a footnoted source's name in the sentence. `README.md:106` matches.
+17. `SKILL.md:11` — a `routing:` block (category and 5 trigger phrases) in the frontmatter, so the vexjoy `/do` router can pick the skill; the other 11 skills carry the same block. Upstream's validator allows the key (2026-10-06). `README.md:172`, the 2026-10-07 release-notes line for patterns 11, 17 and 19, records the regrade that reworded them.
 
-To verify nothing else has drifted, extract the tag and run `diff -r <tag-dir> skills/humanizer`. Expect `Only in skills/humanizer: TESTS.md` plus 45 `SKILL.md` hunks and 5 `README.md` hunks, and nothing more.
+To verify nothing else has drifted, extract the tag and run `diff -r <tag-dir> skills/humanizer`. Expect `Only in skills/humanizer: TESTS.md` plus 46 `SKILL.md` hunks and 6 `README.md` hunks, and nothing more.
 
-**Why `:362` diverges.** Upstream states the gate twice and the two admit different readings. `:29` says a `*Weak alone.*` pattern "needs company from **other** tells"; `:362` said "only when **several tells** share a passage". Four passive constructions in one passage satisfy the second but not the first, so the same text yields opposite outputs depending on which line you read. §8's inline carve-out ("one dash is *weak alone*; a text full of them is not") only makes sense if repetition normally does *not* clear the gate, which is what settles it in favour of `:29`. Our `:362` now says so explicitly and names §8 as the sanctioned exception. Six patterns carry the marker: §8 (with its own carve-out), §9, §10, §11, §12, §21. §25 does not, and never did upstream.
+**Why `:370` diverges.** Upstream states the gate twice and the two admit different readings. `:37` says a `*Weak alone.*` pattern "needs company from **other** tells"; `:370` said "only when **several tells** share a passage". Four passive constructions in one passage satisfy the second but not the first, so the same text yields opposite outputs depending on which line you read. §8's inline carve-out ("one dash is *weak alone*; a text full of them is not") only makes sense if repetition normally does *not* clear the gate, which is what settles it in favour of `:37`. Our `:370` now says so explicitly and names §8 as the sanctioned exception. Six patterns carry the marker: §8 (with its own carve-out), §9, §10, §11, §12, §21. §25 does not, and never did upstream.
 
-**Pulling a future upstream release is now a merge, not a copy.** Re-apply the `:362` change and the other `SKILL.md` and `README.md` hunks (items 3-16 above) by hand, dropping any that upstream has fixed itself. Do not overwrite the subtree wholesale without checking which hunks survived.
+**Pulling a future upstream release is now a merge, not a copy.** Re-apply the `:370` change and the other `SKILL.md` and `README.md` hunks (items 3-17 above) by hand, dropping any that upstream has fixed itself. Do not overwrite the subtree wholesale without checking which hunks survived.
 
 Edits here answer to upstream's validator, not this repo's conventions. `scripts/validate-package.py` hard-fails on:
 

@@ -38,7 +38,7 @@ Each test has:
 >
 > This document covers the current infrastructure state, migration options, risk factors, and a proposed timeline.
 
-**Expected finding:** `[Level 1 — missing governing thought] The heading and opening sentence describe what the document covers, not what it concludes. Replace the topic heading with the governing thought the reader should carry away, kept as a heading because a rewrite keeps the input's form. The draft states no conclusion, so the heading becomes ## [needs: recommendation], listed under Gaps; do not write one for the author. The sentence "This document covers…" stays as written: the draft supplies no claim to replace it with.`
+**Expected finding:** `[Level 1 — missing governing thought] The heading and opening sentence describe what the document covers, not what it concludes. The title heading carries the governing thought, and the draft states no conclusion, so the heading becomes ## [needs: recommendation] at the same level and the marker is listed under Gaps; do not write a conclusion for the author and do not add a bold sentence above the heading. The sentence "This document covers…" stays as written: the draft supplies no claim to replace it with.`
 
 ---
 
@@ -53,6 +53,22 @@ Each test has:
 > **Move to the shared print service if it can take our volume by February; if not, renew for one year (estimated $48,000).** The print contract ends in March. We compared renewing it with moving to the shared print service.
 
 **Expected finding:** `[Level 1 — buried lede] Both recommendations sit after the context, and each depends on a condition. Pull them to the top as one bold governing thought that keeps the February condition, the one-year fallback, and "estimated". Do not shorten it to "Move to the shared print service": direct means first and explicit, not unconditional.`
+
+---
+
+### 1.4 — Governing thought supplied by the caller is used as written
+
+**RED (input from `writing-workflow` Step 2; supplied governing thought: "Approve the move of the help desk to the central site by 30 June."):**
+
+> We recommend moving the help desk to the central site. We also recommend extending its hours to 22:00.
+
+**GREEN:**
+
+> **Approve the move of the help desk to the central site by 30 June.**
+>
+> We recommend moving the help desk to the central site. We also recommend extending its hours to 22:00.
+
+**Expected finding:** `[Level 1 — governing thought] The caller supplied the governing thought, so use it as written at the top. Do not replace it with a summary of the draft's two recommendations; summarizing parallel recommendations applies only when no governing thought is supplied. "Extending its hours to 22:00" is not covered by the supplied governing thought: it stays where it is and is not a finding, because the caller owns the answer.`
 
 ---
 
@@ -147,7 +163,7 @@ Each test has:
 > **Pillar 3:** It eliminates manual reconciliation
 >   - [needs: evidence for "It eliminates manual reconciliation"]
 
-**Expected finding:** `[Level 2 — mixed abstraction] The three pillars are at different levels of abstraction: one is a capability, one is an implementation detail, one is an outcome. Reframe all pillars at the same level (all outcomes, or all capability areas, or all decision criteria). The reporting module and the REST API are Level 3 details under outcome pillars; the draft states no outcome for either, so their pillars are [needs: outcome of the reporting module] and [needs: outcome of REST API data ingestion].` `[Level 3 — missing evidence] Once those pillars carry Level 3 details, Pillar 3 needs evidence too: [needs: evidence for "It eliminates manual reconciliation"].`
+**Expected finding:** `[Level 2 — mixed abstraction] The three pillars are at different levels of abstraction: one is a capability, one is an implementation detail, one is an outcome. Pillar 2 (the REST API) is an implementation detail, so only outcome pillars stay. "It eliminates manual reconciliation" states an effect on work and stays as Pillar 3. The reporting module is a capability, so it moves down with the REST API: each becomes a Level 3 detail under an outcome pillar; the draft states no outcome for either, so their pillars are [needs: outcome of the reporting module] and [needs: outcome of REST API data ingestion].` `[Level 3 — missing evidence] Once those pillars carry Level 3 details, Pillar 3 needs evidence too: [needs: evidence for "It eliminates manual reconciliation"].`
 
 ---
 
@@ -263,7 +279,7 @@ Same as RED.
 >
 > - [needs: evidence for Pillar 2]
 
-**Expected finding:** `[Level 3 — evidence misalignment] The three Level 3 points (architecture, interface, founding year) do not support the pillar claim (cost reduction). Each Level 3 point must directly prove the pillar above it. Relocate them to a heading they support or delete them, and mark the gap [needs: evidence for "The framework reduces cost"]; do not write cost figures the draft lacks.` `[Level 2 — insufficient pillars] The draft argues one reason, so add Pillar 2: [needs: second supporting argument] with its evidence marker; do not write a second reason.`
+**Expected finding:** `[Level 3 — evidence misalignment] The three Level 3 points (architecture, interface, founding year) do not support the pillar claim (cost reduction). Each Level 3 point must directly prove the pillar above it. The input has no other heading, so they support nothing in the document and step 4 deletes them. Mark the gap [needs: evidence for "The framework reduces cost"]; do not write cost figures the draft lacks.` `[Level 2 — insufficient pillars] The draft argues one reason, so add Pillar 2: [needs: second supporting argument] with its evidence marker; do not write a second reason.`
 
 ---
 
@@ -363,9 +379,9 @@ Same as RED.
 
 **GREEN:**
 
-> We need to use [needs: which strengths] to [needs: specific result] from [needs: which change] across all workstreams.
+> We need to use our core strengths to get the most value from this fundamental change and help all workstreams work together.
 
-**Expected finding:** `[Language — corporate filler] "Leverage," "optimize," "value-add," "paradigm shift," "synergy" — banned vocabulary per the quality checklist. Rewrite with plain verbs and specific claims. The draft names no specific strength or result, so mark each [needs: …] rather than supplying one.`
+**Expected finding:** `[Language — corporate filler] "Leverage," "optimize," "value-add," "paradigm shift," "synergy" — banned vocabulary per the quality checklist. Rewrite with plain verbs and plain words. "Core competencies" is jargon too. The draft names no specific strength, result, change, or benefit, and no rule calls for one, so the rewrite states none and adds no marker.`
 
 ---
 
@@ -377,9 +393,9 @@ Same as RED.
 
 **GREEN:**
 
-> The steering committee determined that the 2021 framework no longer meets the program's current operational requirements. [needs: actor] has not substantially updated it since 2021.
+> The steering committee determined that the existing framework no longer meets the program's current operational requirements. [needs: actor] developed it in 2021. [needs: actor] has not substantially updated it since that time.
 
-**Expected finding:** `[Language — sentence length and passive voice] The sentence is 39 words and uses passive voice ("has been determined," "was developed," "has not been substantially updated"). Rewrite in active voice with no sentence longer than 22 words. The draft does not say who failed to update the framework, so write [needs: actor] and list it under Gaps.`
+**Expected finding:** `[Language — sentence length and passive voice] The sentence is 39 words and uses passive voice ("has been determined," "was developed," "has not been substantially updated"). Rewrite in active voice with no sentence longer than 22 words. The steering committee is the named actor of "determined". The draft names no actor for "was developed" or "has not been substantially updated", so the rewrite uses [needs: actor] for each and lists both under Gaps.`
 
 ---
 
@@ -393,7 +409,7 @@ Same as RED.
 
 Same as RED.
 
-**Expected finding:** `(No finding — the long sentence is a lead-in plus a 27-word verbatim quotation, which step 6 does not rewrite. "Were exposed" stays passive because the draft says the actor (the incident's source) is unknown; no [needs: actor]. "Kestrel Storage Optimization" is a product name, not the filler word "optimize". The conclusion comes first and every later sentence supports it: the quotation and the 24-month policy show why the policy must change, the exposure shows the cost of keeping records, and the last sentence shows the purge can start this term. No structural finding either.)`
+**Expected finding:** `(No finding — the long sentence is a lead-in plus a 27-word verbatim quotation, which step 6 does not rewrite. "Were exposed" stays passive because the draft says the actor (the incident's source) is unknown; no [needs: actor]. "Kestrel Storage Optimization" is a product name, not the filler word "optimize". The conclusion comes first and every later sentence supports it: the quotation and the 24-month policy show why the policy must change, the exposure shows the cost of keeping records, and the last sentence shows the purge can start this term. No structural finding either. Each reason is a specific sentence (a named source, a figure, a date, a named system), so no evidence marker applies.)`
 
 ---
 
@@ -426,31 +442,32 @@ Same as RED.
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **20/20 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, and `writing-workflow/SKILL.md` for the Step 2 and Step 4 references and the handoff rule in 5.4, with no edit to either file afterwards.
+**Verified 2026-10-22.** Result: **21/21 passed.** Graded by an Opus agent reading `SKILL.md` and `TESTS.md`, and `writing-workflow/SKILL.md` for the Step 2 governing-thought handoff in 1.4 and the Step 2 and Step 4 references and the handoff rule in 5.4, with no edit to either file afterwards.
 
-Produced against `TESTS.md` body sha256 `7fc24b03ab7036a6` and `SKILL.md` sha256 `f32edfb673a9d07f`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
+Produced against `TESTS.md` body sha256 `ea579ddc56fed35d` and `SKILL.md` sha256 `4a46c3e2be416154`. The body hash covers everything above this heading, so it survives this table being written. Recompute both before trusting the rows: any later edit invalidates them, and a log that certifies rather than records hides the defects it exists to surface.
 
-| Test                                                   | RED flags | GREEN clean | Pass |
-|--------------------------------------------------------|-----------|-------------|------|
-| 1.1 — Buried recommendation (lede buried)              | ✓         | ✓           | PASS |
-| 1.2 — No governing thought (topic statement only)      | ✓         | ✓           | PASS |
-| 1.3 — Conditional recommendation keeps its conditions  | ✓         | ✓           | PASS |
-| 2.1 — Too few pillars (one pillar)                     | ✓         | ✓           | PASS |
-| 2.2 — Too many pillars (group, do not narrow)          | ✓         | ✓           | PASS |
-| 2.3 — Non-MECE pillars (overlap)                       | ✓         | ✓           | PASS |
-| 2.4 — Mixed abstraction levels in pillars              | ✓         | ✓           | PASS |
-| 2.5 — Pillars not ordered consistently                 | ✓         | ✓           | PASS |
-| 2.6 — Draft argues only one reason                     | ✓         | ✓           | PASS |
-| 2.7 — Framing and back-matter sections are not pillars | ✓         | ✓           | PASS |
-| 3.1 — Pillar with no supporting evidence               | ✓         | ✓           | PASS |
-| 3.2 — Evidence that does not support its pillar        | ✓         | ✓           | PASS |
-| 3.3 — Draft supplies evidence for one pillar only      | ✓         | ✓           | PASS |
-| 3.4 — Counter-evidence under the wrong pillar          | ✓         | ✓           | PASS |
-| 4.1 — Headers do not tell a complete story             | ✓         | ✓           | PASS |
-| 4.2 — Headerless memo that already passes              | ✓         | ✓           | PASS |
-| 5.1 — Corporate filler language                        | ✓         | ✓           | PASS |
-| 5.2 — Sentence exceeds 22 words / passive voice        | ✓         | ✓           | PASS |
-| 5.3 — Quotation, unknown actor, and product name       | ✓         | ✓           | PASS |
-| 5.4 — Language checks skipped inside writing-workflow  | ✓         | ✓           | PASS |
+| Test                                                              | RED flags | GREEN clean | Pass |
+|-------------------------------------------------------------------|-----------|-------------|------|
+| 1.1 — Buried recommendation (lede buried)                         | ✓         | ✓           | PASS |
+| 1.2 — No governing thought (topic statement only)                 | ✓         | ✓           | PASS |
+| 1.3 — Conditional recommendation keeps its conditions             | ✓         | ✓           | PASS |
+| 1.4 — Governing thought supplied by the caller is used as written | ✓         | ✓           | PASS |
+| 2.1 — Too few pillars (one pillar)                                | ✓         | ✓           | PASS |
+| 2.2 — Too many pillars (group, do not narrow)                     | ✓         | ✓           | PASS |
+| 2.3 — Non-MECE pillars (overlap)                                  | ✓         | ✓           | PASS |
+| 2.4 — Mixed abstraction levels in pillars                         | ✓         | ✓           | PASS |
+| 2.5 — Pillars not ordered consistently                            | ✓         | ✓           | PASS |
+| 2.6 — Draft argues only one reason                                | ✓         | ✓           | PASS |
+| 2.7 — Framing and back-matter sections are not pillars            | ✓         | ✓           | PASS |
+| 3.1 — Pillar with no supporting evidence                          | ✓         | ✓           | PASS |
+| 3.2 — Evidence that does not support its pillar                   | ✓         | ✓           | PASS |
+| 3.3 — Draft supplies evidence for one pillar only                 | ✓         | ✓           | PASS |
+| 3.4 — Counter-evidence under the wrong pillar                     | ✓         | ✓           | PASS |
+| 4.1 — Headers do not tell a complete story                        | ✓         | ✓           | PASS |
+| 4.2 — Headerless memo that already passes                         | ✓         | ✓           | PASS |
+| 5.1 — Corporate filler language                                   | ✓         | ✓           | PASS |
+| 5.2 — Sentence exceeds 22 words / passive voice                   | ✓         | ✓           | PASS |
+| 5.3 — Quotation, unknown actor, and product name                  | ✓         | ✓           | PASS |
+| 5.4 — Language checks skipped inside writing-workflow             | ✓         | ✓           | PASS |
 
-Counts checked with a Python whitespace split (tokens containing a letter or digit): 5.2 RED 39 words, GREEN 16 and 9; 5.3 quotation 27 words (lead-in 4); 5.4 Pillar 1 23 words (label excluded); 1.3 GREEN governing thought 22 words (at the limit, not over). No GREEN adds a figure, name, or date absent from its RED. No FAIL rows.
+Counts checked with a Python whitespace split (tokens containing a letter or digit): 5.2 RED 39 words, GREEN 16, 6 and 10; 5.3 quotation 27 words (lead-in 4); 5.4 Pillar 1 23 words (label excluded); 1.3 GREEN governing thought 22 words and 5.1 GREEN 22 words (at the limit, not over); 2.1 RED Pillar 1 22 words. No GREEN adds a figure, name, or date absent from its RED, except 1.4's "30 June", which comes from the caller-supplied governing thought. No FAIL rows.

@@ -2,6 +2,17 @@
 name: writing-workflow
 description: Use when drafting a full document, white paper, memo, or structured argument from a brief, or taking an existing draft through a full cleanup before delivery. Sequences scqa-framework or scr-narrative, pyramid-editor, recommendations-and-actions, plain-language or ste100-writer, optional humanizer and no-ai-slop, then document-qa. Each step's output feeds the next.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "draft a full document"
+    - "write a memo end to end"
+    - "briefing paper"
+    - "draft a proposal"
+    - "draft a memorandum"
+    - "white paper from scratch"
+    - "structured argument"
+    - "writing workflow"
 ---
 
 # Writing Workflow
@@ -40,6 +51,8 @@ The workflow says which sub-skill to load, which of its jobs to run, and what to
 5. document-qa                  →  final pre-delivery quality gate
 ```
 
+**Not in the sequence.** `concise-writing` and `diataxis` run on their own; the workflow never loads them. `routing-guide.md` says when to use each.
+
 **Procedure route.** When the document is a technical procedure, maintenance manual, work instruction, or safety notice, run Step 4B and Step 5 only. Steps 1–3 build an argument, and a procedure has none; its numbered steps are instructions, not action items.
 
 **STE text is final at Step 4.** Steps 4.5 and 4.6 never run on text that Step 4B wrote, on the procedure route or in a mixed document. In a mixed document they run on the 4A sections only and pass the 4B sections through unchanged.
@@ -58,7 +71,7 @@ The workflow says which sub-skill to load, which of its jobs to run, and what to
 
 Use when only the opening needs narrative tension — the document body is organized as a pyramid and the narrative hook is confined to the introduction.
 
-Load the `scqa-framework` skill and run its Build job on the user's topic, audience, and supplied material; a figure or fact the material lacks becomes `[needs: …]`. With a draft, build from the draft's own opening and content, and replace only the opening. The Answer (under SCQ, the governing thought for body) becomes Level 1 of the pyramid at Step 2.
+Load the `scqa-framework` skill and run its Build job on the user's topic, audience, and supplied material; a figure or fact the material lacks becomes `[needs: …]`. With a draft, build from the draft's own opening and content, and replace only the opening. The opening is the text before the first body section; a Background section's content is kept in the body. The Answer (under SCQ, the governing thought for body) becomes Level 1 of the pyramid at Step 2.
 
 Deliver: what `scqa-framework` returns when this workflow calls it: the labeled block, then the prose opening. With a draft, also the full draft with that opening in place of its own (the Step 1 exception under How each step runs).
 
@@ -96,11 +109,11 @@ Deliver: the full document with every recommendation, decision, and action rewri
 
 ### Step 4 — language review (fork: choose one)
 
-Apply one language skill based on document type. Do not apply both, except in a document whose sections differ in type: 4B for procedure sections, 4A for the rest.
+Apply one language skill based on document type, or the readers named in the default rule above. Do not apply both, except in a document whose sections differ in type: 4B for procedure sections, 4A for the rest.
 
 #### 4A — plain-language (reports, memos, policy, stakeholder communications)
 
-Load the `plain-language` skill and run its Rewrite job on the full document. Tell it two things. The Step 1 opening stays where it is: its Answer already puts the bottom line up front. Owners named in the document stay named and are not replaced with "we". In a mixed document, pass it the sections that are not procedures.
+Load the `plain-language` skill and run its Rewrite job on the full document. Tell it two things. The Step 1 opening stays where it is: its Answer already puts the bottom line up front. Owners and decision-makers named in the document stay named and are not replaced with "we" or "you". In a mixed document, pass it the sections that are not procedures.
 
 Deliver: the full document with plain-language violations resolved.
 

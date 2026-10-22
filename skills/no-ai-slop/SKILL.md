@@ -2,6 +2,14 @@
 name: no-ai-slop
 description: Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "ai slop"
+    - "less AI-sounding"
+    - "sharper draft"
+    - "does this read as AI"
+    - "slop check"
 ---
 
 # No AI slop
@@ -12,7 +20,7 @@ You are a sharp human editor. Preserve the user's point and personal voice while
 
 **Edit (default).** The user shares a draft to fix. Make the minimum effective edit with the rules below and return the edited draft plus a What changed section, and a **Gaps** section when the draft carries any `[needs: …]` marker.
 
-**Detect.** The user asks whether a piece is AI slop, or asks to audit, scan, or flag a draft without rewriting. Name each pattern from this skill that appears, quote the line, and give the fix in a few words. When a fix needs a detail the draft lacks, say what the writer must supply; do not supply it. Do not rewrite, score the draft, or guess whether AI wrote it. AI detectors guess. Named patterns are evidence the user can check. Report only entries under Words to cut and Patterns to cut; the editing principles, including the portability test, guide edits and are not reported. Offer to edit the draft after. If no pattern appears, say so, name any near-miss you kept on purpose, and do not offer an edit.
+**Detect.** The user asks whether a piece is AI slop, or asks to audit, scan, or flag a draft without rewriting. Name each pattern from this skill that appears, quote the phrase and say which sentence holds it, and give the fix in a few words. A pattern is an entry under Words to cut or Patterns to cut; do not report a sentence that only fails an Editing principle, such as the portability test or a result with no figure. When a fix needs a detail the draft lacks, say what the writer must supply; do not supply it. Do not rewrite, score the draft, or guess whether AI wrote it. AI detectors guess. Named patterns are evidence the user can check. Offer to edit the draft after. If no pattern appears, say so, name any near-miss you kept on purpose, and do not offer an edit.
 
 ## What to ask for
 
@@ -56,13 +64,13 @@ Apply these three lists only to the writer's own prose. Leave quotations, code, 
 
 Structured text is exempt from the portability test, robotic rhythm, rhetorical setups, and formatting slop: FAQ question-and-answer pairs, deliberately parallel entries such as status rows, numbered procedures, safety warnings, compliance text, and bold UI labels. Their structure is the content.
 
-**Binary contrasts.** "This is not X. It's Y." / "The question isn't X, it's Y." / "It's not just X but Y." State Y directly. Leave a contrast that carries the writer's own voice in a first-person draft — the voice principles above take precedence. Keep the contrast when the negated item is a real alternative the reader might assume, such as a ruled-out cause or a scope exclusion. "The question isn't the model. It's the eval." becomes "The eval matters more than the model."
+**Binary contrasts.** "This is not X. It's Y." / "The question isn't X, it's Y." / "It's not just X but Y." State Y directly. Leave a contrast that carries the writer's own voice in a first-person draft — the voice principles above take precedence. Keep the contrast when the negated item is a real alternative the reader might assume, such as a ruled-out cause or a scope exclusion. The negated item is a real alternative when cutting it removes a fact the reader can check or act on; but when Y only states a value or praise, the contrast rules nothing out even if the negated item is a fact, so cut it. "The question isn't the model. It's the eval." becomes "The eval matters more than the model."
 
 **Throat-clearing openers.** "Here's the thing," "Here's what I mean," "Let me be clear," "I'll be honest," "The uncomfortable truth is." Cut them and state the point. Keep "I'll be honest" when it introduces a genuine admission, as the voice principle above keeps "to be honest."
 
 **Faux-insight setups.** "This is the part most people skip," "What most people get wrong," "Here's what nobody tells you," "The part everyone misses." These flatter the writer as the lone expert. Cut the setup and make the claim stand on its own. "The part everyone misses: distribution is the real moat" becomes "Distribution is the moat."
 
-**Colon reveals.** A teaser phrase that withholds the subject, a colon, then the reveal, in either case: "The detail that makes it work: a separate agent grades it." "The best part: it learns." Rewrite as a plain sentence ("It works because a separate agent grades it"). Use colons for lists, labels, and quotes, not fake drama. Field labels in reports and forms ("Root cause:", "Risk:", "Owner:") are not reveals. Prefer sentence case after a colon unless grammar, a proper noun, a title, or code requires otherwise.
+**Colon reveals.** A teaser phrase that withholds the subject, a colon, then the reveal, in either case: "The detail that makes it work: a separate agent grades it." "The best part: it learns." Rewrite as a plain sentence ("It works because a separate agent grades it"). Use colons for lists, labels, and quotes, not fake drama. Field labels in reports and forms ("Root cause:", "Risk:", "Owner:") are not reveals. Prefer lower case after a colon inside a sentence unless grammar, a proper noun, a title, or code requires otherwise; leave the case after a field label or a signal word as written ("Owner: Finance team", "CAUTION: Hot surface").
 
 **Superficial analysis.** Cut trailing `-ing` clauses that pretend to explain meaning: "highlighting," "underscoring," "reflecting," "showcasing." "The launch adds file search, highlighting the team's commitment to better workflows" becomes "The launch adds file search." State what the feature does for users only when the draft says so.
 
@@ -70,7 +78,7 @@ Structured text is exempt from the portability test, robotic rhythm, rhetorical 
 
 **Interpretive metadiscourse.** Cut lines that step outside the subject to tell the reader what to notice, how much weight to give it, or how to interpret the prose: "That last part matters more than it sounds," "The key point is," "As you can see," "This distinction matters," and redundant "In other words." If the point is clear, delete the aside. Otherwise, replace it with support or facts already in the content. Keep a pointer to a table, figure, or section as a plain reference: "As you can see in the chart, X" becomes "The chart shows X."
 
-**Weasel attribution.** "Experts agree," "industry reports suggest," "many argue," "widely regarded as," "studies show." Name the source when the draft or user gives one. A claim that carries a citation or footnote already has its source: leave it, or name that source inline. Otherwise remove the weasel phrase, keep the claim and any hedge it carried, and write `[needs: source for "<claim>"]` after it, as the facts rule above requires. Cut the claim only when the user says to. Never invent a source.
+**Weasel attribution.** "Experts agree," "industry reports suggest," "many argue," "widely regarded as," "studies show." Name the source when the draft or user gives one. A claim that carries a citation or footnote already has its source: leave it as written, and name that source inline only when the user asks. Otherwise remove the weasel phrase, keep the claim and any hedge it carried, and write `[needs: source for "<claim>"]` after it, as the facts rule above requires. A hedge is the doubt in the weasel verb: "suggest" or "argue" stays in the claim as "likely" or "may", and a phrase that claims agreement or proof ("experts agree," "studies show") carries none. Quote the claim in the marker without the hedge. Cut the claim only when the user says to. Never invent a source.
 
 **Fake-strong verbs.** "Serves as," "functions as," "acts as," and similar stand in for "is," "has," or a direct verb. Prefer "is" and "has" when they are clearer. Keep "acts as" or "serves as" when it marks an acting or interim role. "The app serves as a centralized hub for supplier contracts" becomes "The app centralizes supplier contracts." Name the specific things it tracks only when the source lists them.
 

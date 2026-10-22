@@ -68,7 +68,7 @@ Write the full text of each warning and caution in uppercase letters, including 
 
 *Why:* uppercase makes a safety instruction different from the procedure text around it.
 
-*Example:* "CAUTION: DO NOT APPLY MORE THAN 3 Nm OF TORQUE TO THE LAMP HOLDER. TOO MUCH TORQUE CAN BREAK THE LAMP HOLDER."
+*Example:* "CAUTION: DO NOT TORQUE THE LAMP HOLDER TO MORE THAN 3 Nm. TOO MUCH TORQUE CAN BREAK THE LAMP HOLDER."
 
 *Issue 9:* says nothing. The Section 7 examples are in uppercase, but STE does not give rules for formatting (p.104, p.36). House style narrows the choice: applies.
 
@@ -99,7 +99,7 @@ Each sentence obeys Rule 5.1 (20 words, p.87). Take each part from the source on
 
 ## HS-8 Warnings and cautions before their step
 
-Put each warning and caution immediately before the first work step that it applies to. Make sure that its command agrees with the sequence of the work steps.
+Put each warning and caution immediately before the first work step that it applies to. Make sure that its command agrees with the sequence of the work steps. A warning or caution whose command is a work step applies from that step, even when the hazard is in a later step.
 
 *Why:* a reader who obeys the steps in sequence must read the risk before doing the work.
 

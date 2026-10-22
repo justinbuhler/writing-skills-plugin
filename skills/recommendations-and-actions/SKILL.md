@@ -2,6 +2,14 @@
 name: recommendations-and-actions
 description: Reviews or rewrites the language of consulting findings and recommendations. Use when a document mixes observations with recommendations, has hedged or unowned recommendations, lacks clear decision points, or conflates different levels of the finding-to-action hierarchy. Essential QA before any consulting deliverable goes to a client or leadership audience.
 allowed-tools: Read
+routing:
+  category: content-creation
+  triggers:
+    - "recommendation language"
+    - "findings and recommendations"
+    - "hedged recommendation"
+    - "unowned actions"
+    - "decision points"
 ---
 
 # Recommendations and Actions
@@ -75,7 +83,7 @@ Every finding-chain statement in a consulting deliverable belongs to exactly one
 - Is it scoped to this client's situation?
 - Does it create genuine urgency for the decision-maker?
 
-**Flag:** A vague implication ("this could cause problems") generates no urgency. Name the specific consequence: cost, timeline impact, risk event, compliance exposure, or reputational damage. If the source does not state it, write `[needs: consequence]`.
+**Flag:** A vague implication ("this could cause problems") generates no urgency. Name the specific consequence: cost, timeline impact, risk event, compliance exposure, or reputational damage. If the source does not state it, write `[needs: consequence]`. A statement of what a party will choose to do ("the regions will each set their own password rules") is a behaviour, not a consequence: keep it and add `[needs: consequence]` for the cost, delay, or risk event it leads to.
 
 **Diagnostic test — Level 2 vs. Level 3:** If you can name what happens to the client if the finding is left unaddressed → Level 3 Implication. If you can only say what the finding means → Level 2 Insight.
 
@@ -101,7 +109,7 @@ Every finding-chain statement in a consulting deliverable belongs to exactly one
 - **Must** — required; no discretion
 - **Should** — recommended; judgment allowed
 - **May** — permitted; reader's choice
-- When the source does not say how binding a recommendation is, use **should**. Use **must** only where the source states a requirement.
+- When the source does not say how binding a recommendation is, use **should**. Use **must** only where the source states a requirement. A requirement the source places on an outcome (a clause that says records "must be kept") does not make the action that meets it required: keep **should** for the action unless the source requires that action itself.
 - Never use "consider" or "explore" in a recommendation — these are invitations to defer, not recommendations
 
 **Flag and rewrite:**
@@ -146,7 +154,7 @@ Every finding-chain statement in a consulting deliverable belongs to exactly one
 - "Action: [Who] — [What] — [By when] — [Status]."
 
 **Quality tests:**
-- Is there one accountable owner — a named person, a specific role, or one named team (not "the team", "everyone involved", or "IT / Estates" with no lead)?
+- Is there one accountable owner — a named person, a specific role, or one named team (not "the team", "everyone involved", or "IT / Estates" with no lead)? A slash-joined name such as "Finance/Procurement" is one team unless the document also names either part as a unit on its own; then it is two owners and needs a named lead.
 - Does the deadline resolve to one calendar date from the document? A named milestone passes only if the document gives its date. A deadline relative to a trigger passes only if the trigger is itself tracked in the document. "ASAP" fails, "before launch" fails when the document gives no launch date, and so does a date with no year in a document that spans more than one year.
 - Is the output named in the source? Do not derive one from the task's verb or object; write `[needs: output]`.
 - Is a status stated (for example Open, In Progress, Complete, Blocked, Not started, Deferred)? Step 7 uses it to find overdue items.
@@ -159,11 +167,11 @@ Every finding-chain statement in a consulting deliverable belongs to exactly one
 
 Work through the content in this order:
 
-1. **Label every statement** by level (Observation / Insight / Implication / Recommendation / Decision / Action). If a statement spans two levels, split it. In a table, each row is one item: read its Owner, Due or Date, Status, and Output columns as that item's attributes, treat columns holding different levels as already split, and report a missing column once for the table, not per row. Quoted or attributed text (a contract clause, a regulation, an interviewee's words) is an observation of that source: do not apply modal, hedge, or neutrality tests to the quoted words, and never rewrite them. Imperative bullets ("Start …", "Stop …") under a recommendation heading spell out that recommendation: label them Level 4 with it, not as Level 6 actions, so the action tests for output and status do not apply to them.
+1. **Label every statement** by level (Observation / Insight / Implication / Recommendation / Decision / Action). If a statement spans two levels, split it. In a table, each row is one item: read its Owner, Due or Date, Status, and Output columns as that item's attributes, treat columns holding different levels as already split, and report a missing column once for the table, not per row. Quoted or attributed text (a contract clause, a regulation, an interviewee's words) is an observation of that source: do not apply modal, hedge, or neutrality tests to the quoted words, and never rewrite them. Bullets under a recommendation that say what it covers, including imperative bullets ("Start …", "Stop …") under a recommendation heading, spell out that recommendation: label them Level 4 with it, not as Level 6 actions, so the action tests for output and status do not apply to them.
 
 2. **Check level quality** using the tests above. Flag every failure.
 
-3. **Check the chain.** Across the document, each recommendation must trace back through implication → insight → observation. Judge the chain at document level: do not report a broken chain when a passage quotes only part of one. A recommendation with no supporting observation anywhere is an assertion. An observation with no recommendation anywhere is an orphan, unless it reports a met target or gives context. If you cannot tell whether you have the full document, write "Chain assessed within the supplied text only" and report no orphans or unsupported recommendations.
+3. **Check the chain.** Across the document, each recommendation must trace back through implication → insight → observation. Judge the chain at document level: do not report a broken chain when a passage quotes only part of one. A recommendation with no supporting observation anywhere is an assertion. An observation with no recommendation anywhere is an orphan, unless it reports a met target or gives context. If you cannot tell whether you have the full document, write "Chain assessed within the supplied text only" and report no orphans or unsupported recommendations. When you cannot tell, mark no level the supplied text lacks, whether it falls between two levels the text gives or before the first or after the last (an observation and an implication with no insight get no `[needs: insight]`); the one exception is a bullet you split under "Mixing levels in one bullet".
 
 4. **Check commitment verbs** in all recommendations and decisions. Ask whether the main verb commits to a change or only to studying one. Deferral forms include "consider," "explore," "look at," "think about," "evaluate," "assess," "investigate," "review options," "may want to," "might want to," "could," "would benefit from," and "it is suggested." A study verb passes only when the study is itself the deliverable, with an output and a date. Replace a deferral with a direct verb and owner, writing `[needs: owner]` or `[needs: specific change]` where the source names none.
 
@@ -171,7 +179,7 @@ Work through the content in this order:
 
 6. **Check decisions vs. recommendations.** Confirm that "decisions required" are genuine forks, not disguised recommendations.
 
-7. **Check dates.** Find the document's as-of date. Flag any item not yet Complete whose deadline is before it. Flag any recommendation or action due before a decision or action it depends on. If the document gives no as-of date, skip the overdue check and say so; do not assume one.
+7. **Check dates.** Find the document's as-of date. Flag any item not yet Complete whose deadline is before it. Flag any recommendation or action due before a decision or action it depends on. In a rewrite, replace an overdue deadline with `[needs: revised date; <old date> has passed]`, and replace the deadline of the item that is due too early with `[needs: date after <the later item>'s <date> deadline]`; keep the date of the decision or action it depends on. If the document gives no as-of date and any item has a deadline, skip the overdue check and say so; do not assume one.
 
 ---
 
@@ -191,7 +199,7 @@ Then:
 
 **Decisions required:** Surface every Level 5 decision in an explicit table — decision-maker, question, options, deadline, consequence of delay — so none stays buried in the body. A cell the source does not fill reads `[needs: <column>]`, for example `[needs: consequence of delay]`.
 
-**For a rewrite:** Present the corrected content in a structured table or labeled hierarchy, then show a "What changed" section by level. Keep every statement that is not a finding-chain statement, and list it under "Carried unchanged".
+**For a rewrite:** Present the corrected content in a structured table or labeled hierarchy, then show a "What changed" section by level. Keep every statement that is not a finding-chain statement, and list it under "Carried unchanged". Write a missing recommendation as the Level 4 pattern with each slot marked (`[needs: owner] should [needs: action that …] by [needs: date]`); write every other missing level as one marker.
 
 **Gaps (both jobs):** End with each distinct `[needs: …]` gap the response contains, listed once, one per line.
 
