@@ -11,3 +11,4 @@ build/
 .env*
 !.env.example
 .omc/
+session-reads.txt
