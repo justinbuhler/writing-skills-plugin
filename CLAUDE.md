@@ -51,7 +51,7 @@ This is a Claude Code plugin. There is no build step — all content is markdown
 
 **Routing reference:** `skills/writing-workflow/routing-guide.md` is a human planning reference for the workflow. `SKILL.md` contains the executable instruction for the model. Some overlap between them is intentional — they serve different audiences.
 
-**`no-ai-slop` is a fork** of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT, © Peter Yang). Keep `skills/no-ai-slop/LICENSE`: the MIT terms require the notice to ship with the code.
+**`no-ai-slop` is a fork** of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT, © Peter Yang). Keep `skills/no-ai-slop/LICENSE`: the MIT terms require the notice to ship with the code. `ste100-writer` began as a fork of [blagoySimandov/asd-ste100-writer-skill](https://github.com/blagoySimandov/asd-ste100-writer-skill) (MIT per its `package.json`, © Blagoy Simandoff) and keeps `skills/ste100-writer/LICENSE` for the same reason, however far it is rewritten. The other seven skills are original to this repo.
 
 **Cross-harness adapters:** `skills/humanizer/agents/openai.yaml` and `skills/no-ai-slop/agents/openai.yaml` expose those two skills to non-Claude harnesses. Nothing in this repo reads them; leave them alone unless changing the skill's public name or one-line pitch.
 

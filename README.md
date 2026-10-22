@@ -141,7 +141,10 @@ Claude Code sessions in this repo turn it on for you. `CLAUDE.md` has the conven
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Two skills are forks of other MIT-licensed projects and keep their own licenses:
+MIT. See [LICENSE](LICENSE). Three skills are forks of other MIT-licensed projects and keep their own licenses:
 
 - `skills/humanizer/` is a fork of [blader/humanizer](https://github.com/blader/humanizer). See its [LICENSE](skills/humanizer/LICENSE).
 - `skills/no-ai-slop/` is a fork of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop). See its [LICENSE](skills/no-ai-slop/LICENSE).
+- `skills/ste100-writer/` began as a fork of [blagoySimandov/asd-ste100-writer-skill](https://github.com/blagoySimandov/asd-ste100-writer-skill), which declares the MIT license in its `package.json`. It has since been rewritten. See its [LICENSE](skills/ste100-writer/LICENSE).
+
+The other seven skills were written for this repository.
