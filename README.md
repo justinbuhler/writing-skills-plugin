@@ -141,4 +141,7 @@ Claude Code sessions in this repo turn it on for you. `CLAUDE.md` has the conven
 
 ## License
 
-MIT. See [LICENSE](LICENSE). `skills/humanizer/` is a fork of [blader/humanizer](https://github.com/blader/humanizer) and keeps its own MIT [LICENSE](skills/humanizer/LICENSE).
+MIT. See [LICENSE](LICENSE). Two skills are forks of other MIT-licensed projects and keep their own licenses:
+
+- `skills/humanizer/` is a fork of [blader/humanizer](https://github.com/blader/humanizer). See its [LICENSE](skills/humanizer/LICENSE).
+- `skills/no-ai-slop/` is a fork of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop). See its [LICENSE](skills/no-ai-slop/LICENSE).

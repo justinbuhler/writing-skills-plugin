@@ -51,6 +51,8 @@ This is a Claude Code plugin. There is no build step — all content is markdown
 
 **Routing reference:** `skills/writing-workflow/routing-guide.md` is a human planning reference for the workflow. `SKILL.md` contains the executable instruction for the model. Some overlap between them is intentional — they serve different audiences.
 
+**`no-ai-slop` is a fork** of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT, © Peter Yang). Keep `skills/no-ai-slop/LICENSE`: the MIT terms require the notice to ship with the code.
+
 **Cross-harness adapters:** `skills/humanizer/agents/openai.yaml` and `skills/no-ai-slop/agents/openai.yaml` expose those two skills to non-Claude harnesses. Nothing in this repo reads them; leave them alone unless changing the skill's public name or one-line pitch.
 
 ## The humanizer subtree is a fork, not a mirror
