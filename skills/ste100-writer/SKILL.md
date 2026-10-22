@@ -78,14 +78,25 @@ and say that the word needs a check in the Issue 9 dictionary. Do not state
 its approval as a fact.
 
 Put these words in one list, "Words to check in the Issue 9 dictionary", at
-the end of your response. Stop the list at these limits:
+the end of your response. Make the list from the new text, not from the
+source. Read the new text word by word, and list a word once if all of
+these are true:
 
-- List a word only if it is not in `references/word-choices.md` and it is
-  not a technical noun or a technical verb of the text. A technical noun or
-  verb goes in the glossary check, not in this list.
-- Do not list a function word (the, and, of, if).
-- Give each word one line: the word, its part of speech, and your best
-  alternative.
+- It is not in a table or a list of `references/word-choices.md` in the
+  part of speech that you used. The list "Approved words often used" is
+  part of that file.
+- It is not a technical noun or a technical verb of the text (these go in
+  the glossary check), a number, a unit, an identifier, a proper noun, or
+  quoted text.
+- It is not a signal word (WARNING, CAUTION, NOTE). Section 7 makes these
+  the names of safety instructions.
+- It is not a function word (the, a, and, of, if, it, you).
+
+Also list each approved word whose meaning or part of speech in your
+sentence you could not find in that file. Give each word one line: the
+word, its part of speech, and your best alternative. A word that
+`references/word-choices.md` gives as not approved is never on the list:
+replace it.
 
 The standard is ASD copyright. Do not quote long parts of it to the user.
 Cite the rule number and page.
@@ -135,7 +146,18 @@ and change nothing. Give the findings in the sequence that the House style
 section gives.
 
 **Rewrite (default).** The user asks you to write, rewrite, or convert text.
-Do the procedure below and give the new text.
+Do the procedure below. Give the new text first. Then give these sections
+in this sequence, and omit a section that is empty:
+
+1. **Notes**: each decision that the user must confirm.
+2. **Changes**: one line for each finding, tagged, in the sequence that the
+   House style section gives. When the user asks to see the changes, the
+   table of step 6 replaces this list.
+3. **Gaps**: each `[needs: …]` in the new text.
+4. **Words to check in the Issue 9 dictionary** (see Source of truth).
+
+If the user asks for the new text only, give the new text, then **Gaps** and
+**Words to check**.
 
 ## Procedure
 
@@ -191,9 +213,35 @@ action exactly (BYPASS, ENGAGE, RELEASE), use it, not a longer paraphrase
 with other approved words.
 
 Approved does not mean safe in all uses. Some approved words have a narrow
-meaning (GET, COME, LOOK, CHARGE, AIRBORNE) or one part of speech only
-(RELEASE, CHECK, TEST, LEAK, HEAT, SINCE). `references/word-choices.md` lists
-them. Look at each one when it is in the text.
+meaning (GET, COME, LOOK, CHARGE, AIRBORNE, GO, LIVE, CONTACT) or one part
+of speech only (RELEASE, CHECK, TEST, LEAK, HEAT, SINCE, CONTACT), or not
+in every part of speech (FLUSH is not a noun).
+`references/word-choices.md` lists them. Look at each one when it is in the
+text. Two are easy to miss because the general meaning sounds correct:
+
+- GO is for movement only. An area that "goes to 30 m" or a crack that
+  "goes to the edge" does not move: use BE ("there is a crack from the hole
+  to the edge").
+- LIVE is for explosive material only. Electrical equipment is ENERGIZED or
+  DE-ENERGIZED (Rule 3.3).
+
+Rule 1.1 applies to headings and titles too: "Preparation" (→ PREPARE) and
+"Quarterly" (→ INTERVAL) are not approved.
+
+When an approved word has a meaning in the text that the dictionary does not
+give, and its entry gives no alternative for that meaning (CHARGE for a
+spring), do these steps in sequence:
+
+1. Read all of the entry. Some words have two approved meanings: APPLY
+   includes a force or a pressure, so "apply the brakes" is correct.
+2. Find a different approved word or a technical verb that gives the action,
+   for example COMPRESS (v), if the source shows that the spring compresses.
+3. Write the sentence again with approved words that keep the meaning
+   (Rule 9.1). For "serious injury", use DANGEROUS in a different
+   construction (serious (adj), p.373).
+4. If no construction keeps the meaning, keep the source word, put it in
+   Words to check, and tell the user. Do not drop a part of the meaning, such
+   as a degree or a limit, to get an approved word.
 
 ### Section 2: Multi-word nouns (p.63)
 
@@ -235,6 +283,14 @@ unknown (Rule 3.6), or use "you" when the agent is the reader (Rule 3.6,
 Method 4, p.74). When the source implies a specific agent that it does not
 name and none of these applies, write `[needs: actor]` in the agent's place.
 
+One "by" phrase can follow two passive verbs ("the line has been tested and
+the grounding devices have been installed by the nominated person"). Then the
+source does not show who did the first action. Give the agent only to the
+verb that it is nearest to. For the other action, use a construction that
+needs no agent ("make sure that a test showed that the line is
+de-energized"). If the text must say who did it, write `[needs: actor]`.
+Tell the user in Notes.
+
 Modal verbs: Issue 9 has no modal-verb rule. Use the dictionary. MUST shows
 obligation. CAN means possible, able, or permitted. "Shall" is not approved:
 use MUST (p.375). "Should" is not approved: use MUST, or IF for a condition
@@ -265,6 +321,10 @@ instruction is very important for safety or gives an important condition
 - **Rule 5.4** Put a condition the reader needs first at the start, as a descriptive clause set off from the command by a comma. (p.90)
 - **Rule 5.5** Notes carry information only, never instructions. (p.91)
 
+Before you divide a step (Rule 5.2) or change a note (Rule 5.5), read the
+notes "Divided steps" and "Notes with a safety meaning" in
+`references/rules.md`.
+
 ### Section 6: Descriptive writing (p.95)
 
 - **Rule 6.1** Release information in stages. (p.95)
@@ -287,9 +347,16 @@ position before the step are house style (HS-6 to HS-8).
 
 Take each part of a safety instruction from the source only:
 
-- Do not write a hazard, a command, or a consequence yourself.
-- When the source gives a risk but no action that prevents it, write
-  `[needs: command]` (Rule 7.2).
+- Do not write a hazard, a command, or a consequence yourself. The next
+  item gives the only exception.
+- When the source gives a risk but no command, find the cause of the risk in
+  the source. If the cause is a specific act of a person ("persons who go
+  into the intake area risk ..."), write the command that forbids that act,
+  with the condition that the source gives: "WHEN THE ENGINE OPERATES, DO
+  NOT GO INTO THE INTAKE AREA." The command uses the act from the source, so
+  it is not invented. Tell the user in Notes. If the source gives a hazard
+  but no act ("the exhaust can blow debris"), write `[needs: command]`
+  (Rule 7.2).
 - When the source gives no risk or possible result, write
   `[needs: risk or result]` (Rule 7.3).
 - When the reader must know a condition first and the source does not give
@@ -308,6 +375,34 @@ user. If the source does not show the type of risk, write
 `[needs: level of risk]` in place of the signal word. If it gives no risk at
 all, also write `[needs: risk or result]`: with no signal word, both are
 missing.
+
+One risk for a group of instructions: a source can give the risk once, in a
+sentence that refers to all the instructions ("failure to comply with these
+requirements could result in injury"), or in the paragraph that has the
+commands. That risk applies to each command that it covers:
+
+- Write it as the explanation of each safety instruction that has no risk of
+  its own. Or put the commands in one safety instruction, as a vertical list
+  with one explanation (Rule 4.3).
+- Do not write `[needs: risk or result]` for a command that it covers, and do
+  not also keep it as a separate sentence.
+- A risk in a different part of a notice, with no words that connect it to a
+  command, is not that command's explanation: write
+  `[needs: risk or result]` and tell the user that the risk possibly applies.
+  But if the command is about the same hazard (the same equipment or the
+  same act), use that risk to select the signal word (Rule 7.1). The signal
+  word needs only the type of risk.
+
+Keep all of the meaning of a safety instruction:
+
+- An instruction stays an instruction, with its exception. "Treat the line
+  as live unless it is isolated" must not become "the line can be energized
+  at all times". Keep the exception with UNLESS (conj) or UNTIL (conj), for
+  example "THINK THAT THE LINE IS ENERGIZED UNLESS IT IS ISOLATED".
+- A prohibition does not become narrower. "Do not remove or interfere with"
+  forbids more than "do not remove or move". Use the alternative that covers
+  all of it (interfere (v) → TOUCH (v), p.287), or keep the source word and
+  put it in Words to check.
 
 A safety command that is valid STE but not precise ("BE CAREFUL WHEN YOU
 DISCONNECT THE LEADS") stays. Do not delete it to obey Rule 7.2. Keep it and

@@ -17,7 +17,11 @@ authority (see `rules.md`).
       ("do a test", not "test the pump"; "do a check of", not "check").
 - [ ] Rule 1.3: each approved word has its approved meaning. Look again at
       each word in the `word-choices.md` table of restricted meanings (for
-      example GET, COME, LOOK, CHARGE).
+      example GET, COME, LOOK, CHARGE). GO is for movement only, not for an
+      area or a crack that extends to a point. LIVE is for explosive
+      material only: electrical equipment is ENERGIZED or DE-ENERGIZED.
+- [ ] Rule 1.1 in headings and titles: no word that is not approved, for
+      example "Preparation" (→ PREPARE).
 - [ ] Rule 1.4: each verb and adjective is in an approved form.
 - [ ] No word that `word-choices.md` lists is in the text, in the part of
       speech that it gives. A word in a technical noun (Rule 1.6) or in
@@ -89,6 +93,10 @@ authority (see `rules.md`).
       condition either: it can stay after the command (`rules.md`, Rule 5.4).
 - [ ] Rule 5.5: no note gives an instruction, a requirement, or a limit, or
       uses the imperative. Each note sentence has 25 words or less.
+- [ ] Rule 5.5: information that prevents injury or damage, and that the
+      source gives with a risk or a command, is a safety instruction. A note
+      with only a fact stays a note, and Notes tells the user
+      (`rules.md`, "Notes with a safety meaning").
 
 ## Descriptions (Section 6)
 
@@ -111,6 +119,12 @@ authority (see `rules.md`).
 - [ ] Each command, condition, and risk comes from the source. A missing part
       is `[needs: command]`, `[needs: condition]`, `[needs: risk or result]`,
       or `[needs: level of risk]`, only where `SKILL.md` Section 7 says so.
+- [ ] Where the source gives a risk and names the act of a person that
+      causes it, the command forbids that act. It is not `[needs: command]`.
+- [ ] A risk that the source gives for a group of instructions is the
+      explanation of each command that it covers.
+- [ ] Each exception ("unless", "until") is kept. No instruction became a
+      statement, and no prohibition became narrower.
 - [ ] Each command agrees with the work steps it applies to.
 - [ ] No safety data was removed. A valid but imprecise command was kept,
       with a marker, not deleted.
@@ -140,6 +154,7 @@ authority (see `rules.md`).
 
 - [ ] Each technical noun is the same as in the source text.
 - [ ] Each number, tolerance, and unit is the same as in the source text.
-- [ ] No step was removed, added, or put in a different sequence.
+- [ ] No step was removed, added, or put in a different sequence. A source
+      instruction divided into its actions (Rule 5.2) is not an added step.
 - [ ] No fact, value, name, tool, or actor was added that is not in the source.
       Each gap is a `[needs: …]` and is listed under **Gaps**.

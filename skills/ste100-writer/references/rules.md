@@ -520,6 +520,18 @@ A work step can have more than one sentence when actions occur at the same
 time, or when a result occurs immediately after the action, for example a
 measurement and its limit (p.89).
 
+Divided steps (an instruction of this skill): to obey Rule 5.2, you can
+divide one source instruction into its actions. This is not an added step.
+First, find one approved verb that gives all of the source action: "unscrew
+the nut", when the nut comes off, is REMOVE. Divide only if no one verb
+does, or if the source gives two actions ("loosen and remove the axle nut").
+Then write each action as a work step ("Loosen the axle nut." "Remove the
+axle nut."), because the actions do not occur at the same time. An
+action that the source does not give is an added step. When the source gives
+only a limit ("the clearance must be approximately 0.5 mm"), write "Make
+sure that" with the limit in the step it applies to. Do not add a
+measurement or a method that the source does not give.
+
 ### Rule 5.3 Phrase each instruction as an imperative. (p.89)
 
 An instruction tells the reader to do something, so its verb is in the
@@ -575,6 +587,16 @@ a note has a maximum of 25 words.
   work step, and do the test again.
 - In descriptive text, use a note only for an illustration or a table
   (p.93).
+
+Notes with a safety meaning (an instruction of this skill): Rule 5.5 puts
+information that prevents injury or damage in a safety instruction (p.92).
+Do this when the source gives a risk or a command with the information. When
+the source gives only a fact ("the fan can continue to turn after the unit
+stops"), with no risk, no command, and no signal word, keep the fact as a
+note before the step that it is about. Do not make a safety instruction that
+has only markers. In Notes, tell the user that if the fact is there to
+prevent injury or damage, it must be a safety instruction, and the source
+must give its level of risk and its command.
 
 ## Section 6: Descriptive writing (p.95)
 

@@ -56,6 +56,9 @@ Give each measured value its unit of measurement. Put a space between the number
 
 Use only standard abbreviations: unit symbols, abbreviations that the applicable specification or company glossary lists, and abbreviations in wide general technical use whose full term is not in doubt (DC, AC, PVC, LED). Write each other term in full. If the source does not give the full term of such an other abbreviation, keep the abbreviation and write `[needs: full term for "<abbreviation>"]`. A widely used abbreviation does not get this marker. Without the glossary, say which project or company abbreviations need a glossary check.
 
+- *Wide general technical use:* technicians in many fields use the abbreviation with one meaning, and it has no second meaning in the field of the text. DC, AC, and LED pass. An abbreviation of one industry, company, or project (FOD, OLE, EMU, PM) does not pass. If you are not sure, it does not pass.
+- *Full term elsewhere in the source:* a full term that the source gives at any position (in the title, at a different use, or in a list of abbreviations) is the full term of each use. Write it in full, and do not write the `[needs: full term …]` marker.
+
 *Why:* an abbreviation helps only a reader who knows it, and the same letters can have two or more meanings.
 
 *Example:* "Disconnect the fuel quantity sensor.", not "Disconnect the FQS."

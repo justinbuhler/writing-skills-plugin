@@ -125,7 +125,7 @@ Each skill has a `TESTS.md` of RED/GREEN cases. RED is text that breaks the skil
 | recommendations-and-actions | 27 |
 | scqa-framework | 21 |
 | scr-narrative | 23 |
-| ste100-writer | 41 |
+| ste100-writer | 46 |
 | writing-workflow | 26 |
 
 The tests are run by a model, not a script. To run one skill's suite, start a Claude Code session in this repo and give it this prompt:

@@ -4,6 +4,9 @@ Each test has:
 
 - **RED:** text that violates the rule (should be flagged)
 - **GREEN:** text that complies with the rule (should pass)
+  A GREEN shows the part of the response that the test is about: the new text,
+  and a Gaps entry where the test depends on one. It is not the whole response,
+  so it leaves out the Notes, Changes and Words to check sections.
 - **Expected finding:** what the skill should flag in the RED case
 
 Rule numbers are ASD-STE100 Issue 9's own, the same numbers that `SKILL.md`,
@@ -71,6 +74,20 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 
 ---
 
+### Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("qualified")
+
+**RED (descriptive text):**
+
+> Only qualified personnel can do this test.
+
+**GREEN:**
+
+> Only approved personnel can do this test.
+
+**Expected finding:** `[1.1] "qualified" (adj) is not approved: use APPROVED (adj) (p.347). trained (adj) and authorized (adj) take the same alternative (p.407, p.171). "Only approved personnel can do this test." PERSONNEL (n) is approved (p.333): keep it.`
+
+---
+
 ### Rule 1.2 — Give each approved word only the part of speech that the dictionary lists for it
 
 **RED:**
@@ -112,6 +129,34 @@ Each of their REDs obeys Issue 9 and breaks only its house-style rule, and each 
 > Obey the safety procedures at all times.
 
 **Expected finding:** `[1.3] "follow" is approved to mean "come after, go after", not "obey" (FOLLOW (v), p.254). Use "obey".`
+
+---
+
+### Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it (GO for an item that does not move)
+
+**RED:**
+
+> 1. If a crack goes from a bolt hole to the edge of the flange, replace the flange.
+
+**GREEN:**
+
+> 1. If there is a crack from a bolt hole to the edge of the flange, replace the flange.
+
+**Expected finding:** `[1.3] "goes" uses GO (v) for a crack, which does not move. GO is approved only to mean "move to or from a location" (GO (v), p.264). For an item that does not move, use BE with "from … to …": "If there is a crack from a bolt hole to the edge of the flange, replace the flange." The condition stays first (Rule 5.4).`
+
+---
+
+### Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it (LIVE for electrical equipment)
+
+**RED (descriptive text):**
+
+> When the circuit breaker is closed, the busbar is live.
+
+**GREEN:**
+
+> When the circuit breaker is closed, the busbar is energized.
+
+**Expected finding:** `[1.3] "live" is approved only for an item that contains explosive material (LIVE (adj), p.301). For electrical equipment, use ENERGIZED: the past participle of ENERGIZE (v) (p.232) as an adjective (Rule 3.3). "When the circuit breaker is closed, the busbar is energized." CLOSE (v) is correct here: its approved meaning includes setting a circuit breaker so that it completes a circuit (p.192).`
 
 ---
 
@@ -493,6 +538,21 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 
 ---
 
+### Rule 7.2 — Open a safety instruction with a precise command or condition (risk with no command)
+
+**RED (rewrite of a source sentence that gives a risk but no command):**
+
+> Original: Anyone entering the intake area while the fan is running risks being drawn into the fan.
+> Rewritten: WARNING: WHEN THE FAN OPERATES, [needs: command]. IF A PERSON GOES INTO THE INTAKE AREA, THE FAN CAN PULL THE PERSON INTO THE FAN.
+
+**GREEN:**
+
+> WARNING: WHEN THE FAN OPERATES, DO NOT GO INTO THE INTAKE AREA. IF A PERSON GOES INTO THE INTAKE AREA, THE FAN CAN PULL THE PERSON INTO THE FAN.
+
+**Expected finding:** `[7.2] The source gives no command, but it names the act of a person that causes the risk: going into the intake area while the fan operates. Write the command that forbids that act, with the condition from the source: "WHEN THE FAN OPERATES, DO NOT GO INTO THE INTAKE AREA." The command uses only the act and the condition that the source gives, so it adds no fact. Do not write [needs: command]. Tell the user in Notes that the command comes from the act in the source. The risk is to a person, so WARNING is correct (Rule 7.1), and the explanation stays after the command (Rule 7.3).`
+
+---
+
 ### Rule 7.3 — Explain the risk or the likely consequence
 
 **RED:**
@@ -509,6 +569,29 @@ Context: the parts data names this kit, so "kit" is a technical noun here.
 > - `[needs: risk or result]` in the WARNING. The source gives no risk or possible result.
 
 **Expected finding:** `[7.3] The WARNING has a command but no explanation of the risk or possible result. The source does not give one, so do not write one yourself (for example, do not add "THE FAN CAN CAUSE INJURY"). Write [needs: risk or result] after the command and list it under Gaps. A safety instruction that starts with a command and has no condition obeys Rule 7.2 (p.105): do not add [needs: condition]. WARNING already identifies a risk of injury (Rule 7.1, p.104): do not add [needs: level of risk].`
+
+---
+
+### Rule 7.3 — Explain the risk or the likely consequence (one risk for a group of instructions)
+
+**RED (rewrite of a source notice):**
+
+> Original: Do not go below the load. Keep your hands away from the chains. Failure to obey these instructions can cause injury.
+> Rewritten:
+>
+> WARNING: DO NOT GO BELOW THE LOAD. [needs: risk or result]
+>
+> WARNING: KEEP YOUR HANDS AWAY FROM THE CHAINS. [needs: risk or result]
+>
+> If you do not obey these instructions, an injury can occur.
+
+**GREEN:**
+
+> WARNING: DO NOT GO BELOW THE LOAD. IF YOU DO NOT OBEY THIS INSTRUCTION, AN INJURY CAN OCCUR.
+>
+> WARNING: KEEP YOUR HANDS AWAY FROM THE CHAINS. IF YOU DO NOT OBEY THIS INSTRUCTION, AN INJURY CAN OCCUR.
+
+**Expected finding:** `[7.3] The source gives one risk for all its instructions ("Failure to obey these instructions can cause injury"). That risk applies to each command that it covers, so it is the explanation of each safety instruction: do not write [needs: risk or result]. Write it in each warning, as here, or put the two commands in one warning as a vertical list with one explanation (Rule 4.3). Then do not keep it as a separate sentence as well. The risk is injury, so WARNING is correct (Rule 7.1), and each warning starts with its command (Rule 7.2).`
 
 ---
 
@@ -685,52 +768,57 @@ Figures for quantities and warning placement are also tested again as house styl
 
 ## Verification Log
 
-**Verified 2026-10-22.** Result: **41/41 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. No copy of the ASD standard was used: every Expected finding and rule detail was checked in `SKILL.md` or `references/`; a cited dictionary page that the references do not contain (for example CENTER (TN), p.187, or SHOW (v), p.377) was accepted where the finding's substance could be checked from the references. Rule 2.2's shorter form, abbreviation, and hyphens were graded as options, not duties. The Rule 1.14 and Rule 7.1 (caution) tests and the HS-6 example use the verb TORQUE (TORQUE (v), p.406); "Apply a torque of 25 ±2 Nm." in Rule 4.1 keeps the noun, a technical noun (Rule 1.5, category 7). Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. The worked examples in `SKILL.md` and `references/` were also checked against the skill's own rules, and none breaks them. The previous log's notes were not used; every test was graded from scratch.
+**Verified 2026-10-22.** Result: **46/46 passed.** Graded by an Opus agent reading `SKILL.md`, `references/rules.md`, `references/word-choices.md`, `references/checklist.md`, and `references/house-style.md` as the only source for the skill, its rules, pages, and dictionary entries, and `TESTS.md`, with no edit to either file afterwards. No copy of the ASD standard was used: every Expected finding and rule detail was checked in `SKILL.md` or `references/`; a cited dictionary page that the references do not contain (for example CENTER (TN), p.187, or SHOW (v), p.377) was accepted where the finding's substance could be checked from the references. Rule 2.2's shorter form, abbreviation, and hyphens were graded as options, not duties. "isolation valve" in the Rule 4.5 and Rule 5.1 GREENs is a technical name that the `references/word-choices.md` isolation (n) row permits (Rule 1.6). The Rule 7.2 (risk with no command) GREEN ends "PULL THE PERSON INTO THE FAN.", which names the fan in place of an ambiguous "IT" (GR-3), and its command forbids the act that the source names, as `SKILL.md` Section 7 permits. "Apply a torque of 25 ±2 Nm." in Rule 4.1 keeps the noun, a technical noun (Rule 1.5, category 7), as the source writes it. Sections 1 to 8 were graded with house style off; the House style tests were graded with HS-1 to HS-8 applied after the Issue 9 check. A "Context:" line or a parenthetical scenario note was read as scenario information, not as text under test. Each GREEN was scanned for every word that `references/word-choices.md` gives as not approved; each hit is a permitted use (a noun use of TEST or CHECK, a technical name, or quoted placard text). The worked examples in `SKILL.md` and `references/` were also checked against the skill's own rules, and none breaks them. The previous log's notes were not used; every test was graded from scratch.
 
-Produced against `TESTS.md` body sha256 `be98045881a7c57a`, `SKILL.md` sha256 `c0c931d650d7843f`, `references/checklist.md` sha256 `e0ada7e4fd35c647`, `references/house-style.md` sha256 `a07b2cb8a6a31d07`, `references/rules.md` sha256 `67a6308d4aaf2485`, and `references/word-choices.md` sha256 `41164cf4c524654c` (the 4 files concatenated in filename order digest to `cc5361eaded48d0c`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
+Produced against `TESTS.md` body sha256 `0fde6a51c578a00b`, `SKILL.md` sha256 `3d1dce3f0f731cd0`, `references/checklist.md` sha256 `9c091b8f77feace1`, `references/house-style.md` sha256 `6d5e1471ff3acd16`, `references/rules.md` sha256 `2f5fcc4918ae8e7c`, and `references/word-choices.md` sha256 `582711ce087260fb` (the 4 files concatenated in filename order digest to `f648d5d4052d8771`). The body hash covers everything above this heading, so it survives this log being written. Recompute every hash before trusting the rows: any later edit invalidates them.
 
-| Test                                                        | RED flags | GREEN clean | Pass |
-|-------------------------------------------------------------|-----------|-------------|------|
-| Rule 1.1 — Approved words, technical nouns, technical verbs | ✓         | ✓           | PASS |
-| Rule 1.1 — Approved words ("shall")                         | ✓         | ✓           | PASS |
-| Rule 1.1 — Approved words ("should")                        | ✓         | ✓           | PASS |
-| Rule 1.2 — Specified part of speech ("test")                | ✓         | ✓           | PASS |
-| Rule 1.2 — Specified part of speech ("light")               | ✓         | ✓           | PASS |
-| Rule 1.3 — Approved meanings only                           | ✓         | ✓           | PASS |
-| Rule 1.5 — Technical noun category (quoted text)            | ✓         | ✓           | PASS |
-| Rule 1.11 — One technical noun for one item                 | ✓         | ✓           | PASS |
-| Rule 1.12 — Technical verb category                         | ✓         | ✓           | PASS |
-| Rule 1.14 — American English spelling                       | ✓         | ✓           | PASS |
-| Rule 2.1 — Multi-word nouns of no more than three words     | ✓         | ✓           | PASS |
-| Rule 3.5 — "-ing" form only in a technical noun             | ✓         | ✓           | PASS |
-| Rule 3.6 — Active voice                                     | ✓         | ✓           | PASS |
-| Rule 3.7 — Approved verb, not a noun                        | ✓         | ✓           | PASS |
-| Rule 4.1 — Short and clear sentences (be accurate)          | ✓         | ✓           | PASS |
-| Rule 4.2 — Do not omit words                                | ✓         | ✓           | PASS |
-| Rule 4.5 — Articles and demonstrative adjectives            | ✓         | ✓           | PASS |
-| Rule 5.1 — Procedural sentences: 20 words maximum           | ✓         | ✓           | PASS |
-| Rule 5.1 — 20 words maximum (description in a procedure)    | ✓         | ✓           | PASS |
-| Rule 5.2 — One instruction in each sentence (sentence)      | ✓         | ✓           | PASS |
-| Rule 5.2 — One instruction in each sentence (work step)     | ✓         | ✓           | PASS |
-| Rule 5.3 — Imperative form                                  | ✓         | ✓           | PASS |
-| Rule 5.3 — Imperative form ("you should")                   | ✓         | ✓           | PASS |
-| Rule 5.4 — Condition first                                  | ✓         | ✓           | PASS |
-| Rule 6.3 — Descriptive sentences: 25 words maximum          | ✓         | ✓           | PASS |
-| Rule 6.4 — Paragraphs (topic sentence first)                | ✓         | ✓           | PASS |
-| Rule 6.6 — No more than six sentences in a paragraph        | ✓         | ✓           | PASS |
-| Rule 7.1 — Level of risk (warning, not note)                | ✓         | ✓           | PASS |
-| Rule 7.1 — Level of risk (caution, not warning)             | ✓         | ✓           | PASS |
-| Rule 7.2 — Start with a command or condition                | ✓         | ✓           | PASS |
-| Rule 7.3 — Risk or possible result (none in the source)     | ✓         | ✓           | PASS |
-| Rule 8.1 — No semicolon                                     | ✓         | ✓           | PASS |
-| Rule 8.2 — Hyphens for directly related words               | ✓         | ✓           | PASS |
-| House style HS-1 — No em dash or en dash                    | ✓         | ✓           | PASS |
-| House style HS-2 — No slash for "and" or "or"               | ✓         | ✓           | PASS |
-| House style HS-3 — Figures for quantities                   | ✓         | ✓           | PASS |
-| House style HS-4 — Units with the number                    | ✓         | ✓           | PASS |
-| House style HS-5 — Standard abbreviations only              | ✓         | ✓           | PASS |
-| House style HS-6 — Uppercase warnings and cautions          | ✓         | ✓           | PASS |
-| House style HS-7 — Fixed format for warnings and cautions   | ✓         | ✓           | PASS |
-| House style HS-8 — Warnings and cautions before their step  | ✓         | ✓           | PASS |
+| Test                                                                                                                        | RED flags | GREEN clean | Pass |
+|-----------------------------------------------------------------------------------------------------------------------------|-----------|-------------|------|
+| Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs                       | ✓         | ✓           | PASS |
+| Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("shall")             | ✓         | ✓           | PASS |
+| Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("should")            | ✓         | ✓           | PASS |
+| Rule 1.1 — Restrict the vocabulary to dictionary-approved words, technical nouns, and technical verbs ("qualified")         | ✓         | ✓           | PASS |
+| Rule 1.2 — Give each approved word only the part of speech that the dictionary lists for it                                 | ✓         | ✓           | PASS |
+| Rule 1.2 — Give each approved word only the part of speech that the dictionary lists for it ("light")                       | ✓         | ✓           | PASS |
+| Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it                                       | ✓         | ✓           | PASS |
+| Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it (GO for an item that does not move)   | ✓         | ✓           | PASS |
+| Rule 1.3 — Give each approved word only the meaning that the dictionary assigns to it (LIVE for electrical equipment)       | ✓         | ✓           | PASS |
+| Rule 1.5 — A word that fits a technical-noun category is permitted (quoted text)                                            | ✓         | ✓           | PASS |
+| Rule 1.11 — Call each item by a single technical noun throughout                                                            | ✓         | ✓           | PASS |
+| Rule 1.12 — A word that fits a technical-verb category is permitted                                                         | ✓         | ✓           | PASS |
+| Rule 1.14 — Spell in American English unless an official directive says otherwise                                           | ✓         | ✓           | PASS |
+| Rule 2.1 — Limit a noun cluster to three words                                                                              | ✓         | ✓           | PASS |
+| Rule 3.5 — Limit "-ing" words to technical nouns and their modifiers                                                        | ✓         | ✓           | PASS |
+| Rule 3.6 — Prefer the active voice. Descriptive text may use the passive only when the actor is unknown                     | ✓         | ✓           | PASS |
+| Rule 3.7 — Express an action with an approved verb, not with a noun or another word class                                   | ✓         | ✓           | PASS |
+| Rule 4.1 — Keep sentences brief and unambiguous (be accurate)                                                               | ✓         | ✓           | PASS |
+| Rule 4.2 — Never drop words or contract them to save length                                                                 | ✓         | ✓           | PASS |
+| Rule 4.5 — Where it fits, put an article (the, a, an) or "this"/"these" before a noun or noun cluster                       | ✓         | ✓           | PASS |
+| Rule 5.1 — Procedural sentences: 20 words at most                                                                           | ✓         | ✓           | PASS |
+| Rule 5.1 — Procedural sentences: 20 words at most (description in a procedure)                                              | ✓         | ✓           | PASS |
+| Rule 5.2 — One instruction per sentence, except for simultaneous actions (sentence)                                         | ✓         | ✓           | PASS |
+| Rule 5.2 — One instruction per sentence, except for simultaneous actions (work step)                                        | ✓         | ✓           | PASS |
+| Rule 5.3 — Phrase each instruction as an imperative                                                                         | ✓         | ✓           | PASS |
+| Rule 5.3 — Phrase each instruction as an imperative ("you should")                                                          | ✓         | ✓           | PASS |
+| Rule 5.4 — Put a condition the reader needs first at the start, as a descriptive clause set off from the command by a comma | ✓         | ✓           | PASS |
+| Rule 6.3 — Descriptive sentences: 25 words at most                                                                          | ✓         | ✓           | PASS |
+| Rule 6.4 — Group related information into paragraphs (topic sentence first)                                                 | ✓         | ✓           | PASS |
+| Rule 6.6 — Six sentences at most per paragraph                                                                              | ✓         | ✓           | PASS |
+| Rule 7.1 — Mark the risk level with a signal word such as "warning" or "caution" (warning, not note)                        | ✓         | ✓           | PASS |
+| Rule 7.1 — Mark the risk level with a signal word such as "warning" or "caution" (caution, not warning)                     | ✓         | ✓           | PASS |
+| Rule 7.2 — Open a safety instruction with a precise command or condition                                                    | ✓         | ✓           | PASS |
+| Rule 7.2 — Open a safety instruction with a precise command or condition (risk with no command)                             | ✓         | ✓           | PASS |
+| Rule 7.3 — Explain the risk or the likely consequence                                                                       | ✓         | ✓           | PASS |
+| Rule 7.3 — Explain the risk or the likely consequence (one risk for a group of instructions)                                | ✓         | ✓           | PASS |
+| Rule 8.1 — Any standard English punctuation mark is permitted except the semicolon (;)                                      | ✓         | ✓           | PASS |
+| Rule 8.2 — Hyphenate (-) words that belong closely together                                                                 | ✓         | ✓           | PASS |
+| House style HS-1: No em dash or en dash                                                                                     | ✓         | ✓           | PASS |
+| House style HS-2: No slash for "and" or "or"                                                                                | ✓         | ✓           | PASS |
+| House style HS-3: Numbers as figures for quantities                                                                         | ✓         | ✓           | PASS |
+| House style HS-4: Units with the number                                                                                     | ✓         | ✓           | PASS |
+| House style HS-5: Standard abbreviations only                                                                               | ✓         | ✓           | PASS |
+| House style HS-6: Uppercase warnings and cautions                                                                           | ✓         | ✓           | PASS |
+| House style HS-7: Fixed format for warnings and cautions                                                                    | ✓         | ✓           | PASS |
+| House style HS-8: Warnings and cautions before their step                                                                   | ✓         | ✓           | PASS |
 
-Counts were checked with a Python split under Rules 8.4 to 8.7 (a hyphenated word is one word, a number with its unit is one word): 5.1 RED 25 words and its GREEN 18 before the colon; the description-in-a-procedure step 23, its descriptive sentence 22, and its GREEN sentences 9 and 15; 6.3 RED 38; the 2.1 multi-word noun 8; 6.6 RED 7 sentences, its first GREEN paragraph 6 (longest 19 words); 41 Expected findings in all.
+Counts were checked with a Python split under Rules 8.4 to 8.7 (a hyphenated word is one word, a number with its unit is one word): 5.1 RED 25 words and its GREEN 18 before the colon; the description-in-a-procedure step 23, its descriptive sentence 22, and its GREEN sentences 9 and 15; 6.3 RED 38; the 2.1 multi-word noun 8; 6.6 RED 7 sentences, its first GREEN paragraph 6 (longest 19 words); the Rule 7.2 (risk with no command) GREEN sentences 11 and 17 words; 46 Expected findings in all.
