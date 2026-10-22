@@ -103,7 +103,7 @@ Know its limits before you rely on it:
 
 - **The rules are close to the standard.** An audit against the full text found 47 of 53 writing rules summarised faithfully and none wrong. The other six were fixed.
 - **The dictionary is not.** The standard's dictionary rules out about 1,300 words. The skill's word list covers the common ones in maintenance and safety text, not all of them. When a rewrite uses a word the list does not cover, the skill names it as one to check in the Issue 9 dictionary.
-- **Measured result.** Two trials, each on 10 new procedures, descriptions, and safety notices, were judged against the full standard. Neither found a major defect. About 84% of sentences complied fully in the first trial and about 82% in the second, which ran on different texts after the word list grew. Nearly all the misses were word choices, so a larger word list has not yet raised the rate on unseen text.
+- **Measured result.** Three trials, each on 10 new procedures, descriptions, and safety notices in different fields, were judged against the full standard. None found a major defect. About 84%, 82% and 81% of sentences complied fully. Fixes after the second trial removed the misses they targeted, such as words used in the wrong sense, dropped exceptions and narrowed bans, but the overall rate has not moved. Nearly all remaining misses are word choices, and in the third trial the skill listed three in four of them for a dictionary check itself.
 
 Check STE output against the standard before you publish it.
 

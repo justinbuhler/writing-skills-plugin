@@ -694,8 +694,74 @@ If possible, tell the reader what can occur if the reader does not obey the
 safety instruction. A clear and specific risk makes the person who does the
 task more careful.
 
-Take each part from the source only. For a part that the source does not
-give, see `SKILL.md` Section 7.
+The notes below are instructions of this skill for all of Section 7.
+
+Missing parts of a safety instruction (an instruction of this skill): take
+each part of a safety instruction from the source only:
+
+- Do not write a hazard, a command, or a consequence yourself. The next
+  item gives the only exception.
+- When the source gives a risk but no command, find the cause of the risk in
+  the source. If the cause is a specific act of a person ("persons who go
+  into the intake area risk ..."), write the command that forbids that act,
+  with the condition that the source gives: "WHEN THE ENGINE OPERATES, DO
+  NOT GO INTO THE INTAKE AREA." The command uses the act from the source, so
+  it is not invented. Tell the user in Notes. If the source gives a hazard
+  but no act ("the exhaust can blow debris"), write `[needs: command]`
+  (Rule 7.2).
+- When the source gives no risk or possible result, write
+  `[needs: risk or result]` (Rule 7.3).
+- When the reader must know a condition first and the source does not give
+  it, write `[needs: condition]` (Rule 7.2).
+- When neither the signal word nor the text shows if the risk is to persons
+  or to objects, keep the signal word and write `[needs: level of risk]`
+  (Rule 7.1). A source WARNING already shows a risk to persons, and a source
+  CAUTION a risk to objects, so neither needs the marker.
+- When the source has a signal word but gives no risk at all, write only
+  `[needs: risk or result]`: the signal word already shows the level, so do
+  not also write `[needs: level of risk]`.
+
+No signal word (an instruction of this skill): when a safety instruction in
+the source has no signal word, select WARNING or CAUTION from the risk that
+the source gives (Rule 7.1, p.104) and tell the user. If the source does not show the type of risk, write
+`[needs: level of risk]` in place of the signal word. If it gives no risk at
+all, also write `[needs: risk or result]`: with no signal word, both are
+missing.
+
+One risk for a group of instructions (an instruction of this skill): a
+source can give the risk once, in a sentence that refers to all the
+instructions ("failure to comply with these requirements could result in
+injury"), or in the paragraph that has the commands. That risk applies to each command that it covers:
+
+- Write it as the explanation of each safety instruction that has no risk of
+  its own. Or put the commands in one safety instruction, as a vertical list
+  with one explanation (Rule 4.3).
+- Do not write `[needs: risk or result]` for a command that it covers, and do
+  not also keep it as a separate sentence.
+- A risk in a different part of a notice, with no words that connect it to a
+  command, is not that command's explanation: write
+  `[needs: risk or result]` and tell the user that the risk possibly applies.
+  But if the command is about the same hazard (the same equipment or the
+  same act), use that risk to select the signal word (Rule 7.1). The signal
+  word needs only the type of risk.
+
+Keep all of the meaning (an instruction of this skill): keep all of the
+meaning of a safety instruction:
+
+- An instruction stays an instruction, with its exception. "Treat the line
+  as live unless it is isolated" must not become "the line can be energized
+  at all times". Keep the exception with UNLESS (conj) or UNTIL (conj), for
+  example "THINK THAT THE LINE IS ENERGIZED UNLESS IT IS ISOLATED".
+- A prohibition does not become narrower. "Do not remove or interfere with"
+  forbids more than "do not remove or move". Use the alternative that covers
+  all of it (interfere (v) → TOUCH (v), p.287), or keep the source word and
+  put it in Words to check.
+
+A safety command that is valid STE but not precise ("BE CAREFUL WHEN YOU
+DISCONNECT THE LEADS") stays. Do not delete it to obey Rule 7.2. Keep it and
+add the marker that applies, for example `[needs: risk or result]`.
+
+Make sure that each command agrees with the work steps that it applies to.
 
 ## Section 8: Punctuation and word count (p.107)
 

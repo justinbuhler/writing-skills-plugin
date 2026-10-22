@@ -118,7 +118,7 @@ authority (see `rules.md`).
       if the source gives it.
 - [ ] Each command, condition, and risk comes from the source. A missing part
       is `[needs: command]`, `[needs: condition]`, `[needs: risk or result]`,
-      or `[needs: level of risk]`, only where `SKILL.md` Section 7 says so.
+      or `[needs: level of risk]`, only where `rules.md` Section 7 says so.
 - [ ] Where the source gives a risk and names the act of a person that
       causes it, the command forbids that act. It is not `[needs: command]`.
 - [ ] A risk that the source gives for a group of instructions is the

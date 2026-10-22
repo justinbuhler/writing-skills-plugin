@@ -382,8 +382,8 @@ checked against the dictionary. A verb here takes the forms of Rule 1.4.
 Rule 1.3 still applies: an approved word has one meaning, and some of these
 have a narrower meaning than in general English (TURN and SEE, Rule 9.2).
 The tables above give the restricted meanings that writers most often get
-wrong. `SKILL.md` (Source of truth) uses this list to make the "Words to
-check in the Issue 9 dictionary" list.
+wrong. "The Words to check list" below uses this list to make the "Words
+to check in the Issue 9 dictionary" list.
 
 ADD (v), ADJUST (v), ADJUSTMENT (n), AFT (adj, adv), AFTER (conj, prep),
 AGAIN (adv), ALIGN (v), ALSO (adv), ALWAYS (adv), APPLICABLE (adj),
@@ -418,6 +418,30 @@ TIGHTEN (v), TO (prep), TOO (adv), TOUCH (v), TRANSMIT (v), TURN (n, v),
 UNLESS (conj), UNSERVICEABLE (adj), UNTIL (conj, prep), USE (v), VALUE (n),
 VERY (adv), WAIT (v), WEIGHT (n), WHEN (conj), WHILE (conj), WITHOUT (prep),
 WRITE (v).
+
+## The Words to check list
+
+This section is for the words that are not in this file, as `SKILL.md`
+(Source of truth) says. Put these words in one list, "Words to check in the Issue 9 dictionary", at
+the end of your response. Make the list from the new text, not from the
+source. Read the new text word by word, and list a word once if all of
+these are true:
+
+- It is not in a table or a list of `references/word-choices.md` in the
+  part of speech that you used. The list "Approved words often used" is
+  part of that file.
+- It is not a technical noun or a technical verb of the text (these go in
+  the glossary check), a number, a unit, an identifier, a proper noun, or
+  quoted text.
+- It is not a signal word (WARNING, CAUTION, NOTE). Section 7 makes these
+  the names of safety instructions.
+- It is not a function word (the, a, and, of, if, it, you).
+
+Also list each approved word whose meaning or part of speech in your
+sentence you could not find in that file. Give each word one line: the
+word, its part of speech, and your best alternative. A word that
+`references/word-choices.md` gives as not approved is never on the list:
+replace it.
 
 ## Words that are not in the dictionary
 
