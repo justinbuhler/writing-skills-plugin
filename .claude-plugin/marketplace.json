@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "writing-skills",
+  "owner": {
+    "name": "justinbuhler",
+    "url": "https://github.com/justinbuhler"
+  },
+  "description": "Writing skills for consulting documents, technical procedures, and strategic communications.",
+  "plugins": [
+    {
+      "name": "writing-skills",
+      "source": "./",
+      "description": "10 writing skills covering narrative framing, structure, language review, and quality gate for consulting and technical documents.",
+      "license": "MIT",
+      "keywords": [
+        "writing",
+        "consulting",
+        "plain-language",
+        "pyramid",
+        "scqa",
+        "ste100",
+        "document-qa",
+        "recommendations"
+      ]
+    }
+  ]
+}

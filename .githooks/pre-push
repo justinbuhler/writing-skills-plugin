@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+# Pre-push gate, and the only gate this repository has: GitHub Actions is not
+# used, so these checks run here or nowhere. The workflows in .github/workflows/
+# define the same checks but are manual-only. This repo is markdown-only, so the canonical spine has no
+# Python/Node/Swift to run — it is called anyway in case that changes.
+# Bypass once with: git push --no-verify
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+# Hooks inherit these from the invoking git; anything shelling out to git would
+# otherwise operate on the pushing repo's index.
+unset GIT_DIR GIT_INDEX_FILE GIT_WORK_TREE
+
+fail=0
+run(){ echo "▶ $*"; "$@" || fail=1; }
+
+[ -x "$HOME/.claude/scripts/verify-project.sh" ] && run "$HOME/.claude/scripts/verify-project.sh" .
+
+# validate-plugin.yml: manifest listing must equal the skills/ directories
+echo "▶ plugin.json ↔ skills/ set equality"
+listed=$(jq -r '.skills[]' .claude-plugin/plugin.json | sed 's|^\./||' | sort)
+found=$(find skills -maxdepth 1 -mindepth 1 -type d | sort)
+if [ "$listed" != "$found" ]; then
+  echo "  mismatch:"; diff <(echo "$listed") <(echo "$found"); fail=1
+fi
+
+# validate-plugin.yml: every skill ships both files
+echo "▶ every skill has SKILL.md and TESTS.md"
+for dir in skills/*/; do
+  for f in SKILL.md TESTS.md; do
+    [ -f "$dir$f" ] || { echo "  MISSING: $dir$f"; fail=1; }
+  done
+done
+
+# validate-plugin.yml: every RED needs a GREEN and an Expected finding
+echo "▶ every RED has a GREEN and an Expected finding"
+python3 - <<'EOF' || fail=1
+import pathlib, sys
+bad = []
+for f in sorted(pathlib.Path("skills").glob("*/TESTS.md")):
+    body = f.read_text().split("## Verification Log")[0]
+    blocks, title, cur, fenced = [], None, [], False
+    for line in body.split("\n"):
+        if line.startswith("```"):
+            fenced = not fenced
+        if line.startswith("### ") and not fenced:
+            if title:
+                blocks.append((title, "\n".join(cur)))
+            title, cur = line[4:].strip(), []
+        else:
+            cur.append(line)
+    if title:
+        blocks.append((title, "\n".join(cur)))
+    for title, b in blocks:
+        lines = b.split("\n")
+        if not any(l.startswith("**RED") for l in lines):
+            continue
+        for label in ("**GREEN", "**Expected finding"):
+            if not any(l.startswith(label) for l in lines):
+                bad.append(f"  {f}: '{title}' has a RED but no {label.lstrip('*')}")
+for line in bad:
+    print(line)
+sys.exit(1 if bad else 0)
+EOF
+
+# cross-reference integrity: named paths resolve, directions point the right
+# way, and every ste100 rule number has a heading in rules.md
+echo "▶ cross-references resolve and point the right way"
+python3 - <<'EOF' || fail=1
+import pathlib, re, sys
+issue9 = set(re.findall(r"^### Rule (\d+\.\d+)", pathlib.Path(
+    "skills/ste100-writer/references/rules.md").read_text(), re.M))
+bad = []
+for f in sorted(pathlib.Path("skills").rglob("*.md")):
+    lines = f.read_text().split("\n")
+    for n, l in enumerate(lines, 1):
+        for m in re.finditer(r"`([A-Za-z0-9_./-]+\.md)`", l):
+            t = m.group(1)
+            if not ((f.parent / t).exists() or (f.parent.parent / t).exists()
+                    or pathlib.Path(t).exists()):
+                bad.append(f"  {f}:{n} names `{t}`, which does not exist")
+        m = re.search(r'"([^"]+)"\s+(?:table|section)\s+(below|above)', l)
+        if m:
+            name, direction = m.group(1), m.group(2)
+            locs = [i for i, x in enumerate(lines, 1) if name in x and i != n]
+            if locs:
+                tgt = min(locs, key=lambda i: abs(i - n))
+                if (direction == "below" and tgt < n) or (direction == "above" and tgt > n):
+                    bad.append(f'  {f}:{n} says "{name}" {direction}, but it is at line {tgt}')
+    if f.name == "SKILL.md" and (f.parent / "references").is_dir():
+        body = f.read_text()
+        for r in sorted((f.parent / "references").glob("*.md")):
+            if r.name not in body:
+                bad.append(f"  {r}: orphaned — {f} never names it, so nothing loads it")
+    if "ste100-writer" in str(f):
+        for n, l in enumerate(lines, 1):
+            for m in re.finditer(r"\bRules?\s+(\d+\.\d+)", l):
+                if m.group(1) not in issue9:
+                    bad.append(f"  {f}:{n} cites Rule {m.group(1)}, which references/rules.md has no heading for")
+for b in bad:
+    print(b)
+sys.exit(1 if bad else 0)
+EOF
+
+# validate-humanizer.yml
+[ -f skills/humanizer/scripts/validate-package.py ] &&
+  run python3 skills/humanizer/scripts/validate-package.py
+
+# Slowest and needs the CLI, so it runs last and only when available.
+command -v claude >/dev/null 2>&1 && run claude plugin validate .
+
+[ "$fail" = 0 ] && echo "✓ pre-push passed" || echo "✗ pre-push failed — fix or use --no-verify"
+exit $fail

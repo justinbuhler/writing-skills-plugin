@@ -1,0 +1,118 @@
+name: Validate writing-skills plugin
+
+# GitHub Actions is not used: this repository buys no Actions credits.
+# This workflow never runs on push or pull request. .githooks/pre-push runs
+# the same checks locally and is the gate that enforces them. Restore the
+# pull_request and push triggers here if Actions is ever funded again.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Claude Code
+        run: npm install --global @anthropic-ai/claude-code
+      - name: Validate plugin manifest
+        run: claude plugin validate .
+      - name: Check all skills are listed in plugin.json
+        run: |
+          listed=$(jq -r '.skills[]' .claude-plugin/plugin.json | sed 's|^\./||' | sort)
+          found=$(find skills -maxdepth 1 -mindepth 1 -type d | sort)
+          if [ "$listed" != "$found" ]; then
+            echo "Mismatch between plugin.json skills and skills/ directories"
+            echo "Listed in plugin.json:"
+            echo "$listed"
+            echo "Directories in skills/:"
+            echo "$found"
+            exit 1
+          fi
+          echo "All skills accounted for."
+      - name: Check every skill has SKILL.md and TESTS.md
+        run: |
+          missing=0
+          for dir in skills/*/; do
+            skill=$(basename "$dir")
+            if [ ! -f "$dir/SKILL.md" ]; then
+              echo "MISSING: $skill/SKILL.md"
+              missing=1
+            fi
+            if [ ! -f "$dir/TESTS.md" ]; then
+              echo "MISSING: $skill/TESTS.md"
+              missing=1
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then exit 1; fi
+          echo "All skills have SKILL.md and TESTS.md."
+      - name: Check cross-references resolve and point the right way
+        run: |
+          python3 - <<'EOF' || fail=1
+          import pathlib, re, sys
+          issue9 = set(re.findall(r"^### Rule (\d+\.\d+)", pathlib.Path(
+              "skills/ste100-writer/references/rules.md").read_text(), re.M))
+          bad = []
+          for f in sorted(pathlib.Path("skills").rglob("*.md")):
+              lines = f.read_text().split("\n")
+              for n, l in enumerate(lines, 1):
+                  for m in re.finditer(r"`([A-Za-z0-9_./-]+\.md)`", l):
+                      t = m.group(1)
+                      if not ((f.parent / t).exists() or (f.parent.parent / t).exists()
+                              or pathlib.Path(t).exists()):
+                          bad.append(f"  {f}:{n} names `{t}`, which does not exist")
+                  m = re.search(r'"([^"]+)"\s+(?:table|section)\s+(below|above)', l)
+                  if m:
+                      name, direction = m.group(1), m.group(2)
+                      locs = [i for i, x in enumerate(lines, 1) if name in x and i != n]
+                      if locs:
+                          tgt = min(locs, key=lambda i: abs(i - n))
+                          if (direction == "below" and tgt < n) or (direction == "above" and tgt > n):
+                              bad.append(f'  {f}:{n} says "{name}" {direction}, but it is at line {tgt}')
+              if f.name == "SKILL.md" and (f.parent / "references").is_dir():
+                  body = f.read_text()
+                  for r in sorted((f.parent / "references").glob("*.md")):
+                      if r.name not in body:
+                          bad.append(f"  {r}: orphaned — {f} never names it, so nothing loads it")
+              if "ste100-writer" in str(f):
+                  for n, l in enumerate(lines, 1):
+                      for m in re.finditer(r"\bRules?\s+(\d+\.\d+)", l):
+                          if m.group(1) not in issue9:
+                              bad.append(f"  {f}:{n} cites Rule {m.group(1)}, which references/rules.md has no heading for")
+          for b in bad:
+              print(b)
+          sys.exit(1 if bad else 0)
+          EOF
+      - name: Check every RED has a GREEN and an Expected finding
+        run: |
+          python3 - <<'EOF'
+          import pathlib, sys
+          bad = []
+          for f in sorted(pathlib.Path("skills").glob("*/TESTS.md")):
+              body = f.read_text().split("## Verification Log")[0]
+              blocks, title, cur, fenced = [], None, [], False
+              for line in body.split("\n"):
+                  if line.startswith("```"):
+                      fenced = not fenced
+                  if line.startswith("### ") and not fenced:
+                      if title:
+                          blocks.append((title, "\n".join(cur)))
+                      title, cur = line[4:].strip(), []
+                  else:
+                      cur.append(line)
+              if title:
+                  blocks.append((title, "\n".join(cur)))
+              for title, b in blocks:
+                  lines = b.split("\n")
+                  if not any(l.startswith("**RED") for l in lines):
+                      continue
+                  for label in ("**GREEN", "**Expected finding"):
+                      if not any(l.startswith(label) for l in lines):
+                          bad.append(f"{f}: '{title}' has a RED but no {label.lstrip('*')}")
+          for line in bad:
+              print("INCOMPLETE:", line)
+          print(f"{len(bad)} incomplete test block(s).")
+          sys.exit(1 if bad else 0)
+          EOF

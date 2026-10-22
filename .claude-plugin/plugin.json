@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "writing-skills",
+  "version": "1.0.0",
+  "description": "A structured set of writing skills for consulting documents, technical procedures, and strategic communications. Covers the full cycle from narrative framing and structure through language review to final quality gate.",
+  "author": {
+    "name": "Justin Buhler"
+  },
+  "license": "MIT",
+  "keywords": ["writing", "consulting", "plain-language", "pyramid", "scqa", "ste100", "document-qa", "recommendations"],
+  "skills": [
+    "./skills/document-qa",
+    "./skills/humanizer",
+    "./skills/no-ai-slop",
+    "./skills/plain-language",
+    "./skills/pyramid-editor",
+    "./skills/recommendations-and-actions",
+    "./skills/scqa-framework",
+    "./skills/scr-narrative",
+    "./skills/ste100-writer",
+    "./skills/writing-workflow"
+  ]
+}
